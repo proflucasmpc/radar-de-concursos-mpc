@@ -6,6 +6,28 @@ const erro = $("#erro");
 let concursos = [];
 let statusAtual = "aberto";
 
+const ADMIN_BROWSER_HASH = "a305db100f7affbf90ad640fe4d8ac6cf05f1218b941feff854c9ca5ced8afe0";
+
+async function sha256(valor) {
+  const bytes = new TextEncoder().encode(valor);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function autorizarNavegadorAdmin() {
+  const url = new URL(location.href);
+  const token = url.searchParams.get("mpc_admin");
+  if (!token) return;
+
+  if (await sha256(token) === ADMIN_BROWSER_HASH) {
+    localStorage.setItem("radarMpcLiberado", "true");
+    localStorage.removeItem("radarMpcCodigoPendente");
+    url.searchParams.delete("mpc_admin");
+    history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+    if (captura) captura.hidden = true;
+  }
+}
+
 const statusNomes = { aberto: "Inscrições abertas", edital: "Edital publicado", banca: "Banca definida", autorizado: "Concursos autorizados", previsto: "Concursos previstos", provas: "Provas anteriores" };
 const normalizar = (valor = "") => valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const formatarData = (valor) => valor ? new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC" }).format(new Date(`${valor}T12:00:00Z`)) : "Não informado";
@@ -82,6 +104,7 @@ async function validar() {
 }
 
 async function iniciar() {
+  await autorizarNavegadorAdmin();
   try {
     const response = await fetch("data/concursos.json");
     if (!response.ok) throw new Error();
@@ -105,8 +128,12 @@ $("#fechar").onclick = () => captura.hidden = true;
 $("#pedir-codigo").onclick = pedirCodigo;
 $("#liberar").onclick = validar;
 $("#codigo").oninput = (evento) => evento.target.value = evento.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
-if (localStorage.getItem("radarMpcLiberado") !== "true") {
-  if (localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
-  else setTimeout(() => captura.hidden = false, 60000);
-}
-iniciar();
+
+(async () => {
+  await autorizarNavegadorAdmin();
+  if (localStorage.getItem("radarMpcLiberado") !== "true") {
+    if (localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
+    else setTimeout(() => captura.hidden = false, 60000);
+  }
+  iniciar();
+})();
