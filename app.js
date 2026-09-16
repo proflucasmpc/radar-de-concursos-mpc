@@ -3,7 +3,7 @@ const cards = $("#cards");
 let concursos = [];
 let statusAtual = "aberto";
 
-const statusNomes = { aberto: "Inscrições abertas", edital: "Edital publicado", banca: "Banca definida", autorizado: "Concursos autorizados", previsto: "Concursos previstos" };
+const statusNomes = { aberto: "Inscrições abertas", edital: "Edital publicado", banca: "Banca definida", autorizado: "Concursos autorizados", previsto: "Concursos previstos", encerrado: "Inscrições encerradas" };
 const normalizar = (valor = "") => valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const formatarData = (valor) => valor ? new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC" }).format(new Date(`${valor}T12:00:00Z`)) : "Não informado";
 const dinheiro = (valor) => typeof valor === "number" ? valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }) : "Não informado";
@@ -26,17 +26,20 @@ function diasAte(valor) {
   return Math.ceil((fim - hojeLocal()) / 86400000);
 }
 
-function inscricoesEncerradas(c) {
-  if (c.status !== "aberto" || !c.fimInscricoes) return false;
-  const dias = diasAte(c.fimInscricoes);
-  return dias !== null && dias < 0;
+function statusEfetivo(c) {
+  if (!["aberto", "edital"].includes(c.status) || !c.inicioInscricoes || !c.fimInscricoes) return c.status;
+  const hoje = hojeLocal();
+  const inicio = dataLocal(c.inicioInscricoes);
+  const fim = dataLocal(c.fimInscricoes);
+  if (hoje < inicio) return "edital";
+  if (hoje > fim) return "encerrado";
+  return "aberto";
 }
 
-function etiquetaPrazo(c) {
-  if (!c.fimInscricoes || c.status !== "aberto") return "";
+function etiquetaPrazo(c, status) {
+  if (!c.fimInscricoes || status !== "aberto") return "";
   const dias = diasAte(c.fimInscricoes);
   if (dias === null) return "";
-  if (dias < 0) return '<span class="deadline-chip deadline-ended">Inscrições encerradas</span>';
   if (dias === 0) return '<span class="deadline-chip deadline-today">Encerra hoje</span>';
   if (dias <= 3) return `<span class="deadline-chip deadline-urgent">Últimos ${dias} dia${dias === 1 ? "" : "s"}</span>`;
   if (dias <= 7) return `<span class="deadline-chip">Encerra em ${dias} dias</span>`;
@@ -72,9 +75,10 @@ function filtrarConcursos() {
   const ordenacao = $("#ordenacao").value;
 
   const lista = concursos.filter((c) => {
-    if (statusAtual === "aberto" && inscricoesEncerradas(c)) return false;
+    const status = statusEfetivo(c);
+    if (status === "encerrado") return false;
     const pesquisavel = normalizar([c.orgao, c.titulo, c.cidade, c.estado, c.banca, ...(c.cargos || []), ...(c.tags || [])].join(" "));
-    return c.status === statusAtual && (!busca || pesquisavel.includes(busca)) && (nivel === "todos" || (c.escolaridade || []).includes(nivel)) && (estado === "todos" || c.estado === estado) && (esfera === "todos" || c.esfera === esfera) && (banca === "todos" || c.banca === banca);
+    return status === statusAtual && (!busca || pesquisavel.includes(busca)) && (nivel === "todos" || (c.escolaridade || []).includes(nivel)) && (estado === "todos" || c.estado === estado) && (esfera === "todos" || c.esfera === esfera) && (banca === "todos" || c.banca === banca);
   });
 
   return lista.sort((a, b) => {
@@ -91,17 +95,18 @@ function render() {
   $("#contador").textContent = `${lista.length} resultado${lista.length === 1 ? "" : "s"}`;
 
   cards.innerHTML = lista.map((c) => {
+    const status = statusEfetivo(c);
     const contexto = `${c.orgao} — ${c.titulo}`;
     const horario = c.horarioFimInscricoes ? ` às ${c.horarioFimInscricoes}` : "";
     return `<article class="card">
-      <div class="card-topline">${c.destaque ? '<span class="badge">DESTAQUE</span>' : ""}<span class="tag status-${c.status}">${statusNomes[c.status]}</span>${etiquetaPrazo(c)}</div>
+      <div class="card-topline">${c.destaque ? '<span class="badge">DESTAQUE</span>' : ""}<span class="tag status-${status}">${statusNomes[status]}</span>${etiquetaPrazo(c, status)}</div>
       <h3>${c.orgao}</h3>
       <p class="card-title">${c.titulo}</p>
       <p class="card-cargos">${cargosResumo(c)}</p>
       <div class="card-highlights"><div><span>Vagas</span><strong>${c.vagas || "Não informado"}</strong></div><div><span>Salário</span><strong>${salarioTexto(c)}</strong></div></div>
       <div class="meta"><span>📍 ${c.cidade} — ${c.estado}</span><span>🎓 ${escolaridadeTexto(c.escolaridade)}</span><span>🏛️ ${c.esfera[0].toUpperCase() + c.esfera.slice(1)}</span><span>📝 ${c.banca || "Não informado"}</span></div>
       <div class="verification">Atualizado em ${formatarData(c.ultimaVerificacao)}</div>
-      <div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}${horario}</div></div><div class="card-actions"><a class="details" data-lead-context="${contexto}" href="detalhes.html?concurso=${encodeURIComponent(c.slug)}">Ver detalhes</a>${c.inscricaoUrl ? `<a class="secondary-action compact" data-lead-context="Inscrição oficial — ${contexto}" href="${c.inscricaoUrl}" target="_blank" rel="noopener">Inscrição oficial</a>` : ""}</div></div>
+      <div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}${horario}</div></div><div class="card-actions"><a class="details" data-lead-context="${contexto}" href="detalhes.html?concurso=${encodeURIComponent(c.slug)}">Ver detalhes</a>${status === "aberto" && c.inscricaoUrl ? `<a class="secondary-action compact" data-lead-context="Inscrição oficial — ${contexto}" href="${c.inscricaoUrl}" target="_blank" rel="noopener">Inscrição oficial</a>` : ""}</div></div>
     </article>`;
   }).join("");
 
