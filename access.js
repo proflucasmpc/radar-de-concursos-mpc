@@ -1,4 +1,5 @@
 const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
+const RADAR_WHATSAPP_NUMBER = "5511960189698";
 
 (() => {
   const liberado = () => localStorage.getItem("radarMpcLiberado") === "true";
@@ -70,8 +71,9 @@ const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
     localStorage.setItem("radarMpcUltimoInteresse", interesse);
     mostrarCodigo();
 
-    const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nInteresse atual: ${interesse}.\n\nDepois de receber o código, volto ao site por este link:\n${location.href || RADAR_SITE_URL}`);
-    window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
+    const retorno = location.href || RADAR_SITE_URL;
+    const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Estou no Radar de Concursos MPC e quero meu código de acesso.\n\nMeu objetivo: ${objetivo}.\nConcurso/interesse: ${interesse}.\n\nLink para eu retornar depois do código:\n${retorno}`);
+    window.open(`https://api.whatsapp.com/send/?phone=${RADAR_WHATSAPP_NUMBER}&text=${mensagem}`, "_blank", "noopener");
   }
 
   function validar() {
@@ -122,7 +124,6 @@ const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
     if (acao.tagName === "A") {
       const href = acao.getAttribute("href");
       if (href && !href.startsWith("#") && !href.startsWith("javascript:")) {
-        evento.preventDefault();
         destinoPendente = { href: acao.href, target: acao.target };
       }
     }
