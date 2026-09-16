@@ -1,1 +1,10 @@
-{"name":"radar-de-concursos-mpc","private":true,"devDependencies":{"@netlify/functions":"latest"}}
+{
+  "name": "radar-de-concursos-mpc",
+  "private": true,
+  "scripts": {
+    "validar-dados": "node scripts/validar-dados.mjs"
+  },
+  "devDependencies": {
+    "@netlify/functions": "latest"
+  }
+}
