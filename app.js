@@ -6,32 +6,11 @@ const erro = $("#erro");
 let concursos = [];
 let statusAtual = "aberto";
 
-const ADMIN_BROWSER_HASH = "a305db100f7affbf90ad640fe4d8ac6cf05f1218b941feff854c9ca5ced8afe0";
-
-async function sha256(valor) {
-  const bytes = new TextEncoder().encode(valor);
-  const digest = await crypto.subtle.digest("SHA-256", bytes);
-  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
-}
-
-async function autorizarNavegadorAdmin() {
-  const url = new URL(location.href);
-  const token = url.searchParams.get("mpc_admin");
-  if (!token) return;
-
-  if (await sha256(token) === ADMIN_BROWSER_HASH) {
-    localStorage.setItem("radarMpcLiberado", "true");
-    localStorage.removeItem("radarMpcCodigoPendente");
-    url.searchParams.delete("mpc_admin");
-    history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
-    if (captura) captura.hidden = true;
-  }
-}
-
 const statusNomes = { aberto: "Inscrições abertas", edital: "Edital publicado", banca: "Banca definida", autorizado: "Concursos autorizados", previsto: "Concursos previstos", provas: "Provas anteriores" };
 const normalizar = (valor = "") => valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const formatarData = (valor) => valor ? new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC" }).format(new Date(`${valor}T12:00:00Z`)) : "Não informado";
 const escolaridadeTexto = (niveis = []) => niveis.length > 1 ? "Vários níveis" : ({ fundamental: "Ensino fundamental", medio: "Ensino médio", tecnico: "Ensino técnico", superior: "Ensino superior" }[niveis[0]] || "Não informado");
+const liberado = () => localStorage.getItem("radarMpcLiberado") === "true";
 
 function preencherEstados() {
   [...new Set(concursos.map((c) => c.estado).filter(Boolean))].sort().forEach((uf) => $("#estado").insertAdjacentHTML("beforeend", `<option value="${uf}">${uf}</option>`));
@@ -61,15 +40,36 @@ function render() {
   const lista = filtrarConcursos();
   $("#status-label").textContent = statusNomes[statusAtual].toUpperCase();
   $("#contador").textContent = `${lista.length} resultado${lista.length === 1 ? "" : "s"}`;
-  cards.innerHTML = lista.map((c) => `<article class="card">${c.destaque ? '<span class="badge">DESTAQUE</span>' : ""}<span class="tag status-${c.status}">${statusNomes[c.status]}</span><h3>${c.orgao}</h3><p class="card-title">${c.titulo}</p><div class="meta"><span>📍 ${c.cidade} — ${c.estado}</span><span>👥 ${c.vagas}</span><span>🎓 ${escolaridadeTexto(c.escolaridade)}</span><span>🏛️ ${c.esfera[0].toUpperCase() + c.esfera.slice(1)}</span></div><div class="verification">Verificado em ${formatarData(c.ultimaVerificacao)}</div><div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}</div><small>Banca: ${c.banca}</small></div><a class="details" href="detalhes.html?concurso=${encodeURIComponent(c.slug)}">Ver detalhes</a></div></article>`).join("");
+  cards.innerHTML = lista.map((c) => `<article class="card">${c.destaque ? '<span class="badge">DESTAQUE</span>' : ""}<span class="tag status-${c.status}">${statusNomes[c.status]}</span><h3>${c.orgao}</h3><p class="card-title">${c.titulo}</p><div class="meta"><span>📍 ${c.cidade} — ${c.estado}</span><span>👥 ${c.vagas}</span><span>🎓 ${escolaridadeTexto(c.escolaridade)}</span><span>🏛️ ${c.esfera[0].toUpperCase() + c.esfera.slice(1)}</span></div><div class="verification">Verificado em ${formatarData(c.ultimaVerificacao)}</div><div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}</div><small>Banca: ${c.banca}</small></div><a class="details" data-lead-context="${c.orgao} — ${c.titulo}" href="detalhes.html?concurso=${encodeURIComponent(c.slug)}">Ver detalhes</a></div></article>`).join("");
   $("#empty").hidden = lista.length > 0;
 }
 
+function mostrarDados() {
+  if (liberado()) return;
+  captura.hidden = false;
+  $("#etapa-dados").hidden = false;
+  $("#etapa-codigo").hidden = true;
+  erro.hidden = true;
+}
+
 function mostrarCodigo() {
+  if (liberado()) return;
   captura.hidden = false;
   $("#etapa-dados").hidden = true;
   $("#etapa-codigo").hidden = false;
+  erro.hidden = true;
   setTimeout(() => $("#codigo").focus(), 50);
+}
+
+function contextoDoClique(acao) {
+  if (acao?.dataset?.leadContext) return acao.dataset.leadContext;
+  const card = acao?.closest?.(".card");
+  if (card) {
+    const orgao = card.querySelector("h3")?.textContent?.trim();
+    const titulo = card.querySelector(".card-title")?.textContent?.trim();
+    return [orgao, titulo].filter(Boolean).join(" — ");
+  }
+  return acao?.textContent?.trim() || "Radar de Concursos MPC";
 }
 
 function pedirCodigo() {
@@ -81,19 +81,33 @@ function pedirCodigo() {
     erro.hidden = false;
     return;
   }
+
   localStorage.setItem("radarMpcCodigoPendente", "true");
+  const interesse = localStorage.getItem("radarMpcUltimoInteresse") || "Radar de Concursos MPC";
   mostrarCodigo();
-  const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nDepois de receber o código, volto ao site por este link:\n${SITE_URL}`);
+
+  const retorno = location.href || SITE_URL;
+  const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nInteresse atual: ${interesse}.\n\nDepois de receber o código, volto ao site por este link:\n${retorno}`);
   window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
 }
 
 async function validar() {
   erro.hidden = true;
   const codigo = $("#codigo").value.trim().toUpperCase();
-  if (codigo.length !== 6) return;
+  if (codigo.length !== 6) {
+    erro.textContent = "Digite os 6 caracteres do código.";
+    erro.hidden = false;
+    return;
+  }
+
   try {
-    const response = await fetch("/api/validar-codigo", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ codigo }) });
+    const response = await fetch("/api/validar-codigo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ codigo })
+    });
     if (!response.ok) throw new Error();
+
     localStorage.setItem("radarMpcLiberado", "true");
     localStorage.removeItem("radarMpcCodigoPendente");
     captura.hidden = true;
@@ -104,9 +118,8 @@ async function validar() {
 }
 
 async function iniciar() {
-  await autorizarNavegadorAdmin();
   try {
-    const response = await fetch("data/concursos.json");
+    const response = await fetch("data/concursos.json", { cache: "no-store" });
     if (!response.ok) throw new Error();
     concursos = await response.json();
     preencherEstados();
@@ -128,12 +141,28 @@ $("#fechar").onclick = () => captura.hidden = true;
 $("#pedir-codigo").onclick = pedirCodigo;
 $("#liberar").onclick = validar;
 $("#codigo").oninput = (evento) => evento.target.value = evento.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+$("#codigo").addEventListener("keydown", (evento) => {
+  if (evento.key === "Enter") validar();
+});
 
-(async () => {
-  await autorizarNavegadorAdmin();
-  if (localStorage.getItem("radarMpcLiberado") !== "true") {
-    if (localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
-    else setTimeout(() => captura.hidden = false, 60000);
-  }
-  iniciar();
-})();
+document.addEventListener("click", (evento) => {
+  if (liberado() || !captura.hidden || evento.target.closest("#captura")) return;
+  const acao = evento.target.closest("a, button");
+  if (!acao) return;
+
+  localStorage.setItem("radarMpcUltimoInteresse", contextoDoClique(acao));
+
+  const href = acao.tagName === "A" ? acao.getAttribute("href") : null;
+  if (href && !href.startsWith("#") && !href.startsWith("javascript:")) evento.preventDefault();
+
+  mostrarDados();
+}, true);
+
+if (!liberado()) {
+  if (localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
+  else setTimeout(() => {
+    if (!liberado() && captura.hidden) mostrarDados();
+  }, 60000);
+}
+
+iniciar();
