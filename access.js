@@ -119,6 +119,11 @@ const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
     const acao = evento.target.closest("a, button");
     if (!acao) return;
 
+    if (acao.tagName === "A") {
+      const hrefBruto = acao.getAttribute("href") || "";
+      if (/^(privacidade|termos)\.html(?:$|[?#])/i.test(hrefBruto)) return;
+    }
+
     const interesse = contextoAtual(acao);
     if (interesse) localStorage.setItem("radarMpcUltimoInteresse", interesse);
 
