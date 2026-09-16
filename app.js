@@ -13,6 +13,7 @@ const escolaridadeTexto = (niveis = []) => niveis.length > 1 ? "Vários níveis"
 
 function preencherEstados() {
   [...new Set(concursos.map((c) => c.estado).filter(Boolean))].sort().forEach((uf) => $("#estado").insertAdjacentHTML("beforeend", `<option value="${uf}">${uf}</option>`));
+  [...new Set(concursos.map((c) => c.banca).filter(Boolean))].sort().forEach((banca) => $("#banca").insertAdjacentHTML("beforeend", `<option value="${banca}">${banca}</option>`));
 }
 
 function filtrarConcursos() {
@@ -20,9 +21,17 @@ function filtrarConcursos() {
   const nivel = $("#nivel").value;
   const estado = $("#estado").value;
   const esfera = $("#esfera").value;
-  return concursos.filter((c) => {
+  const banca = $("#banca").value;
+  const ordenacao = $("#ordenacao").value;
+  const lista = concursos.filter((c) => {
     const pesquisavel = normalizar([c.orgao, c.titulo, c.cidade, c.estado, c.banca, ...(c.cargos || []), ...(c.tags || [])].join(" "));
-    return c.status === statusAtual && (!busca || pesquisavel.includes(busca)) && (nivel === "todos" || c.escolaridade.includes(nivel)) && (estado === "todos" || c.estado === estado) && (esfera === "todos" || c.esfera === esfera);
+    return c.status === statusAtual && (!busca || pesquisavel.includes(busca)) && (nivel === "todos" || c.escolaridade.includes(nivel)) && (estado === "todos" || c.estado === estado) && (esfera === "todos" || c.esfera === esfera) && (banca === "todos" || c.banca === banca);
+  });
+  return lista.sort((a, b) => {
+    if (ordenacao === "prazo") return (a.fimInscricoes || "9999-12-31").localeCompare(b.fimInscricoes || "9999-12-31");
+    if (ordenacao === "verificacao") return (b.ultimaVerificacao || "").localeCompare(a.ultimaVerificacao || "");
+    if (ordenacao === "orgao") return a.orgao.localeCompare(b.orgao, "pt-BR");
+    return Number(b.destaque) - Number(a.destaque);
   });
 }
 
@@ -41,34 +50,19 @@ function mostrarCodigo() {
   setTimeout(() => $("#codigo").focus(), 50);
 }
 
-async function pedirCodigo() {
+function pedirCodigo() {
   erro.hidden = true;
   const nome = $("#nome").value.trim();
-  const whatsapp = $("#whatsapp").value.replace(/\D/g, "");
   const objetivo = $("#objetivo").value;
-  if (nome.length < 2 || whatsapp.length < 10) {
-    erro.textContent = "Informe seu nome e um WhatsApp válido com DDD.";
+  if (nome.length < 2) {
+    erro.textContent = "Informe seu nome para continuar.";
     erro.hidden = false;
     return;
   }
-  const botao = $("#pedir-codigo");
-  botao.disabled = true;
-  botao.textContent = "AGUARDE...";
-  try {
-    const body = new URLSearchParams({ "form-name": "radar-leads", nome, whatsapp, objetivo, origem: "radar-de-concursos-mpc" });
-    const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
-    if (!response.ok) throw new Error();
-    localStorage.setItem("radarMpcCodigoPendente", "true");
-    mostrarCodigo();
-    const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nDepois de receber o código, volto ao site por este link:\n${SITE_URL}`);
-    window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
-  } catch {
-    erro.textContent = "Não foi possível registrar agora. Seus dados foram preservados; tente novamente.";
-    erro.hidden = false;
-  } finally {
-    botao.disabled = false;
-    botao.textContent = "PEDIR CÓDIGO NO WHATSAPP";
-  }
+  localStorage.setItem("radarMpcCodigoPendente", "true");
+  mostrarCodigo();
+  const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nDepois de receber o código, volto ao site por este link:\n${SITE_URL}`);
+  window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
 }
 
 async function validar() {
@@ -99,13 +93,13 @@ async function iniciar() {
   }
 }
 
-document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => {
+document.querySelectorAll(".tab[data-status]").forEach((tab) => tab.addEventListener("click", () => {
   document.querySelector(".tab.active").classList.remove("active");
   tab.classList.add("active");
   statusAtual = tab.dataset.status;
   render();
 }));
-["#busca", "#nivel", "#estado", "#esfera"].forEach((id) => $(id).addEventListener(id === "#busca" ? "input" : "change", render));
+["#busca", "#nivel", "#estado", "#esfera", "#banca", "#ordenacao"].forEach((id) => $(id).addEventListener(id === "#busca" ? "input" : "change", render));
 $("#buscar").onclick = () => $("#oportunidades").scrollIntoView();
 $("#fechar").onclick = () => captura.hidden = true;
 $("#pedir-codigo").onclick = pedirCodigo;
