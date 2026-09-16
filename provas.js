@@ -1,5 +1,5 @@
 const $ = (s) => document.querySelector(s);
-document.head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="phase2.css">');
+document.head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="phase2.css"><link rel="stylesheet" href="tabs.css">');
 const normalizar = (v = "") => v.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 let provas = [];
 
@@ -14,9 +14,9 @@ function render() {
 }
 async function iniciar() {
   try {
-    const r = await fetch("data/concursos.json");
-    const concursos = await r.json();
-    provas = concursos.flatMap((c) => (c.provasAnteriores || []).map((p) => ({ ...p, orgao: p.orgao || c.orgao, estado: p.estado || c.estado, banca: p.banca || c.banca })));
+    const r = await fetch("data/provas.json");
+    if (!r.ok) throw new Error();
+    provas = await r.json();
     preencher("#prova-banca", [...new Set(provas.map((p) => p.banca))]); preencher("#prova-ano", [...new Set(provas.map((p) => String(p.ano)))]); preencher("#prova-estado", [...new Set(provas.map((p) => p.estado))]); render();
   } catch { $("#provas-lista").innerHTML = '<div class="empty"><p>Não foi possível carregar o acervo agora.</p></div>'; }
 }
