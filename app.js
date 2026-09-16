@@ -1,4 +1,5 @@
 const SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
+const WHATSAPP_NUMBER = "5511960189698";
 const $ = (selector) => document.querySelector(selector);
 const cards = $("#cards");
 const captura = $("#captura");
@@ -128,8 +129,8 @@ function pedirCodigo() {
   const interesse = localStorage.getItem("radarMpcUltimoInteresse") || "Radar de Concursos MPC";
   mostrarCodigo();
   const retorno = location.href || SITE_URL;
-  const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nInteresse atual: ${interesse}.\n\nDepois de receber o código, volto ao site por este link:\n${retorno}`);
-  window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
+  const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero meu código de acesso ao Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nConcurso/interesse: ${interesse}.\n\nLink para eu retornar depois do código:\n${retorno}`);
+  window.open(`https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${mensagem}`, "_blank", "noopener");
 }
 
 async function validar() {
