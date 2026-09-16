@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="enhancements.css">
   <link rel="stylesheet" href="phase2.css">
+  <link rel="stylesheet" href="tabs.css">
 </head>
 <body>
   <header class="topbar"><div class="shell nav"><a class="brand" href="#inicio"><span>MPC</span><div><strong>Radar de Concursos</strong><small>Prof. Lucas MPC</small></div></a><a class="nav-cta" href="#oportunidades">Ver oportunidades</a></div></header>
@@ -33,11 +34,7 @@
   </main>
   <footer><div class="shell"><strong>Radar de Concursos MPC</strong><p>Informação organizada para ajudar você a escolher e preparar seu próximo concurso.</p><nav class="footer-links"><a href="provas.html">Provas anteriores</a><a href="privacidade.html">Política de Privacidade</a><a href="termos.html">Termos de Uso</a><a href="https://hotm.io/falarcomproflucasmpc" target="_blank" rel="noopener">Contato</a></nav><small>O Radar de Concursos MPC organiza informações para facilitar a consulta. O edital, o site do órgão e a página da banca são sempre as fontes definitivas.</small></div></footer>
 
-  <form name="radar-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="radar-leads"><input name="bot-field"><input name="nome"><input name="whatsapp"><input name="objetivo"><input name="origem">
-  </form>
-
-  <div class="modal-backdrop" id="captura" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close" id="fechar" aria-label="Fechar">×</button><div class="shield">✓</div><div id="etapa-dados"><h2 id="modal-title">Continue acompanhando gratuitamente</h2><p>Informe seus dados e peça seu código de acesso pelo WhatsApp.</p><label>Seu nome<input id="nome" autocomplete="name" placeholder="Como podemos chamar você?"></label><label>Seu WhatsApp<input id="whatsapp" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999"></label><label>Seu objetivo<select id="objetivo"><option>Concurso público</option><option>Vestibular / ENEM</option><option>Outro</option></select></label><small>Ao continuar, você concorda em receber o código e informações relacionadas ao seu objetivo de estudos pelo WhatsApp.</small><button class="whatsapp" id="pedir-codigo">Pedir código no WhatsApp</button></div><div id="etapa-codigo" hidden><h2>Insira seu código de acesso</h2><p>Digite o código de 6 caracteres que você recebeu pelo WhatsApp.</p><div class="code-row"><input id="codigo" maxlength="6" autocomplete="one-time-code" placeholder="CÓDIGO"><button id="liberar">Liberar</button></div></div><p class="error" id="erro" hidden></p></section></div>
+  <div class="modal-backdrop" id="captura" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close" id="fechar" aria-label="Fechar">×</button><div class="shield">✓</div><div id="etapa-dados"><h2 id="modal-title">Continue acompanhando gratuitamente</h2><p>Informe seu nome e peça seu código de acesso diretamente pelo WhatsApp.</p><label>Seu nome<input id="nome" autocomplete="name" placeholder="Como podemos chamar você?"></label><label>Seu objetivo<select id="objetivo"><option>Concurso público</option><option>Vestibular / ENEM</option><option>Outro</option></select></label><small>Nenhum dado é armazenado pelo site. A conversa será iniciada diretamente no WhatsApp.</small><button class="whatsapp" id="pedir-codigo">Pedir código no WhatsApp</button></div><div id="etapa-codigo" hidden><h2>Insira seu código de acesso</h2><p>Digite o código de 6 caracteres que você recebeu pelo WhatsApp.</p><div class="code-row"><input id="codigo" maxlength="6" autocomplete="one-time-code" placeholder="CÓDIGO"><button id="liberar">Liberar</button></div></div><p class="error" id="erro" hidden></p></section></div>
   <a class="whatsapp-float" href="https://hotm.io/falarcomproflucasmpc" target="_blank" rel="noopener" aria-label="Falar com o Prof. Lucas no WhatsApp">WhatsApp</a>
   <script src="app.js" defer></script>
 </body>
