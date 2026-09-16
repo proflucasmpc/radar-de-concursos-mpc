@@ -1,0 +1,19 @@
+.tab {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.tab:hover {
+  background: #0d67dc;
+  border-color: #0d67dc;
+  transform: translateY(-1px);
+}
+
+.tab.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
