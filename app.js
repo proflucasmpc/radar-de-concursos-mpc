@@ -1,15 +1,118 @@
-const SITE_URL="https://radar-de-concursos-mpc.netlify.app/";
-const concursos=[
- {orgao:"São Sebastião PREV",titulo:"Concurso Público — Edital 01/2026",local:"São Sebastião — SP",vagas:"Consulte o edital",nivel:"medio superior",salario:"Consulte o edital",prazo:"08 out",banca:"Instituto Mais",status:"aberto",destaque:true,link:"https://www.institutomais.org.br/"},
- {orgao:"FUNDACI",titulo:"Concurso Público — Edital 01/2026",local:"São Paulo — SP",vagas:"Consulte o edital",nivel:"medio superior",salario:"Consulte o edital",prazo:"24 set",banca:"Instituto Mais",status:"aberto",destaque:true,link:"https://www.institutomais.org.br/"},
- {orgao:"Prefeitura de Carmo da Mata",titulo:"Concurso Público 01/2026",local:"Carmo da Mata — MG",vagas:"Consulte o edital",nivel:"medio superior",salario:"Consulte o edital",prazo:"02 out",banca:"FADEPRP",status:"aberto",destaque:false,link:"https://www.carmodamata.mg.gov.br/"},
- {orgao:"Prefeitura de Tanguá",titulo:"Concurso Público 01/2026",local:"Tanguá — RJ",vagas:"23 vagas + CR",nivel:"medio superior",salario:"Consulte o edital",prazo:"Consulte o edital",banca:"Fonte oficial",status:"edital",destaque:true,link:"https://tangua.rj.gov.br/"}
-];
-let statusAtual="aberto";const $=s=>document.querySelector(s);const cards=$("#cards"),captura=$("#captura"),erro=$("#erro");
-function textoStatus(s){return({aberto:"Inscrições abertas",edital:"Edital publicado",banca:"Banca definida",autorizado:"Concursos autorizados",previsto:"Concursos previstos",provas:"Provas anteriores"})[s]}
-function render(){const q=$("#busca").value.trim().toLowerCase(),n=$("#nivel").value;const lista=concursos.filter(c=>c.status===statusAtual&&(`${c.orgao} ${c.titulo} ${c.local} ${c.banca}`.toLowerCase().includes(q))&&(n==="todos"||c.nivel.includes(n)));$("#status-label").textContent=textoStatus(statusAtual).toUpperCase();$("#contador").textContent=`${lista.length} resultado${lista.length===1?"":"s"}`;cards.innerHTML=lista.map((c,i)=>`<article class="card">${c.destaque?'<span class="badge">DESTAQUE</span>':""}<span class="tag">${c.orgao}</span><h3>${c.titulo}</h3><div class="meta"><span>📍 ${c.local}</span><span>👥 ${c.vagas}</span><span>🎓 ${c.nivel.includes("medio")&&c.nivel.includes("superior")?"Vários níveis":c.nivel}</span><span>💰 ${c.salario}</span></div><div class="card-bottom"><div><div class="deadline">Prazo: ${c.prazo}</div><small>Fonte/Banca: ${c.banca}</small></div><button class="details" data-index="${concursos.indexOf(c)}">Ver fonte oficial</button></div></article>`).join("");$("#empty").hidden=lista.length>0;document.querySelectorAll(".details").forEach(b=>b.onclick=()=>abrirDetalhe(Number(b.dataset.index)))}
-function abrirDetalhe(i){if(localStorage.getItem("radarMpcLiberado")==="true")return window.open(concursos[i].link,"_blank","noopener");captura.hidden=false}
-function mostrarCodigo(){captura.hidden=false;$("#etapa-dados").hidden=true;$("#etapa-codigo").hidden=false;setTimeout(()=>$("#codigo").focus(),50)}
-async function pedirCodigo(){erro.hidden=true;const nome=$("#nome").value.trim(),whatsapp=$("#whatsapp").value.replace(/\D/g,""),objetivo=$("#objetivo").value;if(nome.length<2||whatsapp.length<10){erro.textContent="Informe seu nome e um WhatsApp válido com DDD.";erro.hidden=false;return}const btn=$("#pedir-codigo");btn.disabled=true;btn.textContent="AGUARDE...";try{const body=new URLSearchParams({"form-name":"radar-leads",nome,whatsapp,objetivo,origem:"radar-de-concursos-mpc"});const response=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:body.toString()});if(!response.ok)throw new Error();localStorage.setItem("radarMpcCodigoPendente","true");mostrarCodigo();const msg=encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nDepois de receber o código, volto ao site por este link:\n${SITE_URL}`);window.open(`https://hotm.io/falarcomproflucasmpc?text=${msg}`,"_blank","noopener")}catch{erro.textContent="Não foi possível registrar agora. Tente novamente.";erro.hidden=false}finally{btn.disabled=false;btn.textContent="PEDIR CÓDIGO NO WHATSAPP"}}
-async function validar(){erro.hidden=true;const codigo=$("#codigo").value.trim().toUpperCase();if(codigo.length!==6)return;try{const r=await fetch("/api/validar-codigo",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({codigo})});if(!r.ok)throw new Error();localStorage.setItem("radarMpcLiberado","true");localStorage.removeItem("radarMpcCodigoPendente");captura.hidden=true}catch{erro.textContent="Código inválido. Confira e tente novamente.";erro.hidden=false}}
-document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelector(".tab.active").classList.remove("active");t.classList.add("active");statusAtual=t.dataset.status;render()});$("#busca").oninput=render;$("#nivel").onchange=render;$("#buscar").onclick=()=>document.querySelector("#oportunidades").scrollIntoView();$("#fechar").onclick=()=>captura.hidden=true;$("#pedir-codigo").onclick=pedirCodigo;$("#liberar").onclick=validar;$("#codigo").oninput=e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,"");if(localStorage.getItem("radarMpcLiberado")!=="true"){if(localStorage.getItem("radarMpcCodigoPendente")==="true")mostrarCodigo();else setTimeout(()=>captura.hidden=false,60000)}render();
+const SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
+const $ = (selector) => document.querySelector(selector);
+const cards = $("#cards");
+const captura = $("#captura");
+const erro = $("#erro");
+let concursos = [];
+let statusAtual = "aberto";
+
+const statusNomes = { aberto: "Inscrições abertas", edital: "Edital publicado", banca: "Banca definida", autorizado: "Concursos autorizados", previsto: "Concursos previstos", provas: "Provas anteriores" };
+const normalizar = (valor = "") => valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const formatarData = (valor) => valor ? new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC" }).format(new Date(`${valor}T12:00:00Z`)) : "Não informado";
+const escolaridadeTexto = (niveis = []) => niveis.length > 1 ? "Vários níveis" : ({ fundamental: "Ensino fundamental", medio: "Ensino médio", tecnico: "Ensino técnico", superior: "Ensino superior" }[niveis[0]] || "Não informado");
+
+function preencherEstados() {
+  [...new Set(concursos.map((c) => c.estado).filter(Boolean))].sort().forEach((uf) => $("#estado").insertAdjacentHTML("beforeend", `<option value="${uf}">${uf}</option>`));
+}
+
+function filtrarConcursos() {
+  const busca = normalizar($("#busca").value.trim());
+  const nivel = $("#nivel").value;
+  const estado = $("#estado").value;
+  const esfera = $("#esfera").value;
+  return concursos.filter((c) => {
+    const pesquisavel = normalizar([c.orgao, c.titulo, c.cidade, c.estado, c.banca, ...(c.cargos || []), ...(c.tags || [])].join(" "));
+    return c.status === statusAtual && (!busca || pesquisavel.includes(busca)) && (nivel === "todos" || c.escolaridade.includes(nivel)) && (estado === "todos" || c.estado === estado) && (esfera === "todos" || c.esfera === esfera);
+  });
+}
+
+function render() {
+  const lista = filtrarConcursos();
+  $("#status-label").textContent = statusNomes[statusAtual].toUpperCase();
+  $("#contador").textContent = `${lista.length} resultado${lista.length === 1 ? "" : "s"}`;
+  cards.innerHTML = lista.map((c) => `<article class="card">${c.destaque ? '<span class="badge">DESTAQUE</span>' : ""}<span class="tag status-${c.status}">${statusNomes[c.status]}</span><h3>${c.orgao}</h3><p class="card-title">${c.titulo}</p><div class="meta"><span>📍 ${c.cidade} — ${c.estado}</span><span>👥 ${c.vagas}</span><span>🎓 ${escolaridadeTexto(c.escolaridade)}</span><span>🏛️ ${c.esfera[0].toUpperCase() + c.esfera.slice(1)}</span></div><div class="verification">Verificado em ${formatarData(c.ultimaVerificacao)}</div><div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}</div><small>Banca: ${c.banca}</small></div><a class="details" href="detalhes.html?concurso=${encodeURIComponent(c.slug)}">Ver detalhes</a></div></article>`).join("");
+  $("#empty").hidden = lista.length > 0;
+}
+
+function mostrarCodigo() {
+  captura.hidden = false;
+  $("#etapa-dados").hidden = true;
+  $("#etapa-codigo").hidden = false;
+  setTimeout(() => $("#codigo").focus(), 50);
+}
+
+async function pedirCodigo() {
+  erro.hidden = true;
+  const nome = $("#nome").value.trim();
+  const whatsapp = $("#whatsapp").value.replace(/\D/g, "");
+  const objetivo = $("#objetivo").value;
+  if (nome.length < 2 || whatsapp.length < 10) {
+    erro.textContent = "Informe seu nome e um WhatsApp válido com DDD.";
+    erro.hidden = false;
+    return;
+  }
+  const botao = $("#pedir-codigo");
+  botao.disabled = true;
+  botao.textContent = "AGUARDE...";
+  try {
+    const body = new URLSearchParams({ "form-name": "radar-leads", nome, whatsapp, objetivo, origem: "radar-de-concursos-mpc" });
+    const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+    if (!response.ok) throw new Error();
+    localStorage.setItem("radarMpcCodigoPendente", "true");
+    mostrarCodigo();
+    const mensagem = encodeURIComponent(`Olá, Prof. Lucas! Meu nome é ${nome}. Quero o código para acessar o Radar de Concursos MPC. Meu objetivo: ${objetivo}.\n\nDepois de receber o código, volto ao site por este link:\n${SITE_URL}`);
+    window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
+  } catch {
+    erro.textContent = "Não foi possível registrar agora. Seus dados foram preservados; tente novamente.";
+    erro.hidden = false;
+  } finally {
+    botao.disabled = false;
+    botao.textContent = "PEDIR CÓDIGO NO WHATSAPP";
+  }
+}
+
+async function validar() {
+  erro.hidden = true;
+  const codigo = $("#codigo").value.trim().toUpperCase();
+  if (codigo.length !== 6) return;
+  try {
+    const response = await fetch("/api/validar-codigo", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ codigo }) });
+    if (!response.ok) throw new Error();
+    localStorage.setItem("radarMpcLiberado", "true");
+    localStorage.removeItem("radarMpcCodigoPendente");
+    captura.hidden = true;
+  } catch {
+    erro.textContent = "Código inválido ou serviço temporariamente indisponível. Confira e tente novamente.";
+    erro.hidden = false;
+  }
+}
+
+async function iniciar() {
+  try {
+    const response = await fetch("data/concursos.json");
+    if (!response.ok) throw new Error();
+    concursos = await response.json();
+    preencherEstados();
+    render();
+  } catch {
+    cards.innerHTML = '<div class="empty"><h3>Não foi possível carregar as oportunidades</h3><p>Tente atualizar a página em alguns instantes.</p></div>';
+  }
+}
+
+document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => {
+  document.querySelector(".tab.active").classList.remove("active");
+  tab.classList.add("active");
+  statusAtual = tab.dataset.status;
+  render();
+}));
+["#busca", "#nivel", "#estado", "#esfera"].forEach((id) => $(id).addEventListener(id === "#busca" ? "input" : "change", render));
+$("#buscar").onclick = () => $("#oportunidades").scrollIntoView();
+$("#fechar").onclick = () => captura.hidden = true;
+$("#pedir-codigo").onclick = pedirCodigo;
+$("#liberar").onclick = validar;
+$("#codigo").oninput = (evento) => evento.target.value = evento.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+if (localStorage.getItem("radarMpcLiberado") !== "true") {
+  if (localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
+  else setTimeout(() => captura.hidden = false, 60000);
+}
+iniciar();
