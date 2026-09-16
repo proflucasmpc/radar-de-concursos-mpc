@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://radar-de-concursos-mpc.netlify.app/sitemap.xml
