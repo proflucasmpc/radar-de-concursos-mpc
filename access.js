@@ -74,35 +74,24 @@ const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
     window.open(`https://hotm.io/falarcomproflucasmpc?text=${mensagem}`, "_blank", "noopener");
   }
 
-  async function validar() {
+  function validar() {
     erro.hidden = true;
     const codigo = $("#codigo").value.trim().toUpperCase();
-    if (codigo.length !== 6) {
-      erro.textContent = "Digite os 6 caracteres do código.";
+    if (!/^[A-Z0-9]{6}$/.test(codigo)) {
+      erro.textContent = "Digite um código válido de 6 caracteres.";
       erro.hidden = false;
       return;
     }
 
-    try {
-      const response = await fetch("/api/validar-codigo", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ codigo })
-      });
-      if (!response.ok) throw new Error();
-      localStorage.setItem("radarMpcLiberado", "true");
-      localStorage.removeItem("radarMpcCodigoPendente");
-      captura.hidden = true;
+    localStorage.setItem("radarMpcLiberado", "true");
+    localStorage.removeItem("radarMpcCodigoPendente");
+    captura.hidden = true;
 
-      if (destinoPendente?.href) {
-        const { href, target } = destinoPendente;
-        destinoPendente = null;
-        if (target === "_blank") window.open(href, "_blank", "noopener");
-        else location.href = href;
-      }
-    } catch {
-      erro.textContent = "Código inválido ou serviço temporariamente indisponível. Confira e tente novamente.";
-      erro.hidden = false;
+    if (destinoPendente?.href) {
+      const { href, target } = destinoPendente;
+      destinoPendente = null;
+      if (target === "_blank") window.open(href, "_blank", "noopener");
+      else location.href = href;
     }
   }
 
@@ -116,13 +105,16 @@ const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
 
   document.addEventListener("click", (evento) => {
     if (liberado() || !captura.hidden || evento.target.closest("#captura")) return;
-    const acao = evento.target.closest("a, button");
+    const acao = evento.target.closest("a, button, input, select, .card");
     if (!acao) return;
 
     if (acao.tagName === "A") {
       const hrefBruto = acao.getAttribute("href") || "";
       if (/^(privacidade|termos)\.html(?:$|[?#])/i.test(hrefBruto)) return;
     }
+
+    evento.preventDefault();
+    evento.stopImmediatePropagation();
 
     const interesse = contextoAtual(acao);
     if (interesse) localStorage.setItem("radarMpcUltimoInteresse", interesse);
@@ -137,12 +129,7 @@ const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
     mostrarDados();
   }, true);
 
-  if (!liberado()) {
-    if (localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
-    else setTimeout(() => {
-      if (!liberado() && captura.hidden) mostrarDados();
-    }, 60000);
-  }
+  if (!liberado() && localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
 
   window.setRadarLeadContext = (valor) => {
     window.radarLeadContext = valor;
