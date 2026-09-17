@@ -7,7 +7,7 @@ const seguro=(v)=>String(v??"Não informado").replace(/[&<>'"]/g,c=>({"&":"&amp;
 async function iniciar(){
   const slug=new URLSearchParams(location.search).get("concurso");
   try{
-    const caminhos=["data/concursos.json","data/concursos-lote2.json","data/concursos-lote3.json"];
+    const caminhos=["data/concursos.json","data/concursos-lote2.json","data/concursos-lote3.json","data/concursos-gcm.json"];
     const [respostas,respostaMateriais]=await Promise.all([Promise.all(caminhos.map(c=>fetch(c,{cache:"no-store"}))),fetch("data/materiais.json",{cache:"no-store"})]);
     if(respostas.some(r=>!r.ok)||!respostaMateriais.ok)throw new Error();
     const lotes=await Promise.all(respostas.map(r=>r.json()));
