@@ -65,7 +65,7 @@ function pedirCodigo(){ erro.hidden=true; const nome=$("#nome").value.trim(),obj
 async function validar(){ erro.hidden=true; const codigo=$("#codigo").value.trim().toUpperCase(); if(codigo.length!==6){erro.textContent="Digite os 6 caracteres do código.";erro.hidden=false;return;} try{const response=await fetch("/api/validar-codigo",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({codigo})});if(!response.ok)throw new Error();localStorage.setItem("radarMpcLiberado","true");localStorage.removeItem("radarMpcCodigoPendente");captura.hidden=true;}catch{erro.textContent="Código inválido ou serviço temporariamente indisponível. Confira e tente novamente.";erro.hidden=false;}}
 async function iniciar(){
   try{
-    const caminhos=["data/concursos.json","data/concursos-lote2.json","data/concursos-lote3.json"];
+    const caminhos=["data/concursos.json","data/concursos-lote2.json","data/concursos-lote3.json","data/concursos-gcm.json"];
     const respostas=await Promise.all(caminhos.map(c=>fetch(c,{cache:"no-store"})));
     if(respostas.some(r=>!r.ok))throw new Error();
     const lotes=await Promise.all(respostas.map(r=>r.json()));
