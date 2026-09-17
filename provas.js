@@ -20,14 +20,22 @@ function render() {
     const contexto = `${p.orgao} — ${p.cargo} — ${p.ano}`;
     const questoes = p.quantidadeQuestoes ? `${p.quantidadeQuestoes} questões` : "Quantidade não informada";
     const classe = normalizar(p.banca).includes("vunesp") ? "card proof-featured" : "card";
+    const botaoProva = p.provaPdfUrl
+      ? `<a class="details" data-lead-context="Abrir prova — ${contexto}" href="${p.provaPdfUrl}" target="_blank" rel="noopener">Abrir prova</a>`
+      : '<span class="secondary-action compact disabled-action" aria-disabled="true">PDF da prova em conferência</span>';
+    const botaoGabarito = p.gabaritoPdfUrl
+      ? `<a class="secondary-action compact" data-lead-context="Abrir gabarito — ${contexto}" href="${p.gabaritoPdfUrl}" target="_blank" rel="noopener">Abrir gabarito</a>`
+      : '<span class="secondary-action compact disabled-action" aria-disabled="true">Gabarito em conferência</span>';
+    const fonteArquivo = p.fonteArquivo ? `<span>Arquivo: ${p.fonteArquivo}</span>` : "";
+
     return `<article class="${classe}">
       <div class="card-topline"><span class="tag">${p.banca}</span>${normalizar(p.banca).includes("vunesp") ? '<span class="deadline-chip">FOCO VUNESP</span>' : ""}</div>
       <h3>${p.orgao}</h3>
       <p class="card-title">${p.cargo} · ${p.ano}</p>
       <div class="card-highlights"><div><span>Escolaridade</span><strong>${p.escolaridade || "Não informado"}</strong></div><div><span>Questões</span><strong>${questoes}</strong></div></div>
       <div class="meta"><span>📍 ${p.estado}</span><span>📝 ${p.banca}</span></div>
-      <p class="proof-source">Fonte: ${p.fonteUrl ? "página oficial da banca" : "origem não informada"}</p>
-      <div class="card-bottom"><div class="card-actions"><a class="details" data-lead-context="Abrir prova — ${contexto}" href="${p.provaUrl}" target="_blank" rel="noopener">Abrir prova</a>${p.gabaritoUrl ? `<a class="secondary-action compact" data-lead-context="Ver gabarito — ${contexto}" href="${p.gabaritoUrl}" target="_blank" rel="noopener">Ver gabarito</a>` : ""}${p.fonteUrl ? `<a class="secondary-action compact" data-lead-context="Fonte oficial — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">Fonte oficial</a>` : ""}</div></div>
+      <p class="proof-source">${fonteArquivo || "PDF direto ainda não confirmado"}</p>
+      <div class="card-bottom"><div class="card-actions">${botaoProva}${botaoGabarito}${p.fonteUrl ? `<a class="secondary-action compact" data-lead-context="Fonte oficial — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">Fonte oficial</a>` : ""}</div></div>
     </article>`;
   }).join("");
   $("#provas-vazio").hidden = lista.length > 0;
