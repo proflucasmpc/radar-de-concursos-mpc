@@ -10,6 +10,18 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
+  from = "https://radar-de-concursos-mpc.netlify.app/*"
+  to = "https://radar.lucasmpc.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://radar-de-concursos-mpc.netlify.app/*"
+  to = "https://radar.lucasmpc.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
