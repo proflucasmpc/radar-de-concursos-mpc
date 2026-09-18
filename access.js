@@ -24,19 +24,19 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
     };
   }
 
-  function normalizarDrive(item) {
+  function normalizarDrive(item, metadado = {}) {
     const numero = String(item.numero).padStart(3, "0");
     const preview = (id) => id ? `https://drive.google.com/file/d/${id}/preview` : null;
     const view = (id) => id ? `https://drive.google.com/file/d/${id}/view` : null;
     const arquivoUnico = Boolean(item.gabaritoId && item.gabaritoId === item.provaId);
     return {
       id: `vunesp-drive-${numero}`,
-      orgao: "Acervo Vunesp — Prof. Lucas MPC",
-      cargo: `Prova / simulado ${numero}`,
+      orgao: metadado.orgao || "Acervo Vunesp — Prof. Lucas MPC",
+      cargo: metadado.cargo || `Prova / simulado ${numero}`,
       banca: "Vunesp",
-      ano: "Acervo",
-      estado: "Não informado",
-      escolaridade: "Não informado",
+      ano: metadado.ano || "Acervo",
+      estado: metadado.estado || "Não informado",
+      escolaridade: metadado.escolaridade || "Não informado",
       quantidadeQuestoes: null,
       provaPdfUrl: preview(item.provaId),
       gabaritoPdfUrl: arquivoUnico ? null : preview(item.gabaritoId),
@@ -86,10 +86,12 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
         "data/vunesp-drive-121-180.json",
         "data/vunesp-drive-181-236.json"
       ];
-      const [lotesCatalogo, lotesDrive] = await Promise.all([
+      const [lotesCatalogo, lotesDrive, metadadosDrive] = await Promise.all([
         Promise.all(caminhosCatalogo.map(carregarLote)),
-        Promise.all(caminhosDrive.map(carregarLote))
+        Promise.all(caminhosDrive.map(carregarLote)),
+        carregarLote("data/vunesp-drive-metadata.json")
       ]);
+      const mapaMetadados = new Map((metadadosDrive || []).map(m => [Number(m.numero), m]));
       const mapa = new Map();
       principal.forEach((p) => p?.id && mapa.set(p.id, p));
       lotesCatalogo.flat().map(normalizarProva).forEach((p) => p?.id && mapa.set(p.id, p));
@@ -99,7 +101,7 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
         const chave = `${item.provaId}|${item.gabaritoId || ""}`;
         if (pares.has(chave)) return;
         pares.add(chave);
-        const p = normalizarDrive(item);
+        const p = normalizarDrive(item, mapaMetadados.get(Number(item.numero)) || {});
         mapa.set(p.id, p);
       });
       return new Response(JSON.stringify([...mapa.values()]), {
