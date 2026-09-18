@@ -12,7 +12,7 @@ function render() {
   const ano = $("#prova-ano").value;
   const estado = $("#prova-estado").value;
   const lista = provas
-    .filter((p) => (!busca || normalizar(`${p.orgao} ${p.cargo} ${p.banca}`).includes(busca)) && (banca === "todos" || p.banca === banca) && (ano === "todos" || String(p.ano) === ano) && (estado === "todos" || p.estado === estado))
+    .filter((p) => (!busca || normalizar(`${p.orgao} ${p.cargo} ${p.banca} ${p.codigoProjeto || ""}`).includes(busca)) && (banca === "todos" || p.banca === banca) && (ano === "todos" || String(p.ano) === ano) && (estado === "todos" || p.estado === estado))
     .sort((a, b) => Number(b.destaque) - Number(a.destaque) || b.ano - a.ano || a.orgao.localeCompare(b.orgao, "pt-BR"));
 
   $("#prova-contador").textContent = `${lista.length} prova${lista.length === 1 ? "" : "s"}`;

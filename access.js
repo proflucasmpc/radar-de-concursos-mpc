@@ -37,7 +37,8 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
       ano: metadado.ano || "Acervo",
       estado: metadado.estado || "Não informado",
       escolaridade: metadado.escolaridade || "Não informado",
-      quantidadeQuestoes: null,
+      quantidadeQuestoes: metadado.quantidadeQuestoes ?? null,
+      codigoProjeto: metadado.codigoProjeto || null,
       provaPdfUrl: preview(item.provaId),
       gabaritoPdfUrl: arquivoUnico ? null : preview(item.gabaritoId),
       fonteArquivo: arquivoUnico ? "Prova e gabarito no mesmo PDF — Google Drive" : "Acervo do Prof. Lucas MPC — Google Drive",
@@ -101,7 +102,9 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
         const chave = `${item.provaId}|${item.gabaritoId || ""}`;
         if (pares.has(chave)) return;
         pares.add(chave);
-        const p = normalizarDrive(item, mapaMetadados.get(Number(item.numero)) || {});
+        const metadado = mapaMetadados.get(Number(item.numero)) || {};
+        if (metadado.ocultar) return;
+        const p = normalizarDrive(item, metadado);
         mapa.set(p.id, p);
       });
       return new Response(JSON.stringify([...mapa.values()]), {
