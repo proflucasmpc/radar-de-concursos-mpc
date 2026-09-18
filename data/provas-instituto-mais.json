@@ -1,0 +1,32 @@
+[
+  {
+    "id": "instituto-mais-ipmo-analista-previdenciario-2025",
+    "orgao": "Instituto de Previdência do Município de Osasco — IPMO",
+    "cargo": "Analista Previdenciário",
+    "banca": "Instituto Mais",
+    "ano": 2025,
+    "estado": "SP",
+    "escolaridade": "Ensino superior",
+    "quantidadeQuestoes": null,
+    "provaPdfUrl": null,
+    "gabaritoPdfUrl": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/130090/instituto-mais-2025-ipmo-sp-analista-previdenciario-gabarito.pdf",
+    "fonteArquivo": "Gabarito final e definitivo público",
+    "fonteUrl": "https://www.institutomais.org.br/",
+    "destaque": true
+  },
+  {
+    "id": "instituto-mais-santos-eng-quimico-2023",
+    "orgao": "Prefeitura de Santos",
+    "cargo": "Engenheiro Químico",
+    "banca": "Instituto Mais",
+    "ano": 2023,
+    "estado": "SP",
+    "escolaridade": "Ensino superior",
+    "quantidadeQuestoes": null,
+    "provaPdfUrl": null,
+    "gabaritoPdfUrl": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/97049/instituto-mais-2023-prefeitura-de-santos-sp-engenheiro-quimico-gabarito.pdf",
+    "fonteArquivo": "Gabarito público da prova objetiva",
+    "fonteUrl": "https://www.institutomais.org.br/",
+    "destaque": false
+  }
+]

@@ -1,4 +1,4 @@
-const RADAR_SITE_URL = "https://radar-de-concursos-mpc.netlify.app/";
+const RADAR_SITE_URL = "https://radar.lucasmpc.com.br/";
 const RADAR_WHATSAPP_NUMBER = "5511960189698";
 
 // Consolida os lotes adicionais antes de app.js, detalhes.js e provas.js carregarem os catálogos.
@@ -77,7 +77,8 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
         "data/provas-lote2.json",
         "data/provas-lote3.json",
         "data/provas-lote4.json",
-        "data/provas-outras-bancas.json"
+        "data/provas-outras-bancas.json",
+        "data/provas-instituto-mais.json"
       ];
       const caminhosDrive = [
         "data/vunesp-drive-001-060.json",
