@@ -1,0 +1,188 @@
+[
+  {
+    "id": "itanhaem-02-2026-nosso-rumo",
+    "slug": "itanhaem-concurso-02-2026-nosso-rumo",
+    "titulo": "Concurso Público 02/2026",
+    "orgao": "Prefeitura de Itanhaém",
+    "status": "aberto",
+    "descricao": "Concurso público com 20 vagas mais cadastro reserva, organizado pelo Instituto Nosso Rumo.",
+    "esfera": "municipal",
+    "estado": "SP",
+    "cidade": "Itanhaém",
+    "abrangencia": "Municipal",
+    "banca": "Nosso Rumo",
+    "escolaridade": [],
+    "cargos": [
+      "Consulte o quadro de vagas na fonte oficial"
+    ],
+    "vagas": "20 vagas + CR",
+    "cadastroReserva": "Sim",
+    "salarioMinimo": null,
+    "salarioMaximo": null,
+    "inicioInscricoes": "2026-08-31",
+    "fimInscricoes": "2026-09-29",
+    "dataProva": "2026-10-18",
+    "taxa": "Consulte o edital",
+    "editalUrl": "https://nossorumo.org.br/",
+    "inscricaoUrl": "https://nossorumo.org.br/",
+    "fonteUrl": "https://nossorumo.org.br/",
+    "tipoFonte": "Banca organizadora",
+    "ultimaVerificacao": "2026-09-18",
+    "destaque": true,
+    "tags": [
+      "nosso rumo",
+      "itanhaém",
+      "são paulo",
+      "prefeitura"
+    ],
+    "linhaDoTempo": [
+      {
+        "etapa": "Edital publicado",
+        "concluida": true
+      },
+      {
+        "etapa": "Inscrições abertas",
+        "concluida": true
+      },
+      {
+        "etapa": "Prova objetiva — 18/10/2026",
+        "concluida": false
+      },
+      {
+        "etapa": "Resultado",
+        "concluida": false
+      }
+    ],
+    "provasAnteriores": [],
+    "atualizacoes": [
+      {
+        "data": "2026-09-18",
+        "titulo": "Prazo, vagas e prova conferidos no portal do Nosso Rumo"
+      }
+    ]
+  },
+  {
+    "id": "itanhaem-03-2026-nosso-rumo",
+    "slug": "itanhaem-concurso-03-2026-nosso-rumo",
+    "titulo": "Concurso Público 03/2026",
+    "orgao": "Prefeitura de Itanhaém",
+    "status": "aberto",
+    "descricao": "Concurso público com 106 vagas mais cadastro reserva, organizado pelo Instituto Nosso Rumo.",
+    "esfera": "municipal",
+    "estado": "SP",
+    "cidade": "Itanhaém",
+    "abrangencia": "Municipal",
+    "banca": "Nosso Rumo",
+    "escolaridade": [],
+    "cargos": [
+      "Consulte o quadro de vagas na fonte oficial"
+    ],
+    "vagas": "106 vagas + CR",
+    "cadastroReserva": "Sim",
+    "salarioMinimo": null,
+    "salarioMaximo": null,
+    "inicioInscricoes": "2026-09-04",
+    "fimInscricoes": "2026-10-01",
+    "dataProva": "2026-10-18",
+    "taxa": "Consulte o edital",
+    "editalUrl": "https://nossorumo.org.br/",
+    "inscricaoUrl": "https://nossorumo.org.br/",
+    "fonteUrl": "https://nossorumo.org.br/",
+    "tipoFonte": "Banca organizadora",
+    "ultimaVerificacao": "2026-09-18",
+    "destaque": true,
+    "tags": [
+      "nosso rumo",
+      "itanhaém",
+      "são paulo",
+      "prefeitura"
+    ],
+    "linhaDoTempo": [
+      {
+        "etapa": "Edital publicado",
+        "concluida": true
+      },
+      {
+        "etapa": "Inscrições abertas",
+        "concluida": true
+      },
+      {
+        "etapa": "Prova objetiva — 18/10/2026",
+        "concluida": false
+      },
+      {
+        "etapa": "Resultado",
+        "concluida": false
+      }
+    ],
+    "provasAnteriores": [],
+    "atualizacoes": [
+      {
+        "data": "2026-09-18",
+        "titulo": "Prazo, vagas e prova conferidos no portal do Nosso Rumo"
+      }
+    ]
+  },
+  {
+    "id": "crm-pr-01-2026-nosso-rumo",
+    "slug": "crm-pr-concurso-01-2026",
+    "titulo": "Concurso Público 01/2026",
+    "orgao": "Conselho Regional de Medicina do Paraná",
+    "status": "aberto",
+    "descricao": "Concurso público do CRM-PR com duas vagas mais cadastro reserva, organizado pelo Instituto Nosso Rumo.",
+    "esfera": "federal",
+    "estado": "PR",
+    "cidade": "Paraná",
+    "abrangencia": "Estadual",
+    "banca": "Nosso Rumo",
+    "escolaridade": [],
+    "cargos": [
+      "Consulte o quadro de vagas na fonte oficial"
+    ],
+    "vagas": "2 vagas + CR",
+    "cadastroReserva": "Sim",
+    "salarioMinimo": null,
+    "salarioMaximo": null,
+    "inicioInscricoes": "2026-09-04",
+    "fimInscricoes": "2026-10-01",
+    "dataProva": "2026-10-18",
+    "taxa": "Consulte o edital",
+    "editalUrl": "https://nossorumo.org.br/",
+    "inscricaoUrl": "https://nossorumo.org.br/",
+    "fonteUrl": "https://nossorumo.org.br/",
+    "tipoFonte": "Banca organizadora",
+    "ultimaVerificacao": "2026-09-18",
+    "destaque": false,
+    "tags": [
+      "nosso rumo",
+      "crm",
+      "paraná",
+      "conselho profissional"
+    ],
+    "linhaDoTempo": [
+      {
+        "etapa": "Edital publicado",
+        "concluida": true
+      },
+      {
+        "etapa": "Inscrições abertas",
+        "concluida": true
+      },
+      {
+        "etapa": "Prova objetiva — 18/10/2026",
+        "concluida": false
+      },
+      {
+        "etapa": "Resultado",
+        "concluida": false
+      }
+    ],
+    "provasAnteriores": [],
+    "atualizacoes": [
+      {
+        "data": "2026-09-18",
+        "titulo": "Prazo, vagas e prova conferidos no portal do Nosso Rumo"
+      }
+    ]
+  }
+]

@@ -57,7 +57,8 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
         "data/concursos-lote2.json",
         "data/concursos-lote3.json",
         "data/concursos-gcm.json",
-        "data/concursos-lote4.json"
+        "data/concursos-lote4.json",
+        "data/concursos-lote5.json"
       ];
       const extras = await Promise.all(caminhos.map(carregarLote));
       const mapa = new Map();
@@ -75,7 +76,8 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
       const caminhosCatalogo = [
         "data/provas-lote2.json",
         "data/provas-lote3.json",
-        "data/provas-lote4.json"
+        "data/provas-lote4.json",
+        "data/provas-outras-bancas.json"
       ];
       const caminhosDrive = [
         "data/vunesp-drive-001-060.json",
@@ -109,6 +111,18 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
   };
 
   const nav = document.querySelector(".topbar .nav");
+
+  // Navegação editorial do portal.
+  if (document.body && !document.querySelector(".portal-shortcuts")) {
+    const atalhos = document.createElement("nav");
+    atalhos.className = "portal-shortcuts";
+    atalhos.innerHTML = '<a href="bancas.html" data-lead-context="Explorar bancas">Bancas</a><a href="gcm.html" data-lead-context="Concursos GCM">GCM / Guarda Municipal</a><a href="processos.html" data-lead-context="Processos seletivos">Processos seletivos</a><a href="provas.html" data-lead-context="Biblioteca de provas">Provas anteriores</a>';
+    const topo = document.querySelector(".topbar");
+    topo?.insertAdjacentElement("afterend", atalhos);
+    const estiloAtalhos = document.createElement("style");
+    estiloAtalhos.textContent = '.portal-shortcuts{display:flex;gap:8px;overflow:auto;padding:9px max(16px,calc((100% - 1180px)/2));background:#0b2445;border-bottom:1px solid #ffffff18;position:sticky;top:72px;z-index:29}.portal-shortcuts a{white-space:nowrap;color:#dbeaff;text-decoration:none;font-weight:800;font-size:13px;padding:7px 11px;border-radius:999px;border:1px solid #ffffff24}.portal-shortcuts a:hover{background:#ffffff12}@media(max-width:760px){.portal-shortcuts{top:66px}}';
+    document.head.appendChild(estiloAtalhos);
+  }
   const acaoAtual = nav?.querySelector(":scope > .nav-cta");
   if (nav && acaoAtual && !nav.querySelector(".nav-courses-cta")) {
     const grupo = document.createElement("div");
@@ -237,8 +251,12 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
 
   document.addEventListener("click", (evento) => {
     if (liberado() || !captura.hidden || evento.target.closest("#captura")) return;
-    const acao = evento.target.closest("a, button, input, select, .card");
+    const acao = evento.target.closest("a, button");
     if (!acao) return;
+
+    const altaIntencao = acao.matches(".details, .secondary-action, .whatsapp-float, .whatsapp, .material-card, .nav-courses-cta") ||
+      acao.dataset.leadContext?.match(/inscri|prova|gabarito|edital|fonte|material|whatsapp|detalhe/i);
+    if (!altaIntencao) return;
 
     if (acao.tagName === "A") {
       const hrefBruto = acao.getAttribute("href") || "";
@@ -261,6 +279,28 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
   }, true);
 
   if (!liberado() && localStorage.getItem("radarMpcCodigoPendente") === "true") mostrarCodigo();
+
+  // Indicadores de volume no topo da home.
+  if (location.pathname === "/" || location.pathname.endsWith("/index.html")) {
+    Promise.all([
+      window.fetch("data/concursos.json", { cache: "no-store" }).then(r => r.json()).catch(() => []),
+      window.fetch("data/provas.json", { cache: "no-store" }).then(r => r.json()).catch(() => [])
+    ]).then(([cs, ps]) => {
+      const hoje = new Date().toISOString().slice(0, 10);
+      const abertas = cs.filter(c => c.status === "aberto" && (!c.inicioInscricoes || c.inicioInscricoes <= hoje) && (!c.fimInscricoes || c.fimInscricoes >= hoje)).length;
+      const bancas = new Set([...cs.map(c => c.banca), ...ps.map(p => p.banca)].filter(Boolean)).size;
+      const hero = document.querySelector(".hero .shell");
+      if (hero && !hero.querySelector(".portal-stats")) {
+        const box = document.createElement("div");
+        box.className = "portal-stats";
+        box.innerHTML = `<div><strong>${abertas}</strong><span>inscrições abertas</span></div><div><strong>${ps.length}+</strong><span>provas no acervo</span></div><div><strong>${bancas}</strong><span>bancas</span></div>`;
+        hero.appendChild(box);
+        const st = document.createElement("style");
+        st.textContent = '.portal-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.portal-stats>div{min-width:150px;padding:12px 16px;border:1px solid #ffffff28;border-radius:14px;background:#ffffff0d}.portal-stats strong,.portal-stats span{display:block}.portal-stats strong{font-size:24px;color:#fff}.portal-stats span{font-size:12px;color:#b8cae0;font-weight:700}';
+        document.head.appendChild(st);
+      }
+    });
+  }
 
   window.setRadarLeadContext = (valor) => {
     window.radarLeadContext = valor;

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "catanduva-ps-03-2026",
+    "slug": "catanduva-processo-seletivo-03-2026",
+    "titulo": "Processo Seletivo 03/2026",
+    "orgao": "Prefeitura de Catanduva",
+    "status": "aberto",
+    "estado": "SP",
+    "cidade": "Catanduva",
+    "banca": "IBAM",
+    "vagas": "66 vagas",
+    "inicioInscricoes": "2026-09-01",
+    "fimInscricoes": "2026-10-01",
+    "cargos": [
+      "Consulte o edital oficial"
+    ],
+    "fonteUrl": "https://www.ibamsp-concursos.org.br/index/abertos/",
+    "inscricaoUrl": "https://www.ibamsp-concursos.org.br/index/abertos/",
+    "ultimaVerificacao": "2026-09-18"
+  },
+  {
+    "id": "catanduva-ps-02-2026",
+    "slug": "catanduva-processo-seletivo-02-2026",
+    "titulo": "Processo Seletivo 02/2026",
+    "orgao": "Prefeitura de Catanduva",
+    "status": "aberto",
+    "estado": "SP",
+    "cidade": "Catanduva",
+    "banca": "IBAM",
+    "vagas": "Consulte o edital",
+    "inicioInscricoes": "2026-08-24",
+    "fimInscricoes": "2026-09-24",
+    "cargos": [
+      "Consulte o edital oficial"
+    ],
+    "fonteUrl": "https://www.ibamsp-concursos.org.br/index/abertos/",
+    "inscricaoUrl": "https://www.ibamsp-concursos.org.br/index/abertos/",
+    "ultimaVerificacao": "2026-09-18"
+  }
+]

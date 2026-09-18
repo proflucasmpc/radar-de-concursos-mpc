@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://radar-de-concursos-mpc.netlify.app/</loc></url>
   <url><loc>https://radar-de-concursos-mpc.netlify.app/provas.html</loc></url>
+  <url><loc>https://radar-de-concursos-mpc.netlify.app/bancas.html</loc></url>
+  <url><loc>https://radar-de-concursos-mpc.netlify.app/gcm.html</loc></url>
+  <url><loc>https://radar-de-concursos-mpc.netlify.app/processos.html</loc></url>
   <url><loc>https://radar-de-concursos-mpc.netlify.app/privacidade.html</loc></url>
   <url><loc>https://radar-de-concursos-mpc.netlify.app/termos.html</loc></url>
 </urlset>
