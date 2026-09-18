@@ -221,24 +221,37 @@ const RADAR_WHATSAPP_NUMBER = "5511960189698";
     window.open(`https://api.whatsapp.com/send/?phone=${RADAR_WHATSAPP_NUMBER}&text=${mensagem}`, "_blank", "noopener");
   }
 
-  function validar() {
+  async function validar() {
     erro.hidden = true;
     const codigo = $("#codigo").value.trim().toUpperCase();
-    if (!/^[A-Z0-9]{6}$/.test(codigo)) {
-      erro.textContent = "Digite um código válido de 6 caracteres.";
+
+    if (codigo.length !== 6) {
+      erro.textContent = "Digite os 6 caracteres do código.";
       erro.hidden = false;
       return;
     }
 
-    localStorage.setItem("radarMpcLiberado", "true");
-    localStorage.removeItem("radarMpcCodigoPendente");
-    captura.hidden = true;
+    try {
+      const resposta = await fetch("/api/validar-codigo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ codigo })
+      });
+      if (!resposta.ok) throw new Error("Código inválido");
 
-    if (destinoPendente?.href) {
-      const { href, target } = destinoPendente;
-      destinoPendente = null;
-      if (target === "_blank") window.open(href, "_blank", "noopener");
-      else location.href = href;
+      localStorage.setItem("radarMpcLiberado", "true");
+      localStorage.removeItem("radarMpcCodigoPendente");
+      captura.hidden = true;
+
+      if (destinoPendente?.href) {
+        const { href, target } = destinoPendente;
+        destinoPendente = null;
+        if (target === "_blank") window.open(href, "_blank", "noopener");
+        else location.href = href;
+      }
+    } catch {
+      erro.textContent = "Código inválido ou serviço temporariamente indisponível.";
+      erro.hidden = false;
     }
   }
 
