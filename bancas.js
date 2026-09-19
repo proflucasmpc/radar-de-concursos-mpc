@@ -13,7 +13,8 @@ async function iniciar(){
   $("#bancas-lista").innerHTML=ordem.map(b=>{
     const cc=c.filter(x=>n(x.banca).includes(n(b))&&atual(x)).length;
     const pp=p.filter(x=>n(x.banca).includes(n(b))).length;
-    return `<a class="card" href="banca.html?banca=${encodeURIComponent(b)}"><span class="tag">BANCA</span><h3>${b}</h3><div class="card-highlights"><div><span>Oportunidades atuais</span><strong>${cc}</strong></div><div><span>Provas</span><strong>${pp}</strong></div></div><p class="details">Ver banca</p></a>`;
+    const href=n(b).includes("vunesp")?"vunesp.html":`banca.html?banca=${encodeURIComponent(b)}`;
+    return `<a class="card" href="${href}"><span class="tag">BANCA</span><h3>${b}</h3><div class="card-highlights"><div><span>Oportunidades atuais</span><strong>${cc}</strong></div><div><span>Provas</span><strong>${pp}</strong></div></div><p class="details">Ver banca</p></a>`;
   }).join("");
 }
 iniciar();
