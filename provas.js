@@ -20,6 +20,7 @@ function render() {
     const contexto = `${p.orgao} — ${p.cargo} — ${p.ano}`;
     const questoes = p.quantidadeQuestoes ? `${p.quantidadeQuestoes} questões` : "Quantidade não informada";
     const classe = normalizar(p.banca).includes("vunesp") ? "card proof-featured" : "card";
+    const paginaSeo = p.seoUrl ? `<a class="details" href="${p.seoUrl}">Ver página da prova</a>` : "";
     const botaoProva = p.provaPdfUrl
       ? `<a class="details" data-lead-context="Abrir prova — ${contexto}" href="${p.provaPdfUrl}" target="_blank" rel="noopener">Abrir prova</a>`
       : '<span class="secondary-action compact disabled-action" aria-disabled="true">PDF da prova em conferência</span>';
@@ -35,7 +36,7 @@ function render() {
       <div class="card-highlights"><div><span>Escolaridade</span><strong>${p.escolaridade || "Não informado"}</strong></div><div><span>Questões</span><strong>${questoes}</strong></div></div>
       <div class="meta"><span>📍 ${p.estado}</span><span>📝 ${p.banca}</span></div>
       <p class="proof-source">${fonteArquivo || "PDF direto ainda não confirmado"}</p>
-      <div class="card-bottom"><div class="card-actions">${botaoProva}${botaoGabarito}${p.fonteUrl ? `<a class="secondary-action compact" data-lead-context="Fonte oficial — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">Fonte oficial</a>` : ""}</div></div>
+      <div class="card-bottom"><div class="card-actions">${paginaSeo}${botaoProva}${botaoGabarito}${p.fonteUrl ? `<a class="secondary-action compact" data-lead-context="Fonte oficial — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">Fonte oficial</a>` : ""}</div></div>
     </article>`;
   }).join("");
   $("#provas-vazio").hidden = lista.length > 0;
@@ -43,7 +44,7 @@ function render() {
 
 async function iniciar() {
   try {
-    const r = await fetch("data/provas.json", { cache: "no-store" });
+    const r = await fetch("data/provas-seo.json", { cache: "no-store" });
     if (!r.ok) throw new Error();
     provas = await r.json();
     preencher("#prova-banca", [...new Set(provas.map((p) => p.banca))]);

@@ -1,4 +1,5 @@
 [build]
+  command = "npm run gerar-seo"
   publish = "."
   functions = "netlify/functions"
 

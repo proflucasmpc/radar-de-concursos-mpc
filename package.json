@@ -2,7 +2,9 @@
   "name": "radar-de-concursos-mpc",
   "private": true,
   "scripts": {
-    "validar-dados": "node scripts/validar-dados.mjs"
+    "validar-dados": "node scripts/validar-dados.mjs",
+    "gerar-seo": "node scripts/gerar-seo.mjs",
+    "build": "npm run gerar-seo"
   },
   "devDependencies": {
     "@netlify/functions": "latest"
