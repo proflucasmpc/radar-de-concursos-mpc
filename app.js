@@ -7,6 +7,8 @@ const statusNomes = { aberto: "Inscrições abertas", edital: "Edital publicado"
 const normalizar = (valor = "") => valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const formatarData = (valor) => valor ? new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC" }).format(new Date(`${valor}T12:00:00Z`)) : "Não informado";
 const dinheiro = (valor) => typeof valor === "number" ? valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }) : "Não informado";
+const paginasSeo=new Set(["sao-sebastiao-prev-2026","fundaci-concurso-2026","prefeitura-carmo-da-mata-2026","prefeitura-tangua-2026","camara-boituva-edital-01-2026","camara-boituva-edital-02-2026"]);
+const urlConcurso=c=>paginasSeo.has(c.slug)?`concurso-${c.slug}.html`:`detalhes.html?concurso=${encodeURIComponent(c.slug)}`;
 const escolaridadeTexto = (niveis = []) => niveis.length > 1 ? "Vários níveis" : ({ fundamental: "Ensino fundamental", medio: "Ensino médio", tecnico: "Ensino técnico", superior: "Ensino superior" }[niveis[0]] || "Não informado");
 
 function hojeLocal() {
@@ -106,7 +108,7 @@ function render() {
       <div class="card-highlights"><div><span>Vagas</span><strong>${c.vagas || "Não informado"}</strong></div><div><span>Salário</span><strong>${salarioTexto(c)}</strong></div></div>
       <div class="meta"><span>📍 ${c.cidade} — ${c.estado}</span><span>🎓 ${escolaridadeTexto(c.escolaridade)}</span><span>🏛️ ${c.esfera[0].toUpperCase() + c.esfera.slice(1)}</span><span>📝 ${c.banca || "Não informado"}</span></div>
       <div class="verification">Atualizado em ${formatarData(c.ultimaVerificacao)}</div>
-      <div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}${horario}</div></div><div class="card-actions"><a class="details" data-lead-context="${contexto}" href="detalhes.html?concurso=${encodeURIComponent(c.slug)}">Ver detalhes</a>${status === "aberto" && c.inscricaoUrl ? `<a class="secondary-action compact" data-lead-context="Inscrição oficial — ${contexto}" href="${c.inscricaoUrl}" target="_blank" rel="noopener">Inscrição oficial</a>` : ""}</div></div>
+      <div class="card-bottom"><div><div class="deadline">Prazo: ${formatarData(c.fimInscricoes)}${horario}</div></div><div class="card-actions"><a class="details" data-lead-context="${contexto}" href="${urlConcurso(c)}">Ver detalhes</a>${status === "aberto" && c.inscricaoUrl ? `<a class="secondary-action compact" data-lead-context="Inscrição oficial — ${contexto}" href="${c.inscricaoUrl}" target="_blank" rel="noopener">Inscrição oficial</a>` : ""}</div></div>
     </article>`;
   }).join("");
 

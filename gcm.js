@@ -1,5 +1,7 @@
 const $=s=>document.querySelector(s);
 const n=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const paginasSeo=new Set(["sao-sebastiao-prev-2026","fundaci-concurso-2026","prefeitura-carmo-da-mata-2026","prefeitura-tangua-2026","camara-boituva-edital-01-2026","camara-boituva-edital-02-2026"]);
+const urlConcurso=c=>paginasSeo.has(c.slug)?`concurso-${c.slug}.html`:`detalhes.html?concurso=${encodeURIComponent(c.slug)}`;
 const d=v=>v?new Intl.DateTimeFormat("pt-BR",{timeZone:"UTC"}).format(new Date(v+"T12:00:00Z")):"Não informado";
 function abertoAgora(x){
   const hoje=new Date().toISOString().slice(0,10);
@@ -15,6 +17,6 @@ async function iniciar(){
     return (t.includes("guarda")||t.includes("gcm"))&&abertoAgora(x);
   }).sort((a,b)=>(a.fimInscricoes||"9999").localeCompare(b.fimInscricoes||"9999"));
   $("#gcm-count").textContent=`${lista.length} oportunidade(s) com inscrições abertas`;
-  $("#gcm-lista").innerHTML=lista.map(x=>`<article class="card"><span class="tag">${x.banca}</span><h3>${x.orgao}</h3><p class="card-title">${x.titulo}</p><div class="card-highlights"><div><span>Vagas</span><strong>${x.vagas}</strong></div><div><span>Prazo</span><strong>${d(x.fimInscricoes)}</strong></div></div><div class="card-bottom"><a class="details" data-lead-context="Detalhes GCM — ${x.orgao}" href="detalhes.html?concurso=${encodeURIComponent(x.slug)}">Ver detalhes</a>${x.inscricaoUrl?`<a class="secondary-action compact" data-lead-context="Inscrição oficial GCM — ${x.orgao}" href="${x.inscricaoUrl}" target="_blank" rel="noopener">Inscrição oficial</a>`:""}</div></article>`).join("")||'<div class="empty">Nenhum concurso de Guarda Municipal com inscrições abertas no momento.</div>';
+  $("#gcm-lista").innerHTML=lista.map(x=>`<article class="card"><span class="tag">${x.banca}</span><h3>${x.orgao}</h3><p class="card-title">${x.titulo}</p><div class="card-highlights"><div><span>Vagas</span><strong>${x.vagas}</strong></div><div><span>Prazo</span><strong>${d(x.fimInscricoes)}</strong></div></div><div class="card-bottom"><a class="details" data-lead-context="Detalhes GCM — ${x.orgao}" href="${urlConcurso(x)}">Ver detalhes</a>${x.inscricaoUrl?`<a class="secondary-action compact" data-lead-context="Inscrição oficial GCM — ${x.orgao}" href="${x.inscricaoUrl}" target="_blank" rel="noopener">Inscrição oficial</a>`:""}</div></article>`).join("")||'<div class="empty">Nenhum concurso de Guarda Municipal com inscrições abertas no momento.</div>';
 }
 iniciar();
