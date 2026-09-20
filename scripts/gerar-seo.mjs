@@ -62,7 +62,7 @@ function merge(a,b){
 
 const sources = [
   "provas.json","provas-lote2.json","provas-lote3.json","provas-lote4.json",
-  "provas-outras-bancas.json","provas-instituto-mais.json"
+  "provas-outras-bancas.json","provas-instituto-mais.json","vunesp-auditoria-completa.json"
 ];
 let all = [];
 for (const f of sources) all.push(...(await readJson(f)).map(standardize));
