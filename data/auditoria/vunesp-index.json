@@ -1,0 +1,2320 @@
+[
+  {
+    "numero": 1,
+    "codigo": "CMMU1801/003-AssistLegComis-AssistLegRed-OficLegislativo",
+    "cargo": "assistente legislativo das comissões assistente legislativo em redação oficial legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1halfkL_rnPZiYX_kLIQ59W3ysPHAeciu",
+    "gabaritoId": "1sGGpwxoQPrN_oVn4DctsRrWo9PPtk5gF",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 2,
+    "codigo": "CMOA1801/003-AuxTécLegislativo-Manhã",
+    "cargo": "auxiliar técnico legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "10kelZLTqyG_0TwivwWxPl0prCHK0POJS",
+    "gabaritoId": "1dY1NTNDnMJgo-3jrg2wirERZBdf4cqaT",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 3,
+    "codigo": "CPRC1801/002-AgAdministrativo-AgLegislativo-Manhã",
+    "cargo": "agente administrativo agente legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1gmAiDnjxG5cKRVD0ul83nSAeCdPoRDdD",
+    "gabaritoId": "1Aqr0mKKFAs7pSnmqMZaz0e2PDj4oQiq_",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 4,
+    "codigo": "CMSR1901/002-AssistenteComissões",
+    "cargo": "assistente de comissões",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1wndOhdTrsRqqTlW0y2wh7PpQxb_sDxaM",
+    "gabaritoId": "1wndOhdTrsRqqTlW0y2wh7PpQxb_sDxaM",
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 5,
+    "codigo": "CSER1801/003-TécLegislativo-Tarde",
+    "cargo": "técnico legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1Y-I6h2sgw76lMC6BoJpi6Kvtw4uUX0vg",
+    "gabaritoId": "1PooUYpac1yT7zOxGOm7qxsoO_5WvrKCb",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 6,
+    "codigo": "EEFJ1901/001-AssistenteAdministração-Manhã",
+    "cargo": "ASSISTENTE EM ADMINISTRAÇÃO",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1TmbMn5o4O11zo5jlVvDcn6leBXxZ1CyD",
+    "gabaritoId": "11NIelErMUn3gNQCZy4ETzdtXq3LIx4p4",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 7,
+    "codigo": "MPSP1902/001-AuxiliarPromotoria-I-Administrativo",
+    "cargo": "auxiliar de promotoria i (administrativo) OPÇÕES: 001 A 013",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1sq8tfVc5nLhWLIiHdGpUhEJQfuHhrMxv",
+    "gabaritoId": "1iA4JDC4_PY-Ykuu7Pd8_n4Trhpw_GBb8",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 8,
+    "codigo": "MPSP1802/001-AuxiliarPromotoria-I-Eletricista",
+    "cargo": "auxiliar de promotoria i (eletricista)",
+    "ano": 2018,
+    "questoes": 45,
+    "provaId": "116FYxHzzaGoNeEpGso0sFadrHLfLPBcm",
+    "gabaritoId": "1xuGa4igQfO271VPR-lv5v_VSGHvVWhRA",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 9,
+    "codigo": "PMAR1803/017-AgenteEscolar",
+    "cargo": "AGENTE ESCOLAR",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1bLKEXjrq7aBjQKyledFgR35jWWjQsgM6",
+    "gabaritoId": "1HQPGReb66QJYGQB_AaKn5fLgj5bqjAxl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 10,
+    "codigo": "pmar1804/001-OficialAdmEscolar-SecretEscolar-Manhã",
+    "cargo": "oficial administrativo escolar (cód. 001) secretário de escola (cód. 002)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1dWW6oNISQsrVbqVfQKJ3xoho12urNRos",
+    "gabaritoId": "1pIg-TAYoDZxrAHDxmqlSEJziSuFtyaPQ",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 11,
+    "codigo": "PMRU1803/009-ChefeDivisãoPessoal-Manhã",
+    "cargo": "chefe de divisão pessoal",
+    "ano": 2018,
+    "questoes": 60,
+    "provaId": "17xjySRU1GVOnpPO2dXVKUtJd09s6yU1j",
+    "gabaritoId": "1frSeniuvrOjS1BCoa7dAfY2vYiP5i9F0",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 12,
+    "codigo": "PMRU1803/006-Escriturário-OficialAdm-Manhã",
+    "cargo": "escriturário oficial administrativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1u6cY2Iga9St9i5Ruq1L6t-KTGIGTjbFr",
+    "gabaritoId": "1ZS5OhzQs3UBkz5HKztc8ahawgJKqDy1r",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 13,
+    "codigo": "PBIR1901/012-OficialAdministrativo-Manhã",
+    "cargo": "oficial administrativo (cód. 013)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "181goIC2mPh75k9OjuOcYpA07iB9-iNs0",
+    "gabaritoId": "1uXqRvfOLNvtv0efquMktN2y-bmLatMU5",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 14,
+    "codigo": "PCAM1801/004-AgFiscalização-Tarde",
+    "cargo": "agente de fiscalização (cód. 004)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1PVYq10i_O7og25f8xjEGODLv4X47FSnh",
+    "gabaritoId": "1NEPSQhEyN6hM8R902CC8gp_QrQPfmBpu",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 15,
+    "codigo": "PCAM1801/002-AgAdministrativo-Manhã",
+    "cargo": "agente administrativo (cód. 002)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1qACQYEifkTdajGbwuzQdd1ovOdazFdoH",
+    "gabaritoId": "12Zqshem2-p8lQmzuC4L54TPS6ke-XmnM",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 16,
+    "codigo": "pmcr1901/001-GuardaCMunicipal-F/M",
+    "cargo": "Guarda Civil Municipal – 2a Classe (Feminino e Masculino)",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "17AJu1Tqb2kTDWNwSMnbYXgH1OWFqXlYE",
+    "gabaritoId": "1Bo4eCEh51gu7Kt6-kBF0rKLWWW9gxq4I",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 17,
+    "codigo": "pcer1801/027-FiscalObrasPosturas-Manhã",
+    "cargo": "fiscal de obras e posturas (cód. 033)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1LbF7tSYjoT5h69E908AzwP_iFXAFr3O4",
+    "gabaritoId": "1YXzQiLzZ-VzeqcTsDNqz_8VjuNmzUF6d",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 18,
+    "codigo": "pcer1801/031-PEB-EducInfantil-Creche-Manhã",
+    "cargo": "professor de educação básica – educação infantil/creche (cód. 038)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1cnejx5eiktXp0kN-PTMEj_albpO2gMlk",
+    "gabaritoId": "15NaIBNK569djzl9QCUcrv9zLKFNTMO7Q",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 19,
+    "codigo": "PDCO1901/021-ProfessorAdjuntoEducaçãoBásica-I-Manhã",
+    "cargo": "professor adjunto de educação básica i (cód. 025) professor de educação básica I – PEB I (cód. 027)",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1NRhVZU8aXpTZPS5mkyBUHwyQuwQB3gta",
+    "gabaritoId": "1gGSJJgZa8CakuV2c3Sj7s1415k2aXnCE",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 20,
+    "codigo": "PMFM1901/007-OfAdm-SecretEscola-Manhã",
+    "cargo": "oficial administrativo (cód. 007) secretário de escola (cód. 009)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1wSzd2aR0dGQk-Cn2XuLxuYUngw__AYsu",
+    "gabaritoId": "12IIA5SToaa9nK0j4A9eBLZqUEYE6UUbl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 21,
+    "codigo": "PMFM1901/008-ProfAuxDesenvolvInfantil-Manhã",
+    "cargo": "professor auxiliar de desenvolvimento infantil – padi (cód. 008)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1RX-aFXa4VjLsVXREJGb6TSyGLxLixDpP",
+    "gabaritoId": "18O8rjjPkOWUYKHeCSIfBHQSvIR1BX-Xx",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 22,
+    "codigo": "PGUA1902/019-PEB-I-EnsinoFundamental",
+    "cargo": "professor de educação básica I – PEB I – ensino fundamental",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1eVFZbKd3j-C_fe_dut7n2FI_uqmr152X",
+    "gabaritoId": "18F3lYFKBW8bmlQ80MkKXQbr_NP6EiJ36",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 23,
+    "codigo": "pmgr1803/009-EspSaúde-ServiçoSocial",
+    "cargo": "especialista em saúde (serviço social)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1I0iR2aBPNVAEj7mYoycIzJpeTGWACTkB",
+    "gabaritoId": "1A75rKP1nEbRhn1Gum1_q8_-5k91-tguh",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 24,
+    "codigo": "PIBA1901/004-Telefonista-Manhã",
+    "cargo": "telefonista",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1m0GrpGIKVKwN8QWFmPZy-X_CpYDzs9Qq",
+    "gabaritoId": "17yBiYZSfBSC2w8Ma-TDmVA53onQaQtIG",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 25,
+    "codigo": "PMIH1901/001-GuardaCivilMun-2ªClasse-Masc-Fem",
+    "cargo": "Guarda Civil Municipal – 2a Classe (Feminino e Masculino)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1deahJf-vaPQ8D9oTpadzW3A8amIsKqxR",
+    "gabaritoId": "1HDeUVskv6QW_dmj6DBeAljR-IqLbgmf1",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 26,
+    "codigo": "PMIP1801/004-AgenteAdminstraçãoPública-Tarde",
+    "cargo": "Agente de administração pública",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1Ue9EA9ck7kay-S-3Kc2-8gwYnRseJQxs",
+    "gabaritoId": "19LDIKg7hpToRZjB5dAUQxrZLqXz1pSn0",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 27,
+    "codigo": "pmol1802/001-GuardaCivilMunicipal",
+    "cargo": "guarda civil municipal (feminino e masculino)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1G-g0to78oi5z0Y7augXsr6JfmHIoEcwO",
+    "gabaritoId": "1TQPrBL2RWSV6VZ_q_p0dV5sHXsonsSJo",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 28,
+    "codigo": "PMOL1801/001-Escriturário-I-Tarde",
+    "cargo": "escriturário i",
+    "ano": 2018,
+    "questoes": 40,
+    "provaId": "16uTKyFYtueUnvPFHSe7S4ZNdYwLxhsnf",
+    "gabaritoId": "1Ds48gPS2zXCZ5sBfSOOUdFnzZ1xaTydz",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 29,
+    "codigo": "PMOS1902/008-OficialAdministrativo-Manhã",
+    "cargo": "oficial administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1_jhnSoLgGUE0vf0NFtIy-E4jcCjt0xmH",
+    "gabaritoId": "1YDGhx1Y2rqsaFW-NUqLkNB94HlpDMj4P",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 30,
+    "codigo": "PMOS1902/007-EducadorSocial-Tarde",
+    "cargo": "educador social",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1-jw-MgsAOJl1EwyEBGd-6kiGFWnvJSWA",
+    "gabaritoId": "1IuI0B1Yiz6RKgfcAb-VnioMAnFFdQqft",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 31,
+    "codigo": "PMPR1903/001-AuxAçãoEducativa",
+    "cargo": "auxiliar de ação educativa (opção 001)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1L6SXHyVYMYy-qfYLldLxS2jT1GlQS4vA",
+    "gabaritoId": "1bBYHum3nhFhQOmwRwCtxISE_zjGvf_h1",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 32,
+    "codigo": "PPON1802/001-AgComunitárioSaúde-Tarde",
+    "cargo": "agente comunitário de saúde",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "11ReWS96DK4IvWnLoQl1dwGwr_4Q3PkFd",
+    "gabaritoId": "1oUUI55Z9H42zWUdrLTyI2FfSRI2E3BzC",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 33,
+    "codigo": "PMSJ1903/001-Professor-I",
+    "cargo": "professor i",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "15XhyKXJKgRzG8qjJyimndjeA_UIsY3oV",
+    "gabaritoId": "15F_3fsTzQ8PNiGpeiKU6I8Wh6bLoArb_",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 34,
+    "codigo": "PMSO1801/003-TécControleAdministrativo",
+    "cargo": "técnico de controle administrativo",
+    "ano": 2018,
+    "questoes": 60,
+    "provaId": "1Tqkko8TsGgeVJLtGZPGp_4B30VcYpqhq",
+    "gabaritoId": "1MAMg79utYmDet6UhSDovhOd52KpCkQVU",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 35,
+    "codigo": "PMSE1901/001-AuxTécEducação",
+    "cargo": "auxiliar técnico de educação",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1JdkXU8aqJWnRJgJD-qJKuOi7OpA0inuC",
+    "gabaritoId": "1gOaDanWquVPuyWRxDa9nK10vwGxRarOY",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 36,
+    "codigo": "PMSZ1804/012-Enfermeiro-EnfermeiroPlantonista-Manhã",
+    "cargo": "enfermeiro enfermeiro plantonista",
+    "ano": 2018,
+    "questoes": 60,
+    "provaId": "13ZnSt1syaOPh6AfwL3mifV7hvKlylx_-",
+    "gabaritoId": "1USBkV9Om7ks99Ej9vJ9R1bzB2Rll1lNE",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 37,
+    "codigo": "PVAL1801/001-AuxDesenvInfantil-Manhã",
+    "cargo": "auxiliar de desenvolvimento infantil – se",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1wvyreMtst9axz06i82RpEEgK5sTxi5x_",
+    "gabaritoId": "1JTcbORVoHjjvCJTv4qJmFtnynt0R0u2H",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 38,
+    "codigo": null,
+    "cargo": "oficial administrativo",
+    "ano": null,
+    "questoes": 60,
+    "provaId": "1ALWDN7G7ULgZcMsAgr_jrM55rY6zcLVo",
+    "gabaritoId": "1jNjtxltzfEoB87fAXZd0jYOHaITdyQJv",
+    "gabaritoIntegrado": false,
+    "situacao": "necessita_conferencia"
+  },
+  {
+    "numero": 39,
+    "codigo": "SAEP1801/001-AgenteComercial-Manhã",
+    "cargo": "agente comercial",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "10p8kac9ACq8QucWS6z9gNcht0c8xw3DN",
+    "gabaritoId": "1Rh56I-ZRJ7pAiryOU4H4vKKuo2t38q9x",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 40,
+    "codigo": "SAEP1801/003-Escriturário-Manhã",
+    "cargo": "escriturário",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1hGp186868Se1u5nCslyO7Q8usoM2teI9",
+    "gabaritoId": "13kyDzgR5Rzveqqi9c8PuhE8UJ-TKx65K",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 41,
+    "codigo": "SETP1901/001-Escriturário-Manhã",
+    "cargo": "escriturário (cód. 001)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1Q4XWDHOrTObYGzNovUaUj2czWL9hSQ1C",
+    "gabaritoId": "1u6UEm4XlmcGWKGEGgwGcTf2HNEPYO9_7",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 42,
+    "codigo": "PMGR1804/004-AtendenteSUS",
+    "cargo": "atendente sus",
+    "ano": 2018,
+    "questoes": 40,
+    "provaId": "1Zl7XzjABqWvZW22p3TOWHlf1Fo99fMo6",
+    "gabaritoId": "1etAturxxmTT0iHqXp4Rpc87voA0iUira",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 43,
+    "codigo": "TRRP1801/003-AgenteAdministrativo-Manhã",
+    "cargo": "agente administrativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1FvtydrRmvQcFt6pL33R-R_GW8aYX5wDo",
+    "gabaritoId": "1Aw8BhAzEGcgKyCSwDwr02_3n8hOonF9m",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 44,
+    "codigo": "TRRP1801/007-AssistenteSocial-Tarde",
+    "cargo": "assistente social",
+    "ano": 2018,
+    "questoes": 60,
+    "provaId": "1PNlxEFq6u3bJ5xMrHjNAi1hd9UcSfv1H",
+    "gabaritoId": "1ttkmxLvhXa5BaCpeniQRXhrmy-yccA0i",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 45,
+    "codigo": "UABC1801/001-AssistenteAdministração",
+    "cargo": "assistente em administração",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "145SpqxiBN5wxONxEiI80dPKG46Q2B8vo",
+    "gabaritoId": "1XZPgsqAOUI40x2fKrxUbVJKe7pk9C0VC",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 46,
+    "codigo": "IPAV1901/002-Escriturário-TécnicoPrevidenciário-Manhã",
+    "cargo": "escriturário técnico previdenciário",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1vYCHpLYedH8RhrTHmtXe3osTNpODmGZE",
+    "gabaritoId": "16MVPpUi-KtbyhB7RWVR05Fz39VyhyXKW",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 47,
+    "codigo": "cboi1901/001-AgenteAdministrativo-Manhã",
+    "cargo": "agente administrativo",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "18UC4Us448ViJ2It-JAiHWgkQ6JTgM2M1",
+    "gabaritoId": "1CqRbNLQciEpxE-NhzEfrzgr74hMPcfHo",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 48,
+    "codigo": "CMBP1901/002-AssistGestãoPolPúblicas-Secretária-Manhã",
+    "cargo": "assistente de gestão e políticas públicas – secretÁria",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1juPuLbtCr35193zofPlchO7oTSeELVLH",
+    "gabaritoId": "1PJcsFOadmkuICPj76HEjbx90wqdC4JHF",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 49,
+    "codigo": "CMBP1901/001-AssistGestãoPolPúblicas-GestãoAdm-Tarde",
+    "cargo": "assistente de gestão e políticas públicas – gestão administrativa",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1xqV_tXozFcV5JnX0eM_inTwAal-VU2HC",
+    "gabaritoId": "18VyRyq4NboZkoxsQLFu3GB0b0qwZ2knm",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 50,
+    "codigo": "CTAB1902/002-AuxSecretaria",
+    "cargo": "auxiliar de secretaria",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1qlKr0_EHThKAUZX5zYiGaVGgXxdYYVZU",
+    "gabaritoId": "1z6eRJSWazHTMnTcFcor2PRdNV_hKklUY",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 51,
+    "codigo": "EBSH1904/003-TécSegurançaTrabalho-Tarde",
+    "cargo": "técnico em segurança do trabalho",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1RyxCQViuixWOHQ8RT-tOqm_1vEt0keEr",
+    "gabaritoId": "1AdK4IIS6FzClgB8cEtsDwa6E9loerKLI",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 52,
+    "codigo": "EBSH1904/003-TécSegurançaTrabalho-Tarde",
+    "cargo": "técnico em segurança do trabalho",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1fO4aK9zjmEquQcGixJ2nvFghsrV1HbuP",
+    "gabaritoId": "14L_Atgt8exsQoYahK4qmu0NlzLThrGmp",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "duplicadoDe": 51,
+    "ocultar": true
+  },
+  {
+    "numero": 53,
+    "codigo": "EBSH1904/001-AssistenteAdministrativo-Tarde",
+    "cargo": "assistente administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1aJpfVYLmCGyqWmSWuu5AbxuO8Wz-6HL5",
+    "gabaritoId": "14VhxcCIzkvKk_xBOGRmU2p84qFhWj6Uf",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 54,
+    "codigo": "FITO1901/004-TécnicoGestão-Manhã",
+    "cargo": "técnico em gestão: assistência administrativa",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "13_87zhMG9l57buWnLPn_Myb6yw8abZOo",
+    "gabaritoId": "1XSF9w_B0RrIi8QV6t08TqgaL-CdOjvcl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 55,
+    "codigo": "FITO1901/001-AuxAdm-ApoioAdmReprGraf-Manhã",
+    "cargo": "auxiliar de administração: apoio administrativo auxiliar de administração: reprografia e gráfica",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1wyap4m3__UG_EO3NGH1apua0_DgV3Qz5",
+    "gabaritoId": "1ii_8sJzoJHGiYSll9INqUw4TbVSrOu1S",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 56,
+    "codigo": "PCAN1901/008-Escriturário-Manhã",
+    "cargo": "escriturário",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1BD-s2yhRhoapv9RxFuzkh6L_wuEVt2NL",
+    "gabaritoId": "1uPuN9ZP3_5XpnM2wDSifztu3HBdA9Ckg",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 57,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "provaId": "1qeAnGK4ToC1B7gyYWrfqgzb0qNPvCVHP",
+    "gabaritoId": "1T2BrMAu-717NdwhphT6LG-L82FG1asFh",
+    "gabaritoIntegrado": false,
+    "situacao": "necessita_conferencia"
+  },
+  {
+    "numero": 58,
+    "codigo": "PMMA1901/005-AgenteControleEpidemiológico",
+    "cargo": "agente de controle epidemiológico",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1NME__KtlAuZnfiwpGu1OF_45ux1swyMU",
+    "gabaritoId": "123PZRuhQo8kmhqwKJelOcstTFj-8qDKA",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 59,
+    "codigo": "PMPR2003/001-TelefonistaAuxRegMédica",
+    "cargo": "telefonista auxiliar de regulamentação médica – tarm",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1ucHGh4yLfVyujcztJEdlfQ2CII06ECrR",
+    "gabaritoId": "1GrMf0pszju-y9ZF1TXbgl0vxk5xnBOuf",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "duplicadoDe": 173,
+    "ocultar": true
+  },
+  {
+    "numero": 60,
+    "codigo": "PMSD1902/010-MonitorInclusãoDigital",
+    "cargo": "monitor de inclusão digital",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "12pky6wFTWGtNG-gac252_D7VuGPlF4kE",
+    "gabaritoId": "16Ur8h4q3c_khLiVUBJd8qDXHPpbOZeMF",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 61,
+    "codigo": "PMSD1902/001-Merendeira",
+    "cargo": "merendeira",
+    "ano": 2019,
+    "questoes": 40,
+    "provaId": "14DVhjeyffwccBTyjKPJzkDjkgsS37iFR",
+    "gabaritoId": "1NGEj4Uwu6T9YKCzOO36JXOp8bk_Fjt-j",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 62,
+    "codigo": "PMSD1902/008-AuxiliarAdministrativo-II",
+    "cargo": "auxiliar administrativo ii",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "112bLHeRDTKv6PyDslxMDBAC80egoNDdV",
+    "gabaritoId": "1eIuAPnyL-Ekq9YSsjw92mBayWgsIk9ro",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 63,
+    "codigo": "PMSD1902/006-AgDesenvolvimentoInfantil",
+    "cargo": "agente de desenvolvimento infantil",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1MzuD90_Wfx-QCjfJC7H0WZcpaL5zVCPa",
+    "gabaritoId": "1MzuD90_Wfx-QCjfJC7H0WZcpaL5zVCPa",
+    "gabaritoIntegrado": true,
+    "situacao": "validado",
+    "situacaoGabarito": "mesmo_arquivo"
+  },
+  {
+    "numero": 64,
+    "codigo": "PMSR1902/002-SecretárioEscola-Tarde",
+    "cargo": "secretário de escola",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1LkVeoX2VukUvSRWd-yW5oynqnmElP4Q8",
+    "gabaritoId": "1lNpYlHvR8VNkIfCSlCnJhSfPVVx2_FCV",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 65,
+    "codigo": "PMSR1902/001-InspetorAlunos-Manhã",
+    "cargo": "inspetor de alunos",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1NARrsp4dtAD8Arofxxe86aLwG_nFVAaS",
+    "gabaritoId": "1yAszDK5QtZ9bqFWIDKriz4TlWBCHikHc",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 66,
+    "codigo": "PMSO2001/003-SecretárioEscola",
+    "cargo": "secretário de escola",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1mv9N8IeJMzPVIOYZuz__VhgHsntOnE6G",
+    "gabaritoId": "1BayMrv88Hiy-Bn6ekDJa8mBiwi7fOLBH",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 67,
+    "codigo": "PMSO2001/003-SecretárioEscola",
+    "cargo": "secretário de escola",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1mv9N8IeJMzPVIOYZuz__VhgHsntOnE6G",
+    "gabaritoId": "1BayMrv88Hiy-Bn6ekDJa8mBiwi7fOLBH",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "ocultar": true,
+    "duplicadoDe": 66
+  },
+  {
+    "numero": 68,
+    "codigo": "PMSO2001/006-PEB-I",
+    "cargo": "professor de educação básica i",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1xRx2fXWSHtfG3r5MEhtcY0tlxGRW1tcB",
+    "gabaritoId": "1mAokxSGJOnQf4hkpPJ4bpdaJSowo6tva",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 69,
+    "codigo": "PMSO2001/001-InspetorAlunos",
+    "cargo": "inspetor de alunos",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1-z_zCRyXC5__XXEz63H0W5mtk1nOgaXv",
+    "gabaritoId": "1qxEgNY6Qj1vtglZJ6mlfnayfBSwSQmGh",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 70,
+    "codigo": "PMSO2001/002-AuxEducação",
+    "cargo": "auxiliar de educação",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1yv2w1Vz96KfGREhvuaIp5JXLBbFtForn",
+    "gabaritoId": "1_Yp9HBNKyQgUjOFutnrG4GdnkKz34TRe",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 71,
+    "codigo": "SERP1901/001-AgenteAdministrativo",
+    "cargo": "agente administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1wagZXRXwHnc5wbQICR-AEHiZ35f5LE2Y",
+    "gabaritoId": "1wagZXRXwHnc5wbQICR-AEHiZ35f5LE2Y",
+    "gabaritoIntegrado": true,
+    "situacao": "validado",
+    "situacaoGabarito": "mesmo_arquivo"
+  },
+  {
+    "numero": 72,
+    "codigo": "VALP1901/001-AgenteAdministrativo-Manhã",
+    "cargo": "agente administrativo",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1UyrqIveF8cZkEUz38MAj9T57ZHVURnOM",
+    "gabaritoId": "1KX2QMaB9pdlUFi69ddksozuizaZ2cefo",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 73,
+    "codigo": "CMPO2101/001-AgenteLegislativo",
+    "cargo": "agente legislativo",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "1orVFzCZ-_OOwdQldjrE2OBqZWJT2EmWk",
+    "gabaritoId": "1k5mhx6HAwH42bvKnqivwiiwIL7BXlrJ9",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 74,
+    "codigo": "FMEC1903/001-AgAdministrativo",
+    "cargo": "agente administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1A7FYBMM06Z_3rwuFZO1CwaDxoMv7f00i",
+    "gabaritoId": "13uo4M9wa3btcdWyI7lfALeApLjcbnNb4",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 75,
+    "codigo": "CDEN1901/008-Escriturário",
+    "cargo": "escriturário",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1sdzW82dBmu_OaOIebBMl3qEf2lp_Bp25",
+    "gabaritoId": "111wkqwY2C5q4hmNRGPfXNh7UHggr8Vxp",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 76,
+    "codigo": "PBSA2101/002-AuxiliarAdministrativo",
+    "cargo": "auxiliar administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "1YZs-snxoiwrzLTHka90Z-Y4KOjwv2toD",
+    "gabaritoId": "1SThlt34xG3S4SzMaAQg35EwF-zVLfsCv",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 77,
+    "codigo": "PMGR2004/001-Condutor(a)VeículosUrgência",
+    "cargo": "condutor(a) de veículos de urgência",
+    "ano": 2020,
+    "questoes": 40,
+    "provaId": "1gGQ7YK-r6Da11PWXE6JPzxqlBmtQHyEy",
+    "gabaritoId": "11g43nZbSmiTaFgIgzZCsThFRmCdZAEJ6",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 78,
+    "codigo": "pjag1901/015-GuardaMunicipal-3ªClasse",
+    "cargo": "guarda municipal – 3a classe (feminino) guarda municipal – 3a classe (masculino)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1oyb2pE9qj76CAdCeCyzYz2P4Y9j4ISig",
+    "gabaritoId": "1SmaOX245JCPjXDe6FqHuqmJUsjC6j04o",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 79,
+    "codigo": "pjag1901/041-Fiscal",
+    "cargo": "fiscal",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1Msocf21lZs7IeUGT2Xag18t2dPnfvQ2F",
+    "gabaritoId": "1TB8xdN5uk2G0NOKA_03BLSKwN_4xhKGN",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 80,
+    "codigo": "pjag1901/041-Fiscal",
+    "cargo": "fiscal",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1jIGJgBjwPbCAdwyHwGmNYxgNobYHCtjc",
+    "gabaritoId": "1URLAMfyWZpxNdw1k-1FT83yLV1rORT5-",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "ocultar": true,
+    "duplicadoDe": 79
+  },
+  {
+    "numero": 81,
+    "codigo": "PMJU1904/001-EducadorEsportivo",
+    "cargo": "educador esportivo",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1i-qZJ5VbH1fkaxX35x0O4_CQN1pciyX2",
+    "gabaritoId": "12gxGAW1a68AxUtePj6QX3zDqsInh8G86",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 82,
+    "codigo": "PMJU1901/001-AgenteTrânsito",
+    "cargo": "agente de trânsito",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1qtYRbQZgRdH-Zqp76FI4U41Cr-tD9P7c",
+    "gabaritoId": "1PK3JKFkklzYoLoqJOUY3l7jhM5_vLpjc",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 83,
+    "codigo": "PRMA2001/001-AgenteControleEndemias",
+    "cargo": "agente de controle de endemias",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1kZ4M9HGXZlQAjCe4zsAHrNaqcUBvNMkE",
+    "gabaritoId": "1iKCyLD2nlwnaqrDR20kJp3dnbsTL_6qb",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 84,
+    "codigo": "PRMA2004/001-AtendenteEscola-Merendeiro",
+    "cargo": "atendente de escola – merendeiro",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1CtPpZSiOVIiL2cpfEGNVqoMdcDopNQ4r",
+    "gabaritoId": "12Px2tAOrIQatCQqyK0FqdoGDtTdKAf9A",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 85,
+    "codigo": "PRMA2004/002-AuxiliarDesenvolvimentoEscolar",
+    "cargo": "auxiliar de desenvolvimento escolar",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "13_t1CxD2J_o8kHeE-DCWMD4QTDKC33BG",
+    "gabaritoId": "1AhnanwXH7okrzbrZzNfnIz2JZTXWazlq",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 86,
+    "codigo": "PRMA2005/003-AuxiliarEscrita",
+    "cargo": "auxiliar de escrita",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1HcqmAxmWGyWHFErx4cbjDrDti0dJRaUR",
+    "gabaritoId": "17HR-jSglrn4O5sHLVGPS5Jvgw_1uB5ye",
+    "gabaritoIntegrado": false,
+    "situacao": "necessita_conferencia"
+  },
+  {
+    "numero": 87,
+    "codigo": "prma2006/002-SupervisorSaúde",
+    "cargo": "supervisor de saúde",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1_gSvE3rv864PaAnqqgQK5te2ymfqnWZi",
+    "gabaritoId": "17790lSZ8rfEXIPHhySlY0veY8r20h1yC",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 88,
+    "codigo": "PMMC1901/002-AuxServGerais",
+    "cargo": "auxiliar de serviços gerais",
+    "ano": 2019,
+    "questoes": 40,
+    "provaId": "1EHBU-2Q9xQoiyu5YqpGCkeqD_nQG9w9r",
+    "gabaritoId": "176vGKq6rArqnLyp4Bpb8VxnLgkoErHrp",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 89,
+    "codigo": "PMMC1901/004-AuxiliarDesenvolvimentoInfantil",
+    "cargo": "auxiliar de desenvolvimento infantil",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1UOP_BNNpgd066oIVgHq1zX11nyZ1j8jJ",
+    "gabaritoId": "1faefZCR92aqdd5MvzaB76QZfLSjkjzZL",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 90,
+    "codigo": "PMOS2102/001-AgCombateEndemias",
+    "cargo": "agente de combate às endemias (ACE)",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "1MJBVgW0l6JQnwucfzDVa1cBsnWZg00HW",
+    "gabaritoId": "1FFax1bqnChhbwF_J5c6B7AVSe5tGE-ut",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 91,
+    "codigo": "PMOS2002/001-CondutorVeículoUrgência-SAMU",
+    "cargo": "condutor de veículo de urgência – samu",
+    "ano": 2020,
+    "questoes": 30,
+    "provaId": "1ttEOBeTydN_cL-vMVOHDM25vsSM3P7Sy",
+    "gabaritoId": "1Wt8HgzHpkCwO3-NPbhFLvSHRajkmG_O3",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 92,
+    "codigo": "PMOS2105/005-OficialEscola",
+    "cargo": "oficial de escola",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "10LIJL9o8BL90kr7uZiIjOtbUFUdc8Kzh",
+    "gabaritoId": "1ULBAVeWrHhTfzf7JyohIwngUC9urWkSe",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 93,
+    "codigo": "PMRI2103/001-AgenteAdministração",
+    "cargo": "agente de administração",
+    "ano": 2021,
+    "questoes": 50,
+    "provaId": "1YQVN_3QNTRac6c-GDXB23z6j6GLakbym",
+    "gabaritoId": "1SfzJ-z9pMx4-YxW-2LmO06n5XTeBIw9r",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 94,
+    "codigo": "PMRI2102/001-AgenteFiscalização",
+    "cargo": "agente de fiscalização",
+    "ano": 2021,
+    "questoes": 50,
+    "provaId": "1lsPwdanPvw8dge9-BC9GlEiZWlzVBEH7",
+    "gabaritoId": "15pPhlveKyp5ef_MSs6gtc6LQ_sM0WHxt",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 95,
+    "codigo": "PMRI1903/006-EspCiênciasAmbientais",
+    "cargo": "especialista em ciências ambientais",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1B2g145zBvfcSyvVYbicZapZg2Tg5a_gu",
+    "gabaritoId": "19A8evaWCx7ZuFcAbWPBo9gtpKYs3zVxB",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 96,
+    "codigo": "PVPA1902/008-AgGestão-AssistenteAdministrativo",
+    "cargo": "agente de gestão – assistente administrativo (opção: 017)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1Bx_Krv_TYMN9NLz0OFmHzPLF-HhG3nv0",
+    "gabaritoId": "1jxOmzUqoxGjIrwUkVf3xznRMoMHEqndk",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 97,
+    "codigo": "sgua2101/006-AssistServAdministrativos",
+    "cargo": "ASSISTENTE DE SERVIÇOS ADMINISTRATIVOS",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "1fxN3GNVE6TAVgpQYSc11Wf3jKqxkp9jA",
+    "gabaritoId": "1YdocqW17fjCe6n5x10ltXxJ1qRD9DTku",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 98,
+    "codigo": "SAEP1901/021-ProgramadorJúnior",
+    "cargo": "programador júnior",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1cBFafos2M_4YfkIHi2FKJV5zXu3PXnBY",
+    "gabaritoId": "1KTJRNNykns1U_hS3WFeVgOUTEjsAGFy-",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 99,
+    "codigo": "SAEP1901/006-AssessorAdm-EncServiço",
+    "cargo": "assessor administrativo encarregado de serviço",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1eOCZa32rI_uuySW7CEbFDnF5I93JP6GS",
+    "gabaritoId": "1qsycRhqPKJ9xpoK4vX_RyZ6hmd682jnE",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 100,
+    "codigo": "TJSP2101/001-EscreventeTécnicoJudiciário",
+    "cargo": "escrevente técnico judiciário",
+    "ano": 2021,
+    "questoes": 100,
+    "provaId": "1ZXlbmESPg07W8pbTzdiFxEhap4cm2o-x",
+    "gabaritoId": "17jLXfPtpar9TEuchjXMbHssG4WMBaPcE",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 101,
+    "codigo": "TJME1901/001-TécComProcDadosJud-Desenvolvedor",
+    "cargo": "técnico em comunicação e processamento de dados judiciário (desenvolvedor)",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "16vwOE8aEfmzZgzZ9epy_S5AfkF955t46",
+    "gabaritoId": "1AY9sKrZuIKotT21eIsm37h76eshXkX0A",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 102,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "provaId": "1QVrCF_K9dvMgr_sCFls-2xHh3eP00m5C",
+    "gabaritoId": "1_iWUIeicFIWJeWn3wJPo_dWiLeWfmkAw",
+    "gabaritoIntegrado": false,
+    "situacao": "arquivo_incorreto",
+    "ocultar": true
+  },
+  {
+    "numero": 103,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "provaId": "1R4j1TJ2SdG8N13W8HPIE8DuSL58KQuv7",
+    "gabaritoId": "1TqFuddk6aPrMISsi5yenrgTaqk2eCvA1",
+    "gabaritoIntegrado": false,
+    "situacao": "necessita_conferencia",
+    "ocultar": true
+  },
+  {
+    "numero": 104,
+    "codigo": "USJC2101/001-AssistAdm-II-TécAdmSubst 2 Confidencial até o momento da aplicação.",
+    "cargo": null,
+    "ano": 2021,
+    "questoes": null,
+    "provaId": "1EvqvoJ-3zJBwDiKGRfGhEwLhpILtZlRS",
+    "gabaritoId": "1Y3xH5LXN-O14CyLYtoJtDi74dzruMU4m",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 105,
+    "codigo": "UNMA2101/001-AssistAdm-II-TécAdmSubst Confidencial até o momento da aplicação.Confidencial até o momento da aplicação. 3 UNMA2101/001-AssistAdm-II-TécAdmSubst",
+    "cargo": null,
+    "ano": 2021,
+    "questoes": null,
+    "provaId": "1O47Pm9E5ldP1f7cxjI8MyjnHmTqNnfGK",
+    "gabaritoId": "1JgtXa_EMqmyxwtTzhcBzGYspNDrPPqEl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 106,
+    "codigo": "PMBR1601/006-AgenteAdministrativo-Tarde",
+    "cargo": "Agente Administrativo",
+    "ano": 2016,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 107,
+    "codigo": null,
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2006,
+    "questoes": 70,
+    "situacao": "validado"
+  },
+  {
+    "numero": 108,
+    "codigo": null,
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2007,
+    "questoes": 80,
+    "situacao": "validado"
+  },
+  {
+    "numero": 109,
+    "codigo": null,
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2010,
+    "questoes": 80,
+    "situacao": "validado"
+  },
+  {
+    "numero": 110,
+    "codigo": null,
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2011,
+    "questoes": 80,
+    "situacao": "validado"
+  },
+  {
+    "numero": 111,
+    "codigo": "TJSP1204/001-EscreventeTécnicoJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2012,
+    "questoes": 80,
+    "situacao": "validado"
+  },
+  {
+    "numero": 112,
+    "codigo": "TJSP1206/001-EscrTécJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2012,
+    "questoes": 80,
+    "situacao": "validado"
+  },
+  {
+    "numero": 113,
+    "codigo": "TJSP1402/001-EscreventeTécnicoJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2014,
+    "questoes": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 114,
+    "codigo": "TJSP1503/001-EscreventeTécnicoJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2015,
+    "questoes": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 115,
+    "codigo": "TJSP1701/001-EscreventeTécnicoJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2017,
+    "questoes": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 116,
+    "codigo": "TJSP1704/001-EscreventeTécJudiciário",
+    "cargo": "Escrevente Técnico Judiciário - Interior",
+    "ano": 2017,
+    "questoes": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 117,
+    "codigo": "UNSV2001/001-ASA-I-Biblioteca",
+    "cargo": "Assistente de Suporte Acadêmico I - Biblioteca",
+    "ano": 2020,
+    "questoes": 40,
+    "situacaoGabarito": "suspeito_copia_prova",
+    "situacao": "validado"
+  },
+  {
+    "numero": 118,
+    "codigo": "CMMI1901/001-AnLegislativo",
+    "cargo": "Analista Legislativo",
+    "ano": 2019,
+    "questoes": 60,
+    "situacaoGabarito": "mesmo_arquivo",
+    "situacao": "validado"
+  },
+  {
+    "numero": 119,
+    "codigo": "CMMI1901/002-Jornalista",
+    "cargo": "Jornalista",
+    "ano": 2019,
+    "questoes": 60,
+    "situacaoGabarito": "mesmo_arquivo",
+    "situacao": "validado"
+  },
+  {
+    "numero": 120,
+    "codigo": "CMPO2101/001-AgenteLegislativo",
+    "cargo": "Agente Legislativo",
+    "ano": 2021,
+    "questoes": 40,
+    "situacaoGabarito": "mesmo_arquivo",
+    "ocultar": true,
+    "duplicadoDe": 73,
+    "situacao": "validado"
+  },
+  {
+    "numero": 121,
+    "codigo": "CMPO2101/003-DiretorGeral",
+    "cargo": "Diretor Geral",
+    "ano": 2021,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 122,
+    "codigo": "CSJC2101/001-TécnicoLegislativo",
+    "cargo": "Técnico Legislativo",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 123,
+    "codigo": "CMSZ1901/005-Telefonista",
+    "cargo": "Telefonista",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 124,
+    "codigo": "CDEN1901/014-Advogado",
+    "cargo": "Advogado",
+    "ano": 2019,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 125,
+    "codigo": "CDEN1901/016-Contador",
+    "cargo": "Contador",
+    "ano": 2019,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 126,
+    "codigo": "CDEN1901/008-Escriturário",
+    "cargo": "Escriturário",
+    "ano": 2019,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 75,
+    "situacao": "validado"
+  },
+  {
+    "numero": 127,
+    "codigo": "CDEN1901/003-Motorista-VeículosPesados",
+    "cargo": "Motorista - Veículos Pesados",
+    "ano": 2019,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 128,
+    "codigo": "PBSA2101/002-AuxiliarAdministrativo",
+    "cargo": "Auxiliar Administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 76,
+    "situacao": "validado"
+  },
+  {
+    "numero": 129,
+    "codigo": "PAGM1902/014-ProfEnsinoFundamental-I",
+    "cargo": "Professor de Ensino Fundamental I",
+    "ano": 2019,
+    "questoes": 35,
+    "situacao": "validado"
+  },
+  {
+    "numero": 130,
+    "codigo": "PAGM1902/013-ProfEducInfantil",
+    "cargo": "Professor de Educação Infantil",
+    "ano": 2019,
+    "questoes": 35,
+    "situacao": "validado"
+  },
+  {
+    "numero": 131,
+    "codigo": "PMJU2105/001-AssistenteAdministrativo",
+    "cargo": "Assistente Administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 132,
+    "codigo": "PMJU2104/001-DiretorEscola",
+    "cargo": "Diretor de Escola",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 133,
+    "codigo": "PMJU2103/006-TerapeutaOcupacional",
+    "cargo": "Terapeuta Ocupacional",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 134,
+    "codigo": "PMPP2101/017-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 135,
+    "codigo": "PMPP2101/009-SecretárioEscola",
+    "cargo": "Secretário de Escola",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 136,
+    "codigo": "PMGR2101/001-GuardaCivilMunicipal",
+    "cargo": "Guarda Civil Municipal",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 137,
+    "codigo": "PMJU2105/001-AssistenteAdministrativo",
+    "cargo": "Assistente Administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 131,
+    "situacao": "validado"
+  },
+  {
+    "numero": 138,
+    "codigo": "PMJU2104/001-DiretorEscola",
+    "cargo": "Diretor de Escola",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 132,
+    "situacao": "validado"
+  },
+  {
+    "numero": 139,
+    "codigo": "PMJU2103/006-TerapeutaOcupacional",
+    "cargo": "Terapeuta Ocupacional",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 133,
+    "situacao": "validado"
+  },
+  {
+    "numero": 140,
+    "codigo": "PRMA2004/001-AtendenteEscola-Merendeiro",
+    "cargo": "Atendente de Escola - Merendeiro",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 84,
+    "situacao": "validado"
+  },
+  {
+    "numero": 141,
+    "codigo": "PRMA2004/002-AuxiliarDesenvolvimentoEscolar",
+    "cargo": "Auxiliar de Desenvolvimento Escolar",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 85,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 142,
+    "codigo": "PRMA2005/003-AuxiliarEscrita",
+    "cargo": "Auxiliar de Escrita",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 86,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 143,
+    "codigo": "PRMA2004/003-DiretorEscolaMunicipal",
+    "cargo": "Diretor de Escola Municipal",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 144,
+    "codigo": "PRMA2006/005-Enfermeiro",
+    "cargo": "Enfermeiro",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 145,
+    "codigo": "PRMA2005/004-InstrutorTreinamentoInfor",
+    "cargo": "Instrutor de Treinamento em Informática",
+    "ano": 2021,
+    "questoes": 50,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 146,
+    "codigo": "PRMA2005/001-Motorista",
+    "cargo": "Motorista",
+    "ano": 2021,
+    "questoes": 40,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 147,
+    "codigo": "PRMA2004/005-ProfessorEMEF",
+    "cargo": "Professor de EMEF",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 148,
+    "codigo": "PRMA2004/006-ProfEMEI",
+    "cargo": "Professor de EMEI",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 149,
+    "codigo": "PRMA2002/001-AgComunitárioSaúde",
+    "cargo": "Agente Comunitário de Saúde",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 150,
+    "codigo": "PRMA2001/001-AgenteControleEndemias",
+    "cargo": "Agente de Controle de Endemias",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 83,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 151,
+    "codigo": "PRMA2005/002-Telefonista",
+    "cargo": "Telefonista",
+    "ano": 2021,
+    "questoes": 40,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 152,
+    "codigo": "PMMC1901/009-AgenteVistor",
+    "cargo": "Agente Vistor",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 153,
+    "codigo": "PMMC1901/004-AuxiliarDesenvolvimentoInfantil",
+    "cargo": "Auxiliar de Desenvolvimento Infantil",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 89,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 154,
+    "codigo": "PMMC1901/011-EngenheiroCivil",
+    "cargo": "Engenheiro Civil",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 155,
+    "codigo": "PMMC1901/015-Jornalista",
+    "cargo": "Jornalista",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 156,
+    "codigo": "PMMC1901/020-Pedagogo",
+    "cargo": "Pedagogo",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 157,
+    "codigo": "PMMC1903/001-PEB-I",
+    "cargo": "Professor de Educação Básica I",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 158,
+    "codigo": "PMMC1901/021-ProfEducFísica-20horas-40horas",
+    "cargo": "Professor de Educação Física",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 159,
+    "codigo": "PMMC1901/024-Publicitário",
+    "cargo": "Publicitário",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 160,
+    "codigo": "PMMC1901/008-AgenteTributosImobiliários",
+    "cargo": "Agente de Tributos Imobiliários",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 161,
+    "codigo": "PMMC1901/008-AgenteTributosImobiliários",
+    "cargo": "Agente de Tributos Imobiliários",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 160,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 162,
+    "codigo": "PMMC1903/002-DiretorEscMunicipal",
+    "cargo": "Diretor de Escola Municipal",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 163,
+    "codigo": "PMMC1901/012-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 164,
+    "codigo": "PMMC1901/013-FiscalRendas",
+    "cargo": "Fiscal de Rendas",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 165,
+    "codigo": "PMMC1903/005-PEB-II-EducaçãoFísica",
+    "cargo": "Professor de Educação Básica II - Educação Física",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 166,
+    "codigo": "PMMC1903/006-PEB-II-Geografia",
+    "cargo": "Professor de Educação Básica II - Geografia",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 167,
+    "codigo": "PMMC1903/007-PEB-II-História",
+    "cargo": "Professor de Educação Básica II - História",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 168,
+    "codigo": "PMMC1903/009-PEB-II-LínguaPortuguesa",
+    "cargo": "Professor de Educação Básica II - Língua Portuguesa",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 169,
+    "codigo": "PMMC1901/006-Projetista",
+    "cargo": "Projetista",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 170,
+    "codigo": "PMOS2102/001-AgCombateEndemias",
+    "cargo": "Agente de Combate às Endemias",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 90,
+    "situacao": "validado"
+  },
+  {
+    "numero": 171,
+    "codigo": "PMOS2105/005-OficialEscola",
+    "cargo": "Oficial de Escola",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 92,
+    "situacao": "validado"
+  },
+  {
+    "numero": 172,
+    "codigo": "PMPR1907/002-ProfessorSusbtitutoEnsinoFundamental",
+    "cargo": "Professor Substituto de Ensino Fundamental",
+    "ano": 2020,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 173,
+    "codigo": "PMPR2003/001-TelefonistaAuxRegMédica",
+    "cargo": "Telefonista Auxiliar de Regulação Médica - TARM",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 174,
+    "codigo": "PMPP2101/012-AssistenteSocial",
+    "cargo": "Assistente Social",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 175,
+    "codigo": "PMPP2102/007-DiretorEscola",
+    "cargo": "Diretor de Escola",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 176,
+    "codigo": "PMPP2101/016-EngenheiroCivil",
+    "cargo": "Engenheiro Civil",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 177,
+    "codigo": "PMPP2101/008-Escriturário-I",
+    "cargo": "Escriturário I",
+    "ano": 2022,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 178,
+    "codigo": "PMPP2101/017-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2022,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 134,
+    "situacao": "validado"
+  },
+  {
+    "numero": 179,
+    "codigo": "PMPP2101/002-InspetorAlunos",
+    "cargo": "Inspetor de Alunos",
+    "ano": 2022,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 180,
+    "codigo": "PMPP2101/028-MédicoVeterinário",
+    "cargo": "Médico Veterinário",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 181,
+    "codigo": "PMPP2101/030-Psicólogo",
+    "cargo": "Psicólogo",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 182,
+    "codigo": "PMPP2101/009-SecretárioEscola",
+    "cargo": "Secretário de Escola",
+    "ano": 2022,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 135,
+    "situacao": "validado"
+  },
+  {
+    "numero": 183,
+    "codigo": "PMPP2101/001-ServGerais-VigiaNoturno",
+    "cargo": "Serviços Gerais / Vigia Noturno",
+    "ano": 2022,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 184,
+    "codigo": "PMRI2103/001-AgenteAdministração",
+    "cargo": "Agente de Administração",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 93,
+    "situacao": "validado"
+  },
+  {
+    "numero": 185,
+    "codigo": "PMRI2102/001-AgenteFiscalização",
+    "cargo": "Agente de Fiscalização",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 94,
+    "situacao": "validado"
+  },
+  {
+    "numero": 186,
+    "codigo": "PMRI1903/001-AuxiliarFarmacêutico",
+    "cargo": "Auxiliar de Farmacêutico",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 187,
+    "codigo": "PMRI1903/005-EngSegurançaTrabalho",
+    "cargo": "Engenheiro de Segurança do Trabalho",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 188,
+    "codigo": "PMSA1901/001-Procurador",
+    "cargo": "Procurador",
+    "ano": 2021,
+    "questoes": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 189,
+    "codigo": "PMRP2101/001-PEB-I",
+    "cargo": "Professor de Educação Básica I",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 190,
+    "codigo": "PMRP2102/006-PEB-II-Inglês",
+    "cargo": "Professor de Educação Básica II - Inglês",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 191,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "situacao": "necessita_conferencia",
+    "ocultar": true
+  },
+  {
+    "numero": 192,
+    "codigo": "PMSO2001/001-InspetorAlunos",
+    "cargo": "Inspetor de Alunos",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 69,
+    "situacao": "validado"
+  },
+  {
+    "numero": 193,
+    "codigo": "PMSO2001/006-PEB-I",
+    "cargo": "Professor de Educação Básica I",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 68,
+    "situacao": "validado"
+  },
+  {
+    "numero": 194,
+    "codigo": "PMSO2001/009-PEB-II-EducaçãoFísica",
+    "cargo": "Professor de Educação Básica II - Educação Física",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 195,
+    "codigo": "PMSO2001/003-SecretárioEscola",
+    "cargo": "Secretário de Escola",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 66,
+    "situacao": "validado"
+  },
+  {
+    "numero": 196,
+    "codigo": "PMSO2001/015-SupervisorEnsino",
+    "cargo": "Supervisor de Ensino",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 197,
+    "codigo": "PMSO2001/016-Vice-DiretorEscola",
+    "cargo": "Vice-Diretor de Escola",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 198,
+    "codigo": "PTAU2103/004-Escriturário",
+    "cargo": "Escriturário",
+    "ano": 2022,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 199,
+    "codigo": "PTAU2101/001-ProfEdInfantil",
+    "cargo": "Professor de Educação Infantil",
+    "ano": 2021,
+    "questoes": 50,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 200,
+    "codigo": "PTAU2101/002-Professor-I",
+    "cargo": "Professor I",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 201,
+    "codigo": "PTAU2103/009-Recepcionista",
+    "cargo": "Recepcionista",
+    "ano": 2022,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 202,
+    "codigo": "PVPA1905/002-AssistenteSocial",
+    "cargo": "Assistente Social",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 203,
+    "codigo": "PVPA1905/012-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 204,
+    "codigo": "PVPA1902/008-AgGestão-AssistenteAdministrativo",
+    "cargo": "Agente de Gestão - Assistente Administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 96,
+    "situacao": "validado"
+  },
+  {
+    "numero": 205,
+    "codigo": "PVPA1902/036-EngenheiroSegTrabalho",
+    "cargo": "Engenheiro de Segurança do Trabalho",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 206,
+    "codigo": "PVPA1906/001-ProcuradorMunicipal",
+    "cargo": "Procurador Municipal",
+    "ano": 2019,
+    "questoes": 60,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 207,
+    "codigo": "PVPA1905/043-PEB-EdInfantil",
+    "cargo": "Professor de Educação Básica - Educação Infantil",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 208,
+    "codigo": "SGUA2101/001-AgSaneamento-AuxEstTratÁgua",
+    "cargo": "Agente de Saneamento - Auxiliar de Estação de Tratamento de Água",
+    "ano": 2021,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 209,
+    "codigo": "SGUA2101/014-AnalistaCompras",
+    "cargo": "Analista de Compras",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 210,
+    "codigo": "SGUA2101/006-AssistServAdministrativos",
+    "cargo": "Assistente de Serviços Administrativos",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 97,
+    "situacao": "validado"
+  },
+  {
+    "numero": 211,
+    "codigo": "SGUA2101/007-Atendente",
+    "cargo": "Atendente",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 212,
+    "codigo": "SAEP1901/006-AssessorAdm-EncServiço",
+    "cargo": "Assessor Administrativo / Encarregado de Serviço",
+    "ano": 2019,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 99,
+    "situacao": "validado"
+  },
+  {
+    "numero": 213,
+    "codigo": "SAEP1901/002-EletricistaManutenção",
+    "cargo": "Eletricista de Manutenção",
+    "ano": 2019,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 214,
+    "codigo": "SAEP1901/021-ProgramadorJúnior",
+    "cargo": "Programador Júnior",
+    "ano": 2019,
+    "questoes": 60,
+    "ocultar": true,
+    "duplicadoDe": 98,
+    "situacao": "validado"
+  },
+  {
+    "numero": 215,
+    "codigo": "TJSP2101/001-EscreventeTécnicoJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2021,
+    "questoes": 100,
+    "ocultar": true,
+    "duplicadoDe": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 216,
+    "codigo": "TJSP2103/001-AssistSocialJudiciário",
+    "cargo": "Assistente Social Judiciário",
+    "ano": 2022,
+    "questoes": 70,
+    "situacao": "validado"
+  },
+  {
+    "numero": 217,
+    "codigo": "TJSP2104/001-PsicólogoJudiciário",
+    "cargo": "Psicólogo Judiciário",
+    "ano": 2022,
+    "questoes": 70,
+    "situacao": "validado"
+  },
+  {
+    "numero": 218,
+    "codigo": "UNAV2103/001-AgVigilânciaRecepção",
+    "cargo": "Agente de Vigilância e Recepção",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 219,
+    "codigo": "UAIQ2101/001-AnalistaInformática-II",
+    "cargo": "Analista de Informática II - Redes e Infraestrutura",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 220,
+    "codigo": "UACF2101/001-AssitAdmistrativo-II-ÁreaAcadêmica",
+    "cargo": "Assistente Administrativo II - Área Acadêmica",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 221,
+    "codigo": "UNBO2101/001-AssistenteAdministrativo-I",
+    "cargo": "Assistente Administrativo I - Técnico Administrativo Substituto",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "arquivo_incorreto",
+    "ocultar": true
+  },
+  {
+    "numero": 222,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "situacao": "necessita_conferencia",
+    "ocultar": true
+  },
+  {
+    "numero": 223,
+    "codigo": "UNBO2103/001-ASA-I-TécAdmSubstituto",
+    "cargo": "Assistente de Suporte Acadêmico I",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 224,
+    "codigo": "UNFR2001/001-ASA-I-Biblioteca",
+    "cargo": "Assistente de Suporte Acadêmico I - Biblioteca",
+    "ano": 2020,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 225,
+    "codigo": "FEIS2102/002-ASA-I-Biblioteca",
+    "cargo": "Assistente de Suporte Acadêmico I - Biblioteca",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 226,
+    "codigo": "FEIS2101/001-AssisOperacional-I",
+    "cargo": "Assistente Operacional I - Atividades Auxiliares",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 227,
+    "codigo": "UNSV2001/001-ASA-I-Biblioteca",
+    "cargo": "Assistente de Suporte Acadêmico I - Biblioteca",
+    "ano": 2020,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 117,
+    "situacao": "validado"
+  },
+  {
+    "numero": 228,
+    "codigo": "UNMA2101/001-AssistAdm-II-TécAdmSubst",
+    "cargo": "Assistente Administrativo II - Técnico Administrativo Substituto",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 105,
+    "situacao": "validado"
+  },
+  {
+    "numero": 229,
+    "codigo": "IBLC2102/001-AssistAdm-II-Acadêmica",
+    "cargo": "Assistente Administrativo II - Área Acadêmica",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 230,
+    "codigo": "USJC2101/001-AssistAdm-II-TécAdmSubst",
+    "cargo": "Assistente Administrativo II - Técnico Administrativo Substituto",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 104,
+    "situacao": "validado"
+  },
+  {
+    "numero": 231,
+    "codigo": "USJC2102/001-AssistenteAdministrativo-II",
+    "cargo": "Assistente Administrativo II",
+    "ano": 2021,
+    "questoes": 40,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 232,
+    "codigo": "UNSP2101/001-AgVigilânciaRecepção",
+    "cargo": "Agente de Vigilância e Recepção",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 233,
+    "codigo": "UCAP1901/004-Enfermeiro",
+    "cargo": "Enfermeiro",
+    "ano": 2020,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 234,
+    "codigo": "UCAP1901/003-TécnicoEnfermagem",
+    "cargo": "Técnico de Enfermagem",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 235,
+    "codigo": "UCAP1902/005-Eng-EngenheiroCivil",
+    "cargo": "Engenheiro / Engenheiro Civil",
+    "ano": 2022,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 236,
+    "codigo": "CALT1701/001-AssTécLegislativo-Manhã",
+    "cargo": "Assistente Técnico Legislativo",
+    "ano": 2017,
+    "questoes": 50,
+    "situacaoGabarito": "separado_validado",
+    "situacao": "validado"
+  }
+]

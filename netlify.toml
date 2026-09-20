@@ -10,6 +10,16 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
+  from = "/provas/:slug"
+  to = "/.netlify/functions/prova?slug=:slug"
+  status = 200
+
+[[redirects]]
+  from = "/provas/:slug/"
+  to = "/.netlify/functions/prova?slug=:slug"
+  status = 200
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200

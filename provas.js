@@ -9,6 +9,9 @@ function preencher(id, valores) {
 
 function drivePreview(id) { return id ? `https://drive.google.com/file/d/${id}/preview` : null; }
 function driveView(id) { return id ? `https://drive.google.com/file/d/${id}/view` : null; }
+function slugify(v = "") { return String(v).normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 120); }
+const ORG_SLUG = {"MPSP":"ministerio-publico-sp","PMRU":"prefeitura-aruja","PMGR":"prefeitura-guarulhos","PMOS":"prefeitura-osasco","PMPR":"prefeitura-piracicaba","PPON":"prefeitura-pontal","PMSO":"prefeitura-sorocaba","PMSE":"prefeitura-sao-paulo","PMSZ":"prefeitura-suzano","PMJU":"prefeitura-jundiai","PRMA":"prefeitura-marilia","PMMC":"prefeitura-mogi-das-cruzes","PMRI":"prefeitura-ribeirao-preto","PVPA":"prefeitura-varzea-paulista","PMPP":"prefeitura-presidente-prudente","PMSA":"prefeitura-santo-andre","PMRP":"prefeitura-sao-jose-do-rio-preto","PTAU":"prefeitura-taubate","PJAG":"prefeitura-jaguariuna","SGUA":"saeg-guaratingueta","TJSP":"tjsp","TJME":"tjm-sp","UABC":"ufabc","CMMI":"camara-mogi-mirim","CMPO":"camara-potim","CALT":"camara-altinopolis","UNAV":"unesp-aracatuba","UAIQ":"unesp-araraquara","UACF":"unesp-araraquara","UNBO":"unesp-botucatu","UNFR":"unesp-franca","FEIS":"unesp-ilha-solteira","UNSV":"unesp-litoral-paulista","UNMA":"unesp-marilia","IBLC":"unesp-sao-jose-do-rio-preto","USJC":"unesp-sao-jose-dos-campos","UNSP":"unesp-sao-paulo"};
+function provaSlug(meta = {}) { const p = String(meta.codigo || "").split("/")[0].toUpperCase(); return slugify(`vunesp-${ORG_SLUG[p] || "concurso"}-${meta.cargo || "prova"}-${meta.ano || "ano"}-${String(meta.numero || 0).padStart(3, "0")}`); }
 
 function orgaoPorCodigo(codigo = "") {
   const p = String(codigo).split("/")[0].toUpperCase();
@@ -87,7 +90,8 @@ function normalizarItemDrive(item, meta = {}) {
     situacao: meta.situacao || "validado",
     situacaoGabarito: meta.situacaoGabarito || (arquivoUnico ? "integrado" : "separado"),
     ocultar: Boolean(meta.ocultar),
-    duplicadoDe: meta.duplicadoDe || null
+    duplicadoDe: meta.duplicadoDe || null,
+    detalheUrl: `/provas/${provaSlug(meta)}`
   };
 }
 
@@ -108,6 +112,7 @@ function render() {
   $("#provas-lista").innerHTML = lista.map((p) => {
     const vunesp = normalizar(p.banca).includes("vunesp");
     const contexto = `${p.orgao} — ${p.cargo} — ${p.ano}`;
+    const botaoDetalhe = p.detalheUrl ? `<a class="details" href="${p.detalheUrl}">Ver página da prova</a>` : "";
     const botaoProva = p.provaUrl
       ? `<a class="details" data-lead-context="Prova anterior — ${contexto}" href="${p.provaUrl}" target="_blank" rel="noopener">${p.arquivoUnico ? "Abrir prova + gabarito" : "Abrir prova"}</a>`
       : '<span class="disabled-action">Prova indisponível</span>';
@@ -124,7 +129,7 @@ function render() {
       <p class="card-title">${p.cargo}${p.ano ? ` · ${p.ano}` : ""}</p>
       <div class="meta"><span>📍 ${p.estado || "Não informado"}</span><span>🎓 ${p.escolaridade || "Não informado"}</span>${p.questoes ? `<span>🧾 ${p.questoes} questões</span>` : ""}${codigo}</div>
       <div class="verification">Fonte: ${p.fonte || p.banca}</div>
-      <div class="card-bottom"><div class="card-actions">${botaoProva}${botaoGabarito}${botaoFonte}</div></div>
+      <div class="card-bottom"><div class="card-actions">${botaoDetalhe}${botaoProva}${botaoGabarito}${botaoFonte}</div></div>
     </article>`;
   }).join("");
   $("#provas-vazio").hidden = lista.length > 0;
