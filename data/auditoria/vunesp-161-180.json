@@ -1,0 +1,179 @@
+[
+  {
+    "numero": 161,
+    "codigo": "PMMC1901/008-AgenteTributosImobiliários",
+    "cargo": "Agente de Tributos Imobiliários",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 160,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 162,
+    "codigo": "PMMC1903/002-DiretorEscMunicipal",
+    "cargo": "Diretor de Escola Municipal",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 163,
+    "codigo": "PMMC1901/012-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 164,
+    "codigo": "PMMC1901/013-FiscalRendas",
+    "cargo": "Fiscal de Rendas",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 165,
+    "codigo": "PMMC1903/005-PEB-II-EducaçãoFísica",
+    "cargo": "Professor de Educação Básica II - Educação Física",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 166,
+    "codigo": "PMMC1903/006-PEB-II-Geografia",
+    "cargo": "Professor de Educação Básica II - Geografia",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 167,
+    "codigo": "PMMC1903/007-PEB-II-História",
+    "cargo": "Professor de Educação Básica II - História",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 168,
+    "codigo": "PMMC1903/009-PEB-II-LínguaPortuguesa",
+    "cargo": "Professor de Educação Básica II - Língua Portuguesa",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 169,
+    "codigo": "PMMC1901/006-Projetista",
+    "cargo": "Projetista",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 170,
+    "codigo": "PMOS2102/001-AgCombateEndemias",
+    "cargo": "Agente de Combate às Endemias",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 90,
+    "situacao": "validado"
+  },
+  {
+    "numero": 171,
+    "codigo": "PMOS2105/005-OficialEscola",
+    "cargo": "Oficial de Escola",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 92,
+    "situacao": "validado"
+  },
+  {
+    "numero": 172,
+    "codigo": "PMPR1907/002-ProfessorSusbtitutoEnsinoFundamental",
+    "cargo": "Professor Substituto de Ensino Fundamental",
+    "ano": 2020,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 173,
+    "codigo": "PMPR2003/001-TelefonistaAuxRegMédica",
+    "cargo": "Telefonista Auxiliar de Regulação Médica - TARM",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 174,
+    "codigo": "PMPP2101/012-AssistenteSocial",
+    "cargo": "Assistente Social",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 175,
+    "codigo": "PMPP2102/007-DiretorEscola",
+    "cargo": "Diretor de Escola",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 176,
+    "codigo": "PMPP2101/016-EngenheiroCivil",
+    "cargo": "Engenheiro Civil",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 177,
+    "codigo": "PMPP2101/008-Escriturário-I",
+    "cargo": "Escriturário I",
+    "ano": 2022,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 178,
+    "codigo": "PMPP2101/017-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2022,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 134,
+    "situacao": "validado"
+  },
+  {
+    "numero": 179,
+    "codigo": "PMPP2101/002-InspetorAlunos",
+    "cargo": "Inspetor de Alunos",
+    "ano": 2022,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 180,
+    "codigo": "PMPP2101/028-MédicoVeterinário",
+    "cargo": "Médico Veterinário",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  }
+]

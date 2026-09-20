@@ -1,0 +1,173 @@
+[
+  {
+    "numero": 201,
+    "codigo": "PTAU2103/009-Recepcionista",
+    "cargo": "Recepcionista",
+    "ano": 2022,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 202,
+    "codigo": "PVPA1905/002-AssistenteSocial",
+    "cargo": "Assistente Social",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 203,
+    "codigo": "PVPA1905/012-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 204,
+    "codigo": "PVPA1902/008-AgGestão-AssistenteAdministrativo",
+    "cargo": "Agente de Gestão - Assistente Administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 96,
+    "situacao": "validado"
+  },
+  {
+    "numero": 205,
+    "codigo": "PVPA1902/036-EngenheiroSegTrabalho",
+    "cargo": "Engenheiro de Segurança do Trabalho",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 206,
+    "codigo": "PVPA1906/001-ProcuradorMunicipal",
+    "cargo": "Procurador Municipal",
+    "ano": 2019,
+    "questoes": 60,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 207,
+    "codigo": "PVPA1905/043-PEB-EdInfantil",
+    "cargo": "Professor de Educação Básica - Educação Infantil",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 208,
+    "codigo": "SGUA2101/001-AgSaneamento-AuxEstTratÁgua",
+    "cargo": "Agente de Saneamento - Auxiliar de Estação de Tratamento de Água",
+    "ano": 2021,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 209,
+    "codigo": "SGUA2101/014-AnalistaCompras",
+    "cargo": "Analista de Compras",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 210,
+    "codigo": "SGUA2101/006-AssistServAdministrativos",
+    "cargo": "Assistente de Serviços Administrativos",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 97,
+    "situacao": "validado"
+  },
+  {
+    "numero": 211,
+    "codigo": "SGUA2101/007-Atendente",
+    "cargo": "Atendente",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 212,
+    "codigo": "SAEP1901/006-AssessorAdm-EncServiço",
+    "cargo": "Assessor Administrativo / Encarregado de Serviço",
+    "ano": 2019,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 99,
+    "situacao": "validado"
+  },
+  {
+    "numero": 213,
+    "codigo": "SAEP1901/002-EletricistaManutenção",
+    "cargo": "Eletricista de Manutenção",
+    "ano": 2019,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 214,
+    "codigo": "SAEP1901/021-ProgramadorJúnior",
+    "cargo": "Programador Júnior",
+    "ano": 2019,
+    "questoes": 60,
+    "ocultar": true,
+    "duplicadoDe": 98,
+    "situacao": "validado"
+  },
+  {
+    "numero": 215,
+    "codigo": "TJSP2101/001-EscreventeTécnicoJudiciário",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2021,
+    "questoes": 100,
+    "ocultar": true,
+    "duplicadoDe": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 216,
+    "codigo": "TJSP2103/001-AssistSocialJudiciário",
+    "cargo": "Assistente Social Judiciário",
+    "ano": 2022,
+    "questoes": 70,
+    "situacao": "validado"
+  },
+  {
+    "numero": 217,
+    "codigo": "TJSP2104/001-PsicólogoJudiciário",
+    "cargo": "Psicólogo Judiciário",
+    "ano": 2022,
+    "questoes": 70,
+    "situacao": "validado"
+  },
+  {
+    "numero": 218,
+    "codigo": "UNAV2103/001-AgVigilânciaRecepção",
+    "cargo": "Agente de Vigilância e Recepção",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 219,
+    "codigo": "UAIQ2101/001-AnalistaInformática-II",
+    "cargo": "Analista de Informática II - Redes e Infraestrutura",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 220,
+    "codigo": "UACF2101/001-AssitAdmistrativo-II-ÁreaAcadêmica",
+    "cargo": "Assistente Administrativo II - Área Acadêmica",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  }
+]

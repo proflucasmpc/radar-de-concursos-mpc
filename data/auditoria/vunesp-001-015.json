@@ -1,0 +1,167 @@
+[
+  {
+    "numero": 1,
+    "codigo": "CMMU1801/003-AssistLegComis-AssistLegRed-OficLegislativo",
+    "cargo": "assistente legislativo das comissões assistente legislativo em redação oficial legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1halfkL_rnPZiYX_kLIQ59W3ysPHAeciu",
+    "gabaritoId": "1sGGpwxoQPrN_oVn4DctsRrWo9PPtk5gF",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 2,
+    "codigo": "CMOA1801/003-AuxTécLegislativo-Manhã",
+    "cargo": "auxiliar técnico legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "10kelZLTqyG_0TwivwWxPl0prCHK0POJS",
+    "gabaritoId": "1dY1NTNDnMJgo-3jrg2wirERZBdf4cqaT",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 3,
+    "codigo": "CPRC1801/002-AgAdministrativo-AgLegislativo-Manhã",
+    "cargo": "agente administrativo agente legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1gmAiDnjxG5cKRVD0ul83nSAeCdPoRDdD",
+    "gabaritoId": "1Aqr0mKKFAs7pSnmqMZaz0e2PDj4oQiq_",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 4,
+    "codigo": "CMSR1901/002-AssistenteComissões",
+    "cargo": "assistente de comissões",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1wndOhdTrsRqqTlW0y2wh7PpQxb_sDxaM",
+    "gabaritoId": "1wndOhdTrsRqqTlW0y2wh7PpQxb_sDxaM",
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 5,
+    "codigo": "CSER1801/003-TécLegislativo-Tarde",
+    "cargo": "técnico legislativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1Y-I6h2sgw76lMC6BoJpi6Kvtw4uUX0vg",
+    "gabaritoId": "1PooUYpac1yT7zOxGOm7qxsoO_5WvrKCb",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 6,
+    "codigo": "EEFJ1901/001-AssistenteAdministração-Manhã",
+    "cargo": "ASSISTENTE EM ADMINISTRAÇÃO",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1TmbMn5o4O11zo5jlVvDcn6leBXxZ1CyD",
+    "gabaritoId": "11NIelErMUn3gNQCZy4ETzdtXq3LIx4p4",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 7,
+    "codigo": "MPSP1902/001-AuxiliarPromotoria-I-Administrativo",
+    "cargo": "auxiliar de promotoria i (administrativo) OPÇÕES: 001 A 013",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1sq8tfVc5nLhWLIiHdGpUhEJQfuHhrMxv",
+    "gabaritoId": "1iA4JDC4_PY-Ykuu7Pd8_n4Trhpw_GBb8",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 8,
+    "codigo": "MPSP1802/001-AuxiliarPromotoria-I-Eletricista",
+    "cargo": "auxiliar de promotoria i (eletricista)",
+    "ano": 2018,
+    "questoes": 45,
+    "provaId": "116FYxHzzaGoNeEpGso0sFadrHLfLPBcm",
+    "gabaritoId": "1xuGa4igQfO271VPR-lv5v_VSGHvVWhRA",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 9,
+    "codigo": "PMAR1803/017-AgenteEscolar",
+    "cargo": "AGENTE ESCOLAR",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1bLKEXjrq7aBjQKyledFgR35jWWjQsgM6",
+    "gabaritoId": "1HQPGReb66QJYGQB_AaKn5fLgj5bqjAxl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 10,
+    "codigo": "pmar1804/001-OficialAdmEscolar-SecretEscolar-Manhã",
+    "cargo": "oficial administrativo escolar (cód. 001) secretário de escola (cód. 002)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1dWW6oNISQsrVbqVfQKJ3xoho12urNRos",
+    "gabaritoId": "1pIg-TAYoDZxrAHDxmqlSEJziSuFtyaPQ",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 11,
+    "codigo": "PMRU1803/009-ChefeDivisãoPessoal-Manhã",
+    "cargo": "chefe de divisão pessoal",
+    "ano": 2018,
+    "questoes": 60,
+    "provaId": "17xjySRU1GVOnpPO2dXVKUtJd09s6yU1j",
+    "gabaritoId": "1frSeniuvrOjS1BCoa7dAfY2vYiP5i9F0",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 12,
+    "codigo": "PMRU1803/006-Escriturário-OficialAdm-Manhã",
+    "cargo": "escriturário oficial administrativo",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1u6cY2Iga9St9i5Ruq1L6t-KTGIGTjbFr",
+    "gabaritoId": "1ZS5OhzQs3UBkz5HKztc8ahawgJKqDy1r",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 13,
+    "codigo": "PBIR1901/012-OficialAdministrativo-Manhã",
+    "cargo": "oficial administrativo (cód. 013)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "181goIC2mPh75k9OjuOcYpA07iB9-iNs0",
+    "gabaritoId": "1uXqRvfOLNvtv0efquMktN2y-bmLatMU5",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 14,
+    "codigo": "PCAM1801/004-AgFiscalização-Tarde",
+    "cargo": "agente de fiscalização (cód. 004)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1PVYq10i_O7og25f8xjEGODLv4X47FSnh",
+    "gabaritoId": "1NEPSQhEyN6hM8R902CC8gp_QrQPfmBpu",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 15,
+    "codigo": "PCAM1801/002-AgAdministrativo-Manhã",
+    "cargo": "agente administrativo (cód. 002)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1qACQYEifkTdajGbwuzQdd1ovOdazFdoH",
+    "gabaritoId": "12Zqshem2-p8lQmzuC4L54TPS6ke-XmnM",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "numero": 141,
+    "codigo": "PRMA2004/002-AuxiliarDesenvolvimentoEscolar",
+    "cargo": "Auxiliar de Desenvolvimento Escolar",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 85,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 142,
+    "codigo": "PRMA2005/003-AuxiliarEscrita",
+    "cargo": "Auxiliar de Escrita",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 86,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 143,
+    "codigo": "PRMA2004/003-DiretorEscolaMunicipal",
+    "cargo": "Diretor de Escola Municipal",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 144,
+    "codigo": "PRMA2006/005-Enfermeiro",
+    "cargo": "Enfermeiro",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 145,
+    "codigo": "PRMA2005/004-InstrutorTreinamentoInfor",
+    "cargo": "Instrutor de Treinamento em Informática",
+    "ano": 2021,
+    "questoes": 50,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 146,
+    "codigo": "PRMA2005/001-Motorista",
+    "cargo": "Motorista",
+    "ano": 2021,
+    "questoes": 40,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 147,
+    "codigo": "PRMA2004/005-ProfessorEMEF",
+    "cargo": "Professor de EMEF",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 148,
+    "codigo": "PRMA2004/006-ProfEMEI",
+    "cargo": "Professor de EMEI",
+    "ano": 2021,
+    "questoes": 60,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 149,
+    "codigo": "PRMA2002/001-AgComunitárioSaúde",
+    "cargo": "Agente Comunitário de Saúde",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 150,
+    "codigo": "PRMA2001/001-AgenteControleEndemias",
+    "cargo": "Agente de Controle de Endemias",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 83,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 151,
+    "codigo": "PRMA2005/002-Telefonista",
+    "cargo": "Telefonista",
+    "ano": 2021,
+    "questoes": 40,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 152,
+    "codigo": "PMMC1901/009-AgenteVistor",
+    "cargo": "Agente Vistor",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 153,
+    "codigo": "PMMC1901/004-AuxiliarDesenvolvimentoInfantil",
+    "cargo": "Auxiliar de Desenvolvimento Infantil",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 89,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 154,
+    "codigo": "PMMC1901/011-EngenheiroCivil",
+    "cargo": "Engenheiro Civil",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 155,
+    "codigo": "PMMC1901/015-Jornalista",
+    "cargo": "Jornalista",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 156,
+    "codigo": "PMMC1901/020-Pedagogo",
+    "cargo": "Pedagogo",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 157,
+    "codigo": "PMMC1903/001-PEB-I",
+    "cargo": "Professor de Educação Básica I",
+    "ano": 2021,
+    "questoes": 40,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 158,
+    "codigo": "PMMC1901/021-ProfEducFísica-20horas-40horas",
+    "cargo": "Professor de Educação Física",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 159,
+    "codigo": "PMMC1901/024-Publicitário",
+    "cargo": "Publicitário",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  },
+  {
+    "numero": 160,
+    "codigo": "PMMC1901/008-AgenteTributosImobiliários",
+    "cargo": "Agente de Tributos Imobiliários",
+    "ano": 2021,
+    "questoes": 50,
+    "gabaritoIntegrado": true,
+    "situacao": "validado"
+  }
+]

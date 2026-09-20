@@ -7,34 +7,87 @@ function preencher(id, valores) {
   [...new Set(valores.filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b), "pt-BR", { numeric: true })).forEach((v) => $(id).insertAdjacentHTML("beforeend", `<option value="${v}">${v}</option>`));
 }
 
-function drivePreview(id) {
-  return id ? `https://drive.google.com/file/d/${id}/preview` : null;
+function drivePreview(id) { return id ? `https://drive.google.com/file/d/${id}/preview` : null; }
+function driveView(id) { return id ? `https://drive.google.com/file/d/${id}/view` : null; }
+
+function orgaoPorCodigo(codigo = "") {
+  const p = String(codigo).split("/")[0].toUpperCase();
+  const mapa = {
+    MPSP: "Ministério Público do Estado de São Paulo",
+    PMRU: "Prefeitura de Arujá",
+    PMGR: "Prefeitura de Guarulhos",
+    PMOS: "Prefeitura de Osasco",
+    PMPR: "Prefeitura de Piracicaba",
+    PPON: "Prefeitura de Pontal",
+    PMSO: "Prefeitura de Sorocaba",
+    PMSE: "Prefeitura de São Paulo — Secretaria Municipal de Educação",
+    PMSZ: "Prefeitura de Suzano",
+    PMJU: "Prefeitura de Jundiaí",
+    PRMA: "Prefeitura de Marília",
+    PMMC: "Prefeitura de Mogi das Cruzes",
+    PMRI: "Prefeitura de Ribeirão Preto",
+    PVPA: "Prefeitura de Várzea Paulista",
+    PMPP: "Prefeitura de Presidente Prudente",
+    PMSA: "Prefeitura de Santo André",
+    PMRP: "Prefeitura de São José do Rio Preto",
+    PTAU: "Prefeitura de Taubaté",
+    PJAG: "Prefeitura de Jaguariúna",
+    VALP: "Prefeitura de Várzea Paulista",
+    PGUA: "Prefeitura de Guaratinguetá",
+    SGUA: "SAEG — Guaratinguetá",
+    TJSP: "Tribunal de Justiça do Estado de São Paulo",
+    TJME: "Tribunal de Justiça Militar do Estado de São Paulo",
+    UABC: "Universidade Federal do ABC",
+    EBSH: "EBSERH",
+    FITO: "Fundação Instituto Tecnológico de Osasco",
+    SETP: "SERTPREV — Sertãozinho",
+    CMMI: "Câmara Municipal de Mogi Mirim",
+    CMPO: "Câmara Municipal de Potim",
+    CALT: "Câmara Municipal de Altinópolis",
+    FMEC: "Fundação Municipal para Educação Comunitária — Campinas",
+    UNAV: "UNESP — Câmpus de Araçatuba",
+    UAIQ: "UNESP — Instituto de Química de Araraquara",
+    UACF: "UNESP — Faculdade de Ciências Farmacêuticas de Araraquara",
+    UNBO: "UNESP — Faculdade de Medicina de Botucatu",
+    UNFR: "UNESP — Faculdade de Ciências Humanas e Sociais de Franca",
+    FEIS: "UNESP — Faculdade de Engenharia de Ilha Solteira",
+    UNSV: "UNESP — Instituto de Biociências do Litoral Paulista",
+    UNMA: "UNESP — Faculdade de Filosofia e Ciências de Marília",
+    IBLC: "UNESP — São José do Rio Preto",
+    USJC: "UNESP — Instituto de Ciência e Tecnologia de São José dos Campos",
+    UNSP: "UNESP — Instituto de Artes de São Paulo",
+    UCAP: "Instituição pública — Campinas",
+    SAEP: "Serviço público municipal — Vunesp"
+  };
+  return mapa[p] || (p ? `Órgão do concurso Vunesp — ${p}` : "Acervo Vunesp — Prof. Lucas MPC");
 }
 
-function driveView(id) {
-  return id ? `https://drive.google.com/file/d/${id}/view` : null;
-}
-
-function normalizarItemDrive(item) {
+function normalizarItemDrive(item, meta = {}) {
   const numero = String(item.numero).padStart(3, "0");
-  const arquivoUnico = Boolean(item.gabaritoId && item.gabaritoId === item.provaId);
+  const arquivoUnico = Boolean(meta.gabaritoIntegrado || (item.gabaritoId && item.gabaritoId === item.provaId));
+  const gabaritoBloqueado = ["suspeito_copia_prova", "necessita_conferencia", "mesmo_arquivo"].includes(meta.situacaoGabarito);
   return {
     id: `vunesp-drive-${numero}`,
-    orgao: "Acervo Vunesp — Prof. Lucas MPC",
-    cargo: `Prova / simulado ${numero}`,
+    orgao: meta.orgao || orgaoPorCodigo(meta.codigo),
+    cargo: meta.cargo || `Prova / simulado ${numero}`,
+    codigo: meta.codigo || null,
     banca: "Vunesp",
-    ano: "Acervo",
-    estado: "Não informado",
-    escolaridade: "Não informado",
-    questoes: null,
+    ano: meta.ano || "Acervo",
+    estado: meta.estado || "SP",
+    escolaridade: meta.escolaridade || "Não informado",
+    questoes: meta.questoes || null,
     provaUrl: drivePreview(item.provaId),
-    gabaritoUrl: arquivoUnico ? null : drivePreview(item.gabaritoId),
+    gabaritoUrl: arquivoUnico || gabaritoBloqueado ? null : drivePreview(item.gabaritoId),
     fonteUrl: driveView(item.provaId),
-    fonte: "Acervo do Prof. Lucas MPC — Google Drive",
+    fonte: "Acervo auditado do Prof. Lucas MPC — Google Drive",
     destaque: false,
     arquivoUnico,
     origem: "drive-vunesp",
-    numeroAcervo: item.numero
+    numeroAcervo: item.numero,
+    situacao: meta.situacao || "validado",
+    situacaoGabarito: meta.situacaoGabarito || (arquivoUnico ? "integrado" : "separado"),
+    ocultar: Boolean(meta.ocultar),
+    duplicadoDe: meta.duplicadoDe || null
   };
 }
 
@@ -45,7 +98,7 @@ function render() {
   const estado = $("#prova-estado").value;
 
   const lista = provas.filter((p) =>
-    (!busca || normalizar(`${p.orgao} ${p.cargo} ${p.banca} ${p.numeroAcervo || ""}`).includes(busca)) &&
+    (!busca || normalizar(`${p.orgao} ${p.cargo} ${p.codigo || ""} ${p.banca} ${p.numeroAcervo || ""}`).includes(busca)) &&
     (banca === "todos" || p.banca === banca) &&
     (ano === "todos" || String(p.ano) === ano) &&
     (estado === "todos" || p.estado === estado)
@@ -64,11 +117,12 @@ function render() {
     const botaoFonte = p.fonteUrl
       ? `<a class="secondary-action" data-lead-context="Fonte — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">${p.origem === "drive-vunesp" ? "Ver no Drive" : "Fonte oficial"}</a>`
       : "";
+    const codigo = p.codigo ? `<span>🏷️ ${p.codigo}</span>` : "";
     return `<article class="card${vunesp ? " proof-featured" : ""}">
       <div class="card-topline"><span class="tag">${p.banca}</span>${vunesp ? '<span class="badge">FOCO VUNESP</span>' : ""}</div>
       <h3>${p.orgao}</h3>
       <p class="card-title">${p.cargo}${p.ano ? ` · ${p.ano}` : ""}</p>
-      <div class="meta"><span>📍 ${p.estado || "Não informado"}</span><span>🎓 ${p.escolaridade || "Não informado"}</span>${p.questoes ? `<span>🧾 ${p.questoes} questões</span>` : ""}</div>
+      <div class="meta"><span>📍 ${p.estado || "Não informado"}</span><span>🎓 ${p.escolaridade || "Não informado"}</span>${p.questoes ? `<span>🧾 ${p.questoes} questões</span>` : ""}${codigo}</div>
       <div class="verification">Fonte: ${p.fonte || p.banca}</div>
       <div class="card-bottom"><div class="card-actions">${botaoProva}${botaoGabarito}${botaoFonte}</div></div>
     </article>`;
@@ -94,22 +148,35 @@ async function iniciar() {
       "data/vunesp-drive-121-180.json",
       "data/vunesp-drive-181-236.json"
     ];
+    const caminhosAuditoria = [
+      "data/auditoria/vunesp-001-015.json","data/auditoria/vunesp-016-030.json",
+      "data/auditoria/vunesp-031-045.json","data/auditoria/vunesp-046-060.json",
+      "data/auditoria/vunesp-061-075.json","data/auditoria/vunesp-076-090.json",
+      "data/auditoria/vunesp-091-105.json","data/auditoria/vunesp-106-120.json",
+      "data/auditoria/vunesp-121-140.json","data/auditoria/vunesp-141-160.json",
+      "data/auditoria/vunesp-161-180.json","data/auditoria/vunesp-181-200.json",
+      "data/auditoria/vunesp-201-220.json","data/auditoria/vunesp-221-236.json"
+    ];
 
-    const [lotesCatalogo, lotesDrive] = await Promise.all([
+    const [lotesCatalogo, lotesDrive, lotesAuditoria] = await Promise.all([
       Promise.all(caminhosCatalogo.map((c) => carregarJson(c, false))),
-      Promise.all(caminhosDrive.map((c) => carregarJson(c, true)))
+      Promise.all(caminhosDrive.map((c) => carregarJson(c, true))),
+      Promise.all(caminhosAuditoria.map((c) => carregarJson(c, true)))
     ]);
 
+    const mapaAuditoria = new Map(lotesAuditoria.flat().map((m) => [Number(m.numero), m]));
     const mapa = new Map();
     lotesCatalogo.flat().forEach((p) => p?.id && mapa.set(p.id, p));
 
     const paresDriveVistos = new Set();
     lotesDrive.flat().forEach((item) => {
       if (!item?.provaId) return;
+      const meta = mapaAuditoria.get(Number(item.numero)) || {};
+      if (meta.ocultar || ["arquivo_incorreto", "necessita_conferencia"].includes(meta.situacao)) return;
       const chavePar = `${item.provaId}|${item.gabaritoId || ""}`;
       if (paresDriveVistos.has(chavePar)) return;
       paresDriveVistos.add(chavePar);
-      const normalizado = normalizarItemDrive(item);
+      const normalizado = normalizarItemDrive(item, meta);
       mapa.set(normalizado.id, normalizado);
     });
 

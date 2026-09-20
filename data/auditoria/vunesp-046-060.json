@@ -1,0 +1,171 @@
+[
+  {
+    "numero": 46,
+    "codigo": "IPAV1901/002-Escriturário-TécnicoPrevidenciário-Manhã",
+    "cargo": "escriturário técnico previdenciário",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1vYCHpLYedH8RhrTHmtXe3osTNpODmGZE",
+    "gabaritoId": "16MVPpUi-KtbyhB7RWVR05Fz39VyhyXKW",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 47,
+    "codigo": "cboi1901/001-AgenteAdministrativo-Manhã",
+    "cargo": "agente administrativo",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "18UC4Us448ViJ2It-JAiHWgkQ6JTgM2M1",
+    "gabaritoId": "1CqRbNLQciEpxE-NhzEfrzgr74hMPcfHo",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 48,
+    "codigo": "CMBP1901/002-AssistGestãoPolPúblicas-Secretária-Manhã",
+    "cargo": "assistente de gestão e políticas públicas – secretÁria",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1juPuLbtCr35193zofPlchO7oTSeELVLH",
+    "gabaritoId": "1PJcsFOadmkuICPj76HEjbx90wqdC4JHF",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 49,
+    "codigo": "CMBP1901/001-AssistGestãoPolPúblicas-GestãoAdm-Tarde",
+    "cargo": "assistente de gestão e políticas públicas – gestão administrativa",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1xqV_tXozFcV5JnX0eM_inTwAal-VU2HC",
+    "gabaritoId": "18VyRyq4NboZkoxsQLFu3GB0b0qwZ2knm",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 50,
+    "codigo": "CTAB1902/002-AuxSecretaria",
+    "cargo": "auxiliar de secretaria",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1qlKr0_EHThKAUZX5zYiGaVGgXxdYYVZU",
+    "gabaritoId": "1z6eRJSWazHTMnTcFcor2PRdNV_hKklUY",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 51,
+    "codigo": "EBSH1904/003-TécSegurançaTrabalho-Tarde",
+    "cargo": "técnico em segurança do trabalho",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1RyxCQViuixWOHQ8RT-tOqm_1vEt0keEr",
+    "gabaritoId": "1AdK4IIS6FzClgB8cEtsDwa6E9loerKLI",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 52,
+    "codigo": "EBSH1904/003-TécSegurançaTrabalho-Tarde",
+    "cargo": "técnico em segurança do trabalho",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1fO4aK9zjmEquQcGixJ2nvFghsrV1HbuP",
+    "gabaritoId": "14L_Atgt8exsQoYahK4qmu0NlzLThrGmp",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "duplicadoDe": 51,
+    "ocultar": true
+  },
+  {
+    "numero": 53,
+    "codigo": "EBSH1904/001-AssistenteAdministrativo-Tarde",
+    "cargo": "assistente administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1aJpfVYLmCGyqWmSWuu5AbxuO8Wz-6HL5",
+    "gabaritoId": "14VhxcCIzkvKk_xBOGRmU2p84qFhWj6Uf",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 54,
+    "codigo": "FITO1901/004-TécnicoGestão-Manhã",
+    "cargo": "técnico em gestão: assistência administrativa",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "13_87zhMG9l57buWnLPn_Myb6yw8abZOo",
+    "gabaritoId": "1XSF9w_B0RrIi8QV6t08TqgaL-CdOjvcl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 55,
+    "codigo": "FITO1901/001-AuxAdm-ApoioAdmReprGraf-Manhã",
+    "cargo": "auxiliar de administração: apoio administrativo auxiliar de administração: reprografia e gráfica",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1wyap4m3__UG_EO3NGH1apua0_DgV3Qz5",
+    "gabaritoId": "1ii_8sJzoJHGiYSll9INqUw4TbVSrOu1S",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 56,
+    "codigo": "PCAN1901/008-Escriturário-Manhã",
+    "cargo": "escriturário",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1BD-s2yhRhoapv9RxFuzkh6L_wuEVt2NL",
+    "gabaritoId": "1uPuN9ZP3_5XpnM2wDSifztu3HBdA9Ckg",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 57,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "provaId": "1qeAnGK4ToC1B7gyYWrfqgzb0qNPvCVHP",
+    "gabaritoId": "1T2BrMAu-717NdwhphT6LG-L82FG1asFh",
+    "gabaritoIntegrado": false,
+    "situacao": "necessita_conferencia"
+  },
+  {
+    "numero": 58,
+    "codigo": "PMMA1901/005-AgenteControleEpidemiológico",
+    "cargo": "agente de controle epidemiológico",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1NME__KtlAuZnfiwpGu1OF_45ux1swyMU",
+    "gabaritoId": "123PZRuhQo8kmhqwKJelOcstTFj-8qDKA",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 59,
+    "codigo": "PMPR2003/001-TelefonistaAuxRegMédica",
+    "cargo": "telefonista auxiliar de regulamentação médica – tarm",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1ucHGh4yLfVyujcztJEdlfQ2CII06ECrR",
+    "gabaritoId": "1GrMf0pszju-y9ZF1TXbgl0vxk5xnBOuf",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "duplicadoDe": 173,
+    "ocultar": true
+  },
+  {
+    "numero": 60,
+    "codigo": "PMSD1902/010-MonitorInclusãoDigital",
+    "cargo": "monitor de inclusão digital",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "12pky6wFTWGtNG-gac252_D7VuGPlF4kE",
+    "gabaritoId": "16Ur8h4q3c_khLiVUBJd8qDXHPpbOZeMF",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  }
+]

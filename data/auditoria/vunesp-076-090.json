@@ -1,0 +1,171 @@
+[
+  {
+    "numero": 76,
+    "codigo": "PBSA2101/002-AuxiliarAdministrativo",
+    "cargo": "auxiliar administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "1YZs-snxoiwrzLTHka90Z-Y4KOjwv2toD",
+    "gabaritoId": "1SThlt34xG3S4SzMaAQg35EwF-zVLfsCv",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 77,
+    "codigo": "PMGR2004/001-Condutor(a)VeículosUrgência",
+    "cargo": "condutor(a) de veículos de urgência",
+    "ano": 2020,
+    "questoes": 40,
+    "provaId": "1gGQ7YK-r6Da11PWXE6JPzxqlBmtQHyEy",
+    "gabaritoId": "11g43nZbSmiTaFgIgzZCsThFRmCdZAEJ6",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 78,
+    "codigo": "pjag1901/015-GuardaMunicipal-3ªClasse",
+    "cargo": "guarda municipal – 3a classe (feminino) guarda municipal – 3a classe (masculino)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1oyb2pE9qj76CAdCeCyzYz2P4Y9j4ISig",
+    "gabaritoId": "1SmaOX245JCPjXDe6FqHuqmJUsjC6j04o",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 79,
+    "codigo": "pjag1901/041-Fiscal",
+    "cargo": "fiscal",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1Msocf21lZs7IeUGT2Xag18t2dPnfvQ2F",
+    "gabaritoId": "1TB8xdN5uk2G0NOKA_03BLSKwN_4xhKGN",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 80,
+    "codigo": "pjag1901/041-Fiscal",
+    "cargo": "fiscal",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1jIGJgBjwPbCAdwyHwGmNYxgNobYHCtjc",
+    "gabaritoId": "1URLAMfyWZpxNdw1k-1FT83yLV1rORT5-",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "ocultar": true,
+    "duplicadoDe": 79
+  },
+  {
+    "numero": 81,
+    "codigo": "PMJU1904/001-EducadorEsportivo",
+    "cargo": "educador esportivo",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1i-qZJ5VbH1fkaxX35x0O4_CQN1pciyX2",
+    "gabaritoId": "12gxGAW1a68AxUtePj6QX3zDqsInh8G86",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 82,
+    "codigo": "PMJU1901/001-AgenteTrânsito",
+    "cargo": "agente de trânsito",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1qtYRbQZgRdH-Zqp76FI4U41Cr-tD9P7c",
+    "gabaritoId": "1PK3JKFkklzYoLoqJOUY3l7jhM5_vLpjc",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 83,
+    "codigo": "PRMA2001/001-AgenteControleEndemias",
+    "cargo": "agente de controle de endemias",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1kZ4M9HGXZlQAjCe4zsAHrNaqcUBvNMkE",
+    "gabaritoId": "1iKCyLD2nlwnaqrDR20kJp3dnbsTL_6qb",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 84,
+    "codigo": "PRMA2004/001-AtendenteEscola-Merendeiro",
+    "cargo": "atendente de escola – merendeiro",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1CtPpZSiOVIiL2cpfEGNVqoMdcDopNQ4r",
+    "gabaritoId": "12Px2tAOrIQatCQqyK0FqdoGDtTdKAf9A",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 85,
+    "codigo": "PRMA2004/002-AuxiliarDesenvolvimentoEscolar",
+    "cargo": "auxiliar de desenvolvimento escolar",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "13_t1CxD2J_o8kHeE-DCWMD4QTDKC33BG",
+    "gabaritoId": "1AhnanwXH7okrzbrZzNfnIz2JZTXWazlq",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 86,
+    "codigo": "PRMA2005/003-AuxiliarEscrita",
+    "cargo": "auxiliar de escrita",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1HcqmAxmWGyWHFErx4cbjDrDti0dJRaUR",
+    "gabaritoId": "17HR-jSglrn4O5sHLVGPS5Jvgw_1uB5ye",
+    "gabaritoIntegrado": false,
+    "situacao": "necessita_conferencia"
+  },
+  {
+    "numero": 87,
+    "codigo": "prma2006/002-SupervisorSaúde",
+    "cargo": "supervisor de saúde",
+    "ano": 2020,
+    "questoes": 50,
+    "provaId": "1_gSvE3rv864PaAnqqgQK5te2ymfqnWZi",
+    "gabaritoId": "17790lSZ8rfEXIPHhySlY0veY8r20h1yC",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 88,
+    "codigo": "PMMC1901/002-AuxServGerais",
+    "cargo": "auxiliar de serviços gerais",
+    "ano": 2019,
+    "questoes": 40,
+    "provaId": "1EHBU-2Q9xQoiyu5YqpGCkeqD_nQG9w9r",
+    "gabaritoId": "176vGKq6rArqnLyp4Bpb8VxnLgkoErHrp",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 89,
+    "codigo": "PMMC1901/004-AuxiliarDesenvolvimentoInfantil",
+    "cargo": "auxiliar de desenvolvimento infantil",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1UOP_BNNpgd066oIVgHq1zX11nyZ1j8jJ",
+    "gabaritoId": "1faefZCR92aqdd5MvzaB76QZfLSjkjzZL",
+    "gabaritoIntegrado": false,
+    "situacao": "validado",
+    "situacaoGabarito": "suspeito_copia_prova"
+  },
+  {
+    "numero": 90,
+    "codigo": "PMOS2102/001-AgCombateEndemias",
+    "cargo": "agente de combate às endemias (ACE)",
+    "ano": 2021,
+    "questoes": 40,
+    "provaId": "1MJBVgW0l6JQnwucfzDVa1cBsnWZg00HW",
+    "gabaritoId": "1FFax1bqnChhbwF_J5c6B7AVSe5tGE-ut",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  }
+]

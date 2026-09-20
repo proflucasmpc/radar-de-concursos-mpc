@@ -1,0 +1,176 @@
+[
+  {
+    "numero": 181,
+    "codigo": "PMPP2101/030-Psicólogo",
+    "cargo": "Psicólogo",
+    "ano": 2022,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 182,
+    "codigo": "PMPP2101/009-SecretárioEscola",
+    "cargo": "Secretário de Escola",
+    "ano": 2022,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 135,
+    "situacao": "validado"
+  },
+  {
+    "numero": 183,
+    "codigo": "PMPP2101/001-ServGerais-VigiaNoturno",
+    "cargo": "Serviços Gerais / Vigia Noturno",
+    "ano": 2022,
+    "questoes": 30,
+    "situacao": "validado"
+  },
+  {
+    "numero": 184,
+    "codigo": "PMRI2103/001-AgenteAdministração",
+    "cargo": "Agente de Administração",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 93,
+    "situacao": "validado"
+  },
+  {
+    "numero": 185,
+    "codigo": "PMRI2102/001-AgenteFiscalização",
+    "cargo": "Agente de Fiscalização",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 94,
+    "situacao": "validado"
+  },
+  {
+    "numero": 186,
+    "codigo": "PMRI1903/001-AuxiliarFarmacêutico",
+    "cargo": "Auxiliar de Farmacêutico",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 187,
+    "codigo": "PMRI1903/005-EngSegurançaTrabalho",
+    "cargo": "Engenheiro de Segurança do Trabalho",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 188,
+    "codigo": "PMSA1901/001-Procurador",
+    "cargo": "Procurador",
+    "ano": 2021,
+    "questoes": 100,
+    "situacao": "validado"
+  },
+  {
+    "numero": 189,
+    "codigo": "PMRP2101/001-PEB-I",
+    "cargo": "Professor de Educação Básica I",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 190,
+    "codigo": "PMRP2102/006-PEB-II-Inglês",
+    "cargo": "Professor de Educação Básica II - Inglês",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 191,
+    "codigo": null,
+    "cargo": null,
+    "ano": null,
+    "questoes": null,
+    "situacao": "necessita_conferencia",
+    "ocultar": true
+  },
+  {
+    "numero": 192,
+    "codigo": "PMSO2001/001-InspetorAlunos",
+    "cargo": "Inspetor de Alunos",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 69,
+    "situacao": "validado"
+  },
+  {
+    "numero": 193,
+    "codigo": "PMSO2001/006-PEB-I",
+    "cargo": "Professor de Educação Básica I",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 68,
+    "situacao": "validado"
+  },
+  {
+    "numero": 194,
+    "codigo": "PMSO2001/009-PEB-II-EducaçãoFísica",
+    "cargo": "Professor de Educação Básica II - Educação Física",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 195,
+    "codigo": "PMSO2001/003-SecretárioEscola",
+    "cargo": "Secretário de Escola",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 66,
+    "situacao": "validado"
+  },
+  {
+    "numero": 196,
+    "codigo": "PMSO2001/015-SupervisorEnsino",
+    "cargo": "Supervisor de Ensino",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 197,
+    "codigo": "PMSO2001/016-Vice-DiretorEscola",
+    "cargo": "Vice-Diretor de Escola",
+    "ano": 2020,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 198,
+    "codigo": "PTAU2103/004-Escriturário",
+    "cargo": "Escriturário",
+    "ano": 2022,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 199,
+    "codigo": "PTAU2101/001-ProfEdInfantil",
+    "cargo": "Professor de Educação Infantil",
+    "ano": 2021,
+    "questoes": 50,
+    "situacaoGabarito": "necessita_conferencia",
+    "situacao": "validado"
+  },
+  {
+    "numero": 200,
+    "codigo": "PTAU2101/002-Professor-I",
+    "cargo": "Professor I",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "numero": 121,
+    "codigo": "CMPO2101/003-DiretorGeral",
+    "cargo": "Diretor Geral",
+    "ano": 2021,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 122,
+    "codigo": "CSJC2101/001-TécnicoLegislativo",
+    "cargo": "Técnico Legislativo",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 123,
+    "codigo": "CMSZ1901/005-Telefonista",
+    "cargo": "Telefonista",
+    "ano": 2019,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 124,
+    "codigo": "CDEN1901/014-Advogado",
+    "cargo": "Advogado",
+    "ano": 2019,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 125,
+    "codigo": "CDEN1901/016-Contador",
+    "cargo": "Contador",
+    "ano": 2019,
+    "questoes": 60,
+    "situacao": "validado"
+  },
+  {
+    "numero": 126,
+    "codigo": "CDEN1901/008-Escriturário",
+    "cargo": "Escriturário",
+    "ano": 2019,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 75,
+    "situacao": "validado"
+  },
+  {
+    "numero": 127,
+    "codigo": "CDEN1901/003-Motorista-VeículosPesados",
+    "cargo": "Motorista - Veículos Pesados",
+    "ano": 2019,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 128,
+    "codigo": "PBSA2101/002-AuxiliarAdministrativo",
+    "cargo": "Auxiliar Administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 76,
+    "situacao": "validado"
+  },
+  {
+    "numero": 129,
+    "codigo": "PAGM1902/014-ProfEnsinoFundamental-I",
+    "cargo": "Professor de Ensino Fundamental I",
+    "ano": 2019,
+    "questoes": 35,
+    "situacao": "validado"
+  },
+  {
+    "numero": 130,
+    "codigo": "PAGM1902/013-ProfEducInfantil",
+    "cargo": "Professor de Educação Infantil",
+    "ano": 2019,
+    "questoes": 35,
+    "situacao": "validado"
+  },
+  {
+    "numero": 131,
+    "codigo": "PMJU2105/001-AssistenteAdministrativo",
+    "cargo": "Assistente Administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 132,
+    "codigo": "PMJU2104/001-DiretorEscola",
+    "cargo": "Diretor de Escola",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 133,
+    "codigo": "PMJU2103/006-TerapeutaOcupacional",
+    "cargo": "Terapeuta Ocupacional",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 134,
+    "codigo": "PMPP2101/017-Farmacêutico",
+    "cargo": "Farmacêutico",
+    "ano": 2021,
+    "questoes": 50,
+    "situacao": "validado"
+  },
+  {
+    "numero": 135,
+    "codigo": "PMPP2101/009-SecretárioEscola",
+    "cargo": "Secretário de Escola",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 136,
+    "codigo": "PMGR2101/001-GuardaCivilMunicipal",
+    "cargo": "Guarda Civil Municipal",
+    "ano": 2021,
+    "questoes": 40,
+    "situacao": "validado"
+  },
+  {
+    "numero": 137,
+    "codigo": "PMJU2105/001-AssistenteAdministrativo",
+    "cargo": "Assistente Administrativo",
+    "ano": 2021,
+    "questoes": 40,
+    "ocultar": true,
+    "duplicadoDe": 131,
+    "situacao": "validado"
+  },
+  {
+    "numero": 138,
+    "codigo": "PMJU2104/001-DiretorEscola",
+    "cargo": "Diretor de Escola",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 132,
+    "situacao": "validado"
+  },
+  {
+    "numero": 139,
+    "codigo": "PMJU2103/006-TerapeutaOcupacional",
+    "cargo": "Terapeuta Ocupacional",
+    "ano": 2021,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 133,
+    "situacao": "validado"
+  },
+  {
+    "numero": 140,
+    "codigo": "PRMA2004/001-AtendenteEscola-Merendeiro",
+    "cargo": "Atendente de Escola - Merendeiro",
+    "ano": 2020,
+    "questoes": 50,
+    "ocultar": true,
+    "duplicadoDe": 84,
+    "situacao": "validado"
+  }
+]

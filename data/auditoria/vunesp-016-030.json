@@ -1,0 +1,167 @@
+[
+  {
+    "numero": 16,
+    "codigo": "pmcr1901/001-GuardaCMunicipal-F/M",
+    "cargo": "Guarda Civil Municipal – 2a Classe (Feminino e Masculino)",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "17AJu1Tqb2kTDWNwSMnbYXgH1OWFqXlYE",
+    "gabaritoId": "1Bo4eCEh51gu7Kt6-kBF0rKLWWW9gxq4I",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 17,
+    "codigo": "pcer1801/027-FiscalObrasPosturas-Manhã",
+    "cargo": "fiscal de obras e posturas (cód. 033)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1LbF7tSYjoT5h69E908AzwP_iFXAFr3O4",
+    "gabaritoId": "1YXzQiLzZ-VzeqcTsDNqz_8VjuNmzUF6d",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 18,
+    "codigo": "pcer1801/031-PEB-EducInfantil-Creche-Manhã",
+    "cargo": "professor de educação básica – educação infantil/creche (cód. 038)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1cnejx5eiktXp0kN-PTMEj_albpO2gMlk",
+    "gabaritoId": "15NaIBNK569djzl9QCUcrv9zLKFNTMO7Q",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 19,
+    "codigo": "PDCO1901/021-ProfessorAdjuntoEducaçãoBásica-I-Manhã",
+    "cargo": "professor adjunto de educação básica i (cód. 025) professor de educação básica I – PEB I (cód. 027)",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1NRhVZU8aXpTZPS5mkyBUHwyQuwQB3gta",
+    "gabaritoId": "1gGSJJgZa8CakuV2c3Sj7s1415k2aXnCE",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 20,
+    "codigo": "PMFM1901/007-OfAdm-SecretEscola-Manhã",
+    "cargo": "oficial administrativo (cód. 007) secretário de escola (cód. 009)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1wSzd2aR0dGQk-Cn2XuLxuYUngw__AYsu",
+    "gabaritoId": "12IIA5SToaa9nK0j4A9eBLZqUEYE6UUbl",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 21,
+    "codigo": "PMFM1901/008-ProfAuxDesenvolvInfantil-Manhã",
+    "cargo": "professor auxiliar de desenvolvimento infantil – padi (cód. 008)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1RX-aFXa4VjLsVXREJGb6TSyGLxLixDpP",
+    "gabaritoId": "18O8rjjPkOWUYKHeCSIfBHQSvIR1BX-Xx",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 22,
+    "codigo": "PGUA1902/019-PEB-I-EnsinoFundamental",
+    "cargo": "professor de educação básica I – PEB I – ensino fundamental",
+    "ano": 2019,
+    "questoes": 60,
+    "provaId": "1eVFZbKd3j-C_fe_dut7n2FI_uqmr152X",
+    "gabaritoId": "18F3lYFKBW8bmlQ80MkKXQbr_NP6EiJ36",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 23,
+    "codigo": "pmgr1803/009-EspSaúde-ServiçoSocial",
+    "cargo": "especialista em saúde (serviço social)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1I0iR2aBPNVAEj7mYoycIzJpeTGWACTkB",
+    "gabaritoId": "1A75rKP1nEbRhn1Gum1_q8_-5k91-tguh",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 24,
+    "codigo": "PIBA1901/004-Telefonista-Manhã",
+    "cargo": "telefonista",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1m0GrpGIKVKwN8QWFmPZy-X_CpYDzs9Qq",
+    "gabaritoId": "17yBiYZSfBSC2w8Ma-TDmVA53onQaQtIG",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 25,
+    "codigo": "PMIH1901/001-GuardaCivilMun-2ªClasse-Masc-Fem",
+    "cargo": "Guarda Civil Municipal – 2a Classe (Feminino e Masculino)",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1deahJf-vaPQ8D9oTpadzW3A8amIsKqxR",
+    "gabaritoId": "1HDeUVskv6QW_dmj6DBeAljR-IqLbgmf1",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 26,
+    "codigo": "PMIP1801/004-AgenteAdminstraçãoPública-Tarde",
+    "cargo": "Agente de administração pública",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1Ue9EA9ck7kay-S-3Kc2-8gwYnRseJQxs",
+    "gabaritoId": "19LDIKg7hpToRZjB5dAUQxrZLqXz1pSn0",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 27,
+    "codigo": "pmol1802/001-GuardaCivilMunicipal",
+    "cargo": "guarda civil municipal (feminino e masculino)",
+    "ano": 2018,
+    "questoes": 50,
+    "provaId": "1G-g0to78oi5z0Y7augXsr6JfmHIoEcwO",
+    "gabaritoId": "1TQPrBL2RWSV6VZ_q_p0dV5sHXsonsSJo",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 28,
+    "codigo": "PMOL1801/001-Escriturário-I-Tarde",
+    "cargo": "escriturário i",
+    "ano": 2018,
+    "questoes": 40,
+    "provaId": "16uTKyFYtueUnvPFHSe7S4ZNdYwLxhsnf",
+    "gabaritoId": "1Ds48gPS2zXCZ5sBfSOOUdFnzZ1xaTydz",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 29,
+    "codigo": "PMOS1902/008-OficialAdministrativo-Manhã",
+    "cargo": "oficial administrativo",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1_jhnSoLgGUE0vf0NFtIy-E4jcCjt0xmH",
+    "gabaritoId": "1YDGhx1Y2rqsaFW-NUqLkNB94HlpDMj4P",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  },
+  {
+    "numero": 30,
+    "codigo": "PMOS1902/007-EducadorSocial-Tarde",
+    "cargo": "educador social",
+    "ano": 2019,
+    "questoes": 50,
+    "provaId": "1-jw-MgsAOJl1EwyEBGd-6kiGFWnvJSWA",
+    "gabaritoId": "1IuI0B1Yiz6RKgfcAb-VnioMAnFFdQqft",
+    "gabaritoIntegrado": false,
+    "situacao": "validado"
+  }
+]
