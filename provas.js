@@ -1,66 +1,67 @@
 const $ = (s) => document.querySelector(s);
 document.head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="phase2.css"><link rel="stylesheet" href="tabs.css">');
+
 const normalizar = (v = "") => String(v).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 let provas = [];
 
 function preencher(id, valores) {
-  [...new Set(valores.filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b), "pt-BR", { numeric: true })).forEach((v) => $(id).insertAdjacentHTML("beforeend", `<option value="${v}">${v}</option>`));
+  [...new Set(valores.filter(Boolean))]
+    .sort((a, b) => String(a).localeCompare(String(b), "pt-BR", { numeric: true }))
+    .forEach((v) => $(id).insertAdjacentHTML("beforeend", `<option value="${v}">${v}</option>`));
 }
 
 function drivePreview(id) { return id ? `https://drive.google.com/file/d/${id}/preview` : null; }
 function driveView(id) { return id ? `https://drive.google.com/file/d/${id}/view` : null; }
-function slugify(v = "") { return String(v).normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 120); }
-const ORG_SLUG = {"MPSP":"ministerio-publico-sp","PMRU":"prefeitura-aruja","PMGR":"prefeitura-guarulhos","PMOS":"prefeitura-osasco","PMPR":"prefeitura-piracicaba","PPON":"prefeitura-pontal","PMSO":"prefeitura-sorocaba","PMSE":"prefeitura-sao-paulo","PMSZ":"prefeitura-suzano","PMJU":"prefeitura-jundiai","PRMA":"prefeitura-marilia","PMMC":"prefeitura-mogi-das-cruzes","PMRI":"prefeitura-ribeirao-preto","PVPA":"prefeitura-varzea-paulista","PMPP":"prefeitura-presidente-prudente","PMSA":"prefeitura-santo-andre","PMRP":"prefeitura-sao-jose-do-rio-preto","PTAU":"prefeitura-taubate","PJAG":"prefeitura-jaguariuna","SGUA":"saeg-guaratingueta","TJSP":"tjsp","TJME":"tjm-sp","UABC":"ufabc","CMMI":"camara-mogi-mirim","CMPO":"camara-potim","CALT":"camara-altinopolis","UNAV":"unesp-aracatuba","UAIQ":"unesp-araraquara","UACF":"unesp-araraquara","UNBO":"unesp-botucatu","UNFR":"unesp-franca","FEIS":"unesp-ilha-solteira","UNSV":"unesp-litoral-paulista","UNMA":"unesp-marilia","IBLC":"unesp-sao-jose-do-rio-preto","USJC":"unesp-sao-jose-dos-campos","UNSP":"unesp-sao-paulo"};
-function provaSlug(meta = {}) { const p = String(meta.codigo || "").split("/")[0].toUpperCase(); return slugify(`vunesp-${ORG_SLUG[p] || "concurso"}-${meta.cargo || "prova"}-${meta.ano || "ano"}-${String(meta.numero || 0).padStart(3, "0")}`); }
+function slugify(v = "") {
+  return String(v).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 120);
+}
+
+const ORG_SLUG = {
+  MPSP:"ministerio-publico-sp", PMRU:"prefeitura-aruja", PMGR:"prefeitura-guarulhos",
+  PMOS:"prefeitura-osasco", PMPR:"prefeitura-piracicaba", PPON:"prefeitura-pontal",
+  PMSO:"prefeitura-sorocaba", PMSE:"prefeitura-sao-paulo", PMSZ:"prefeitura-suzano",
+  PMJU:"prefeitura-jundiai", PRMA:"prefeitura-marilia", PMMC:"prefeitura-mogi-das-cruzes",
+  PMRI:"prefeitura-ribeirao-preto", PVPA:"prefeitura-varzea-paulista",
+  PMPP:"prefeitura-presidente-prudente", PMSA:"prefeitura-santo-andre",
+  PMRP:"prefeitura-sao-jose-do-rio-preto", PTAU:"prefeitura-taubate",
+  PJAG:"prefeitura-jaguariuna", SGUA:"saeg-guaratingueta", TJSP:"tjsp", TJME:"tjm-sp",
+  UABC:"ufabc", CMMI:"camara-mogi-mirim", CMPO:"camara-potim", CALT:"camara-altinopolis",
+  UNAV:"unesp-aracatuba", UAIQ:"unesp-araraquara", UACF:"unesp-araraquara",
+  UNBO:"unesp-botucatu", UNFR:"unesp-franca", FEIS:"unesp-ilha-solteira",
+  UNSV:"unesp-litoral-paulista", UNMA:"unesp-marilia", IBLC:"unesp-sao-jose-do-rio-preto",
+  USJC:"unesp-sao-jose-dos-campos", UNSP:"unesp-sao-paulo"
+};
+
+function provaSlug(meta = {}) {
+  const p = String(meta.codigo || "").split("/")[0].toUpperCase();
+  return slugify(`vunesp-${ORG_SLUG[p] || "concurso"}-${meta.cargo || "prova"}-${meta.ano || "ano"}-${String(meta.numero || 0).padStart(3, "0")}`);
+}
 
 function orgaoPorCodigo(codigo = "") {
   const p = String(codigo).split("/")[0].toUpperCase();
   const mapa = {
-    MPSP: "Ministério Público do Estado de São Paulo",
-    PMRU: "Prefeitura de Arujá",
-    PMGR: "Prefeitura de Guarulhos",
-    PMOS: "Prefeitura de Osasco",
-    PMPR: "Prefeitura de Piracicaba",
-    PPON: "Prefeitura de Pontal",
-    PMSO: "Prefeitura de Sorocaba",
-    PMSE: "Prefeitura de São Paulo — Secretaria Municipal de Educação",
-    PMSZ: "Prefeitura de Suzano",
-    PMJU: "Prefeitura de Jundiaí",
-    PRMA: "Prefeitura de Marília",
-    PMMC: "Prefeitura de Mogi das Cruzes",
-    PMRI: "Prefeitura de Ribeirão Preto",
-    PVPA: "Prefeitura de Várzea Paulista",
-    PMPP: "Prefeitura de Presidente Prudente",
-    PMSA: "Prefeitura de Santo André",
-    PMRP: "Prefeitura de São José do Rio Preto",
-    PTAU: "Prefeitura de Taubaté",
-    PJAG: "Prefeitura de Jaguariúna",
-    VALP: "Prefeitura de Várzea Paulista",
-    PGUA: "Prefeitura de Guaratinguetá",
-    SGUA: "SAEG — Guaratinguetá",
-    TJSP: "Tribunal de Justiça do Estado de São Paulo",
-    TJME: "Tribunal de Justiça Militar do Estado de São Paulo",
-    UABC: "Universidade Federal do ABC",
-    EBSH: "EBSERH",
-    FITO: "Fundação Instituto Tecnológico de Osasco",
-    SETP: "SERTPREV — Sertãozinho",
-    CMMI: "Câmara Municipal de Mogi Mirim",
-    CMPO: "Câmara Municipal de Potim",
-    CALT: "Câmara Municipal de Altinópolis",
-    FMEC: "Fundação Municipal para Educação Comunitária — Campinas",
-    UNAV: "UNESP — Câmpus de Araçatuba",
-    UAIQ: "UNESP — Instituto de Química de Araraquara",
-    UACF: "UNESP — Faculdade de Ciências Farmacêuticas de Araraquara",
-    UNBO: "UNESP — Faculdade de Medicina de Botucatu",
-    UNFR: "UNESP — Faculdade de Ciências Humanas e Sociais de Franca",
-    FEIS: "UNESP — Faculdade de Engenharia de Ilha Solteira",
-    UNSV: "UNESP — Instituto de Biociências do Litoral Paulista",
-    UNMA: "UNESP — Faculdade de Filosofia e Ciências de Marília",
-    IBLC: "UNESP — São José do Rio Preto",
-    USJC: "UNESP — Instituto de Ciência e Tecnologia de São José dos Campos",
-    UNSP: "UNESP — Instituto de Artes de São Paulo",
-    UCAP: "Instituição pública — Campinas",
-    SAEP: "Serviço público municipal — Vunesp"
+    MPSP:"Ministério Público do Estado de São Paulo", PMRU:"Prefeitura de Arujá",
+    PMGR:"Prefeitura de Guarulhos", PMOS:"Prefeitura de Osasco", PMPR:"Prefeitura de Piracicaba",
+    PPON:"Prefeitura de Pontal", PMSO:"Prefeitura de Sorocaba",
+    PMSE:"Prefeitura de São Paulo — Secretaria Municipal de Educação", PMSZ:"Prefeitura de Suzano",
+    PMJU:"Prefeitura de Jundiaí", PRMA:"Prefeitura de Marília", PMMC:"Prefeitura de Mogi das Cruzes",
+    PMRI:"Prefeitura de Ribeirão Preto", PVPA:"Prefeitura de Várzea Paulista",
+    PMPP:"Prefeitura de Presidente Prudente", PMSA:"Prefeitura de Santo André",
+    PMRP:"Prefeitura de São José do Rio Preto", PTAU:"Prefeitura de Taubaté",
+    PJAG:"Prefeitura de Jaguariúna", VALP:"Prefeitura de Várzea Paulista",
+    PGUA:"Prefeitura de Guaratinguetá", SGUA:"SAEG — Guaratinguetá",
+    TJSP:"Tribunal de Justiça do Estado de São Paulo", TJME:"Tribunal de Justiça Militar do Estado de São Paulo",
+    UABC:"Universidade Federal do ABC", EBSH:"EBSERH", FITO:"Fundação Instituto Tecnológico de Osasco",
+    SETP:"SERTPREV — Sertãozinho", CMMI:"Câmara Municipal de Mogi Mirim", CMPO:"Câmara Municipal de Potim",
+    CALT:"Câmara Municipal de Altinópolis", FMEC:"Fundação Municipal para Educação Comunitária — Campinas",
+    UNAV:"UNESP — Câmpus de Araçatuba", UAIQ:"UNESP — Instituto de Química de Araraquara",
+    UACF:"UNESP — Faculdade de Ciências Farmacêuticas de Araraquara", UNBO:"UNESP — Faculdade de Medicina de Botucatu",
+    UNFR:"UNESP — Faculdade de Ciências Humanas e Sociais de Franca", FEIS:"UNESP — Faculdade de Engenharia de Ilha Solteira",
+    UNSV:"UNESP — Instituto de Biociências do Litoral Paulista", UNMA:"UNESP — Faculdade de Filosofia e Ciências de Marília",
+    IBLC:"UNESP — São José do Rio Preto", USJC:"UNESP — Instituto de Ciência e Tecnologia de São José dos Campos",
+    UNSP:"UNESP — Instituto de Artes de São Paulo", UCAP:"Instituição pública — Campinas",
+    SAEP:"Serviço público municipal — Vunesp"
   };
   return mapa[p] || (p ? `Órgão do concurso Vunesp — ${p}` : "Acervo Vunesp — Prof. Lucas MPC");
 }
@@ -100,7 +101,6 @@ function render() {
   const banca = $("#prova-banca").value;
   const ano = $("#prova-ano").value;
   const estado = $("#prova-estado").value;
-
   const lista = provas.filter((p) =>
     (!busca || normalizar(`${p.orgao} ${p.cargo} ${p.codigo || ""} ${p.banca} ${p.numeroAcervo || ""}`).includes(busca)) &&
     (banca === "todos" || p.banca === banca) &&
@@ -113,15 +113,9 @@ function render() {
     const vunesp = normalizar(p.banca).includes("vunesp");
     const contexto = `${p.orgao} — ${p.cargo} — ${p.ano}`;
     const botaoDetalhe = p.detalheUrl ? `<a class="details" href="${p.detalheUrl}">Ver página da prova</a>` : "";
-    const botaoProva = p.provaUrl
-      ? `<a class="details" data-lead-context="Prova anterior — ${contexto}" href="${p.provaUrl}" target="_blank" rel="noopener">${p.arquivoUnico ? "Abrir prova + gabarito" : "Abrir prova"}</a>`
-      : '<span class="disabled-action">Prova indisponível</span>';
-    const botaoGabarito = p.gabaritoUrl
-      ? `<a class="secondary-action" data-lead-context="Gabarito — ${contexto}" href="${p.gabaritoUrl}" target="_blank" rel="noopener">Ver gabarito</a>`
-      : "";
-    const botaoFonte = p.fonteUrl
-      ? `<a class="secondary-action" data-lead-context="Fonte — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">${p.origem === "drive-vunesp" ? "Ver no Drive" : "Fonte oficial"}</a>`
-      : "";
+    const botaoProva = p.provaUrl ? `<a class="details" data-lead-context="Prova anterior — ${contexto}" href="${p.provaUrl}" target="_blank" rel="noopener">${p.arquivoUnico ? "Abrir prova + gabarito" : "Abrir prova"}</a>` : '<span class="disabled-action">Prova indisponível</span>';
+    const botaoGabarito = p.gabaritoUrl ? `<a class="secondary-action" data-lead-context="Gabarito — ${contexto}" href="${p.gabaritoUrl}" target="_blank" rel="noopener">Ver gabarito</a>` : "";
+    const botaoFonte = p.fonteUrl ? `<a class="secondary-action" data-lead-context="Fonte — ${contexto}" href="${p.fonteUrl}" target="_blank" rel="noopener">${p.origem === "drive-vunesp" ? "Ver no Drive" : "Fonte oficial"}</a>` : "";
     const codigo = p.codigo ? `<span>🏷️ ${p.codigo}</span>` : "";
     return `<article class="card${vunesp ? " proof-featured" : ""}">
       <div class="card-topline"><span class="tag">${p.banca}</span>${vunesp ? '<span class="badge">FOCO VUNESP</span>' : ""}</div>
@@ -148,28 +142,17 @@ async function iniciar() {
   try {
     const caminhosCatalogo = ["data/provas.json", "data/provas-lote2.json", "data/provas-lote3.json"];
     const caminhosDrive = [
-      "data/vunesp-drive-001-060.json",
-      "data/vunesp-drive-061-120.json",
-      "data/vunesp-drive-121-180.json",
-      "data/vunesp-drive-181-236.json"
-    ];
-    const caminhosAuditoria = [
-      "data/auditoria/vunesp-001-015.json","data/auditoria/vunesp-016-030.json",
-      "data/auditoria/vunesp-031-045.json","data/auditoria/vunesp-046-060.json",
-      "data/auditoria/vunesp-061-075.json","data/auditoria/vunesp-076-090.json",
-      "data/auditoria/vunesp-091-105.json","data/auditoria/vunesp-106-120.json",
-      "data/auditoria/vunesp-121-140.json","data/auditoria/vunesp-141-160.json",
-      "data/auditoria/vunesp-161-180.json","data/auditoria/vunesp-181-200.json",
-      "data/auditoria/vunesp-201-220.json","data/auditoria/vunesp-221-236.json"
+      "data/vunesp-drive-001-060.json", "data/vunesp-drive-061-120.json",
+      "data/vunesp-drive-121-180.json", "data/vunesp-drive-181-236.json"
     ];
 
-    const [lotesCatalogo, lotesDrive, lotesAuditoria] = await Promise.all([
+    const [lotesCatalogo, lotesDrive, auditoria] = await Promise.all([
       Promise.all(caminhosCatalogo.map((c) => carregarJson(c, false))),
       Promise.all(caminhosDrive.map((c) => carregarJson(c, true))),
-      Promise.all(caminhosAuditoria.map((c) => carregarJson(c, true)))
+      carregarJson("data/auditoria/vunesp-index.json", true)
     ]);
 
-    const mapaAuditoria = new Map(lotesAuditoria.flat().map((m) => [Number(m.numero), m]));
+    const mapaAuditoria = new Map(auditoria.map((m) => [Number(m.numero), m]));
     const mapa = new Map();
     lotesCatalogo.flat().forEach((p) => p?.id && mapa.set(p.id, p));
 
