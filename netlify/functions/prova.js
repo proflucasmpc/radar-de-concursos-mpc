@@ -27,33 +27,67 @@ const ORGAOS = {
   UNFR:"UNESP — Faculdade de Ciências Humanas e Sociais de Franca", FEIS:"UNESP — Faculdade de Engenharia de Ilha Solteira",
   UNSV:"UNESP — Instituto de Biociências do Litoral Paulista", UNMA:"UNESP — Faculdade de Filosofia e Ciências de Marília",
   IBLC:"UNESP — São José do Rio Preto", USJC:"UNESP — Instituto de Ciência e Tecnologia de São José dos Campos",
-  UNSP:"UNESP — Instituto de Artes de São Paulo"
+  UNSP:"UNESP — Instituto de Artes de São Paulo", UCAP:"Instituição pública — Campinas",
+  SAEP:"Serviço público municipal — Vunesp"
 };
-const ORG_SLUG = {"MPSP":"ministerio-publico-sp","PMRU":"prefeitura-aruja","PMGR":"prefeitura-guarulhos","PMOS":"prefeitura-osasco","PMPR":"prefeitura-piracicaba","PPON":"prefeitura-pontal","PMSO":"prefeitura-sorocaba","PMSE":"prefeitura-sao-paulo","PMSZ":"prefeitura-suzano","PMJU":"prefeitura-jundiai","PRMA":"prefeitura-marilia","PMMC":"prefeitura-mogi-das-cruzes","PMRI":"prefeitura-ribeirao-preto","PVPA":"prefeitura-varzea-paulista","PMPP":"prefeitura-presidente-prudente","PMSA":"prefeitura-santo-andre","PMRP":"prefeitura-sao-jose-do-rio-preto","PTAU":"prefeitura-taubate","PJAG":"prefeitura-jaguariuna","SGUA":"saeg-guaratingueta","TJSP":"tjsp","TJME":"tjm-sp","UABC":"ufabc","CMMI":"camara-mogi-mirim","CMPO":"camara-potim","CALT":"camara-altinopolis","UNAV":"unesp-aracatuba","UAIQ":"unesp-araraquara","UACF":"unesp-araraquara","UNBO":"unesp-botucatu","UNFR":"unesp-franca","FEIS":"unesp-ilha-solteira","UNSV":"unesp-litoral-paulista","UNMA":"unesp-marilia","IBLC":"unesp-sao-jose-do-rio-preto","USJC":"unesp-sao-jose-dos-campos","UNSP":"unesp-sao-paulo"};
+const ORG_SLUG = {
+  MPSP:"ministerio-publico-sp", PMRU:"prefeitura-aruja", PMGR:"prefeitura-guarulhos",
+  PMOS:"prefeitura-osasco", PMPR:"prefeitura-piracicaba", PPON:"prefeitura-pontal",
+  PMSO:"prefeitura-sorocaba", PMSE:"prefeitura-sao-paulo", PMSZ:"prefeitura-suzano",
+  PMJU:"prefeitura-jundiai", PRMA:"prefeitura-marilia", PMMC:"prefeitura-mogi-das-cruzes",
+  PMRI:"prefeitura-ribeirao-preto", PVPA:"prefeitura-varzea-paulista",
+  PMPP:"prefeitura-presidente-prudente", PMSA:"prefeitura-santo-andre",
+  PMRP:"prefeitura-sao-jose-do-rio-preto", PTAU:"prefeitura-taubate",
+  PJAG:"prefeitura-jaguariuna", SGUA:"saeg-guaratingueta", TJSP:"tjsp", TJME:"tjm-sp",
+  UABC:"ufabc", CMMI:"camara-mogi-mirim", CMPO:"camara-potim", CALT:"camara-altinopolis",
+  UNAV:"unesp-aracatuba", UAIQ:"unesp-araraquara", UACF:"unesp-araraquara",
+  UNBO:"unesp-botucatu", UNFR:"unesp-franca", FEIS:"unesp-ilha-solteira",
+  UNSV:"unesp-litoral-paulista", UNMA:"unesp-marilia", IBLC:"unesp-sao-jose-do-rio-preto",
+  USJC:"unesp-sao-jose-dos-campos", UNSP:"unesp-sao-paulo"
+};
 
 function slugify(v="") {
   return String(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()
     .replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,120);
 }
-function prefix(m){ return String(m.codigo||"").split("/")[0].toUpperCase(); }
-function slugFor(m){
-  return slugify(`vunesp-${ORG_SLUG[prefix(m)]||"concurso"}-${m.cargo||"prova"}-${m.ano||"ano"}-${String(m.numero).padStart(3,"0")}`);
+function legacySlugify(v="") {
+  return String(v).normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,120);
 }
+function prefix(m){ return String(m.codigo||"").split("/")[0].toUpperCase(); }
+function slugBase(m){ return `vunesp-${ORG_SLUG[prefix(m)]||"concurso"}-${m.cargo||"prova"}-${m.ano||"ano"}-${String(m.numero).padStart(3,"0")}`; }
+function slugFor(m){ return slugify(slugBase(m)); }
+function legacySlugFor(m){ return legacySlugify(slugBase(m)); }
 function esc(v=""){ return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 function driveView(id){ return id ? `https://drive.google.com/file/d/${id}/view` : null; }
 
 exports.handler = async (event) => {
   const slug = String(event.queryStringParameters?.slug || "").replace(/^\/+|\/+$/g,"");
-  const meta = audit.find(m => !m.ocultar && !["arquivo_incorreto","necessita_conferencia"].includes(m.situacao) && slugFor(m) === slug);
+  const publicaveis = audit.filter(m => !m.ocultar && !["arquivo_incorreto","necessita_conferencia"].includes(m.situacao));
+  let meta = publicaveis.find(m => slugFor(m) === slug);
+
   if (!meta) {
-    return {statusCode:404,headers:{"Content-Type":"text/html; charset=utf-8","X-Robots-Tag":"noindex"},body:"<!doctype html><html lang=\"pt-BR\"><meta charset=\"utf-8\"><title>Prova não encontrada</title><body><h1>Prova não encontrada</h1><p><a href=\"/provas.html\">Voltar ao acervo</a></p></body></html>"};
+    const legado = publicaveis.find(m => legacySlugFor(m) === slug);
+    if (legado) {
+      return {
+        statusCode:301,
+        headers:{Location:`${BASE}/provas/${slugFor(legado)}`,"Cache-Control":"public, max-age=86400"},
+        body:""
+      };
+    }
+    return {
+      statusCode:404,
+      headers:{"Content-Type":"text/html; charset=utf-8","X-Robots-Tag":"noindex"},
+      body:'<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Prova não encontrada</title><body><h1>Prova não encontrada</h1><p><a href="/provas.html">Voltar ao acervo</a></p></body></html>'
+    };
   }
+
   const raw = drive.find(x => Number(x.numero) === Number(meta.numero)) || {};
   const pfx = prefix(meta);
-  const orgao = ORGAOS[pfx] || "Concurso organizado pela Vunesp";
+  const orgao = meta.orgao || ORGAOS[pfx] || "Concurso organizado pela Vunesp";
   const cargo = meta.cargo || "Prova anterior";
   const ano = meta.ano || "";
-  const canonical = `${BASE}/provas/${slug}`;
+  const canonical = `${BASE}/provas/${slugFor(meta)}`;
   const provaUrl = driveView(raw.provaId);
   const integrado = Boolean(meta.gabaritoIntegrado || (raw.provaId && raw.provaId === raw.gabaritoId));
   const bloqueado = ["suspeito_copia_prova","necessita_conferencia","mesmo_arquivo"].includes(meta.situacaoGabarito);
@@ -67,6 +101,7 @@ exports.handler = async (event) => {
     "isPartOf":{"@type":"WebSite","name":"Radar de Concursos MPC","url":BASE},
     "about":[orgao,cargo,"Vunesp"]
   };
+
   const html = `<!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -111,5 +146,10 @@ ${gabaritoUrl ? `<a class="secondary-action" href="${gabaritoUrl}" target="_blan
 </section></main>
 <footer><div class="shell"><strong>Radar de Concursos MPC</strong><p>Provas anteriores e informações organizadas para sua preparação.</p><nav class="footer-links"><a href="/provas.html">Provas anteriores</a><a href="/">Concursos</a><a href="/privacidade.html">Privacidade</a></nav></div></footer>
 </body></html>`;
-  return {statusCode:200,headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=0, s-maxage=3600","X-Robots-Tag":"index, follow"},body:html};
+
+  return {
+    statusCode:200,
+    headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=0, s-maxage=3600","X-Robots-Tag":"index, follow"},
+    body:html
+  };
 };
