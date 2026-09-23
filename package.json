@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "validar-dados": "node scripts/validar-dados.mjs",
+    "aplicar-correcoes-vunesp": "node scripts/aplicar-correcoes-vunesp.mjs",
     "gerar-seo": "node scripts/gerar-seo.mjs",
-    "build": "npm run gerar-seo"
+    "build": "npm run aplicar-correcoes-vunesp && npm run gerar-seo"
   },
   "devDependencies": {
     "@netlify/functions": "latest"
