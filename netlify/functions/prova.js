@@ -6,7 +6,7 @@ const drive = [
   ...require("../../data/vunesp-drive-181-236.json")
 ];
 
-const BASE = "https://radar.lucasmpc.com.br";
+const BASE = "https://radar-de-concursos-mpc.netlify.app";
 const ORGAOS = {
   MPSP:"Ministério Público do Estado de São Paulo", PMRU:"Prefeitura de Arujá",
   PMGR:"Prefeitura de Guarulhos", PMOS:"Prefeitura de Osasco", PMPR:"Prefeitura de Piracicaba",

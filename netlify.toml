@@ -9,19 +9,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Consolida toda a autoridade SEO no subdomínio oficial.
-[[redirects]]
-  from = "https://radar-de-concursos-mpc.netlify.app/*"
-  to = "https://radar.lucasmpc.com.br/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://radar-de-concursos-mpc.netlify.app/*"
-  to = "https://radar.lucasmpc.com.br/:splat"
-  status = 301
-  force = true
-
 [[redirects]]
   from = "/provas/:slug"
   to = "/.netlify/functions/prova?slug=:slug"
